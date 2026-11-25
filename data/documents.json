@@ -1,0 +1,1629 @@
+{
+ "types": [
+  "PERSON",
+  "EMAIL",
+  "PHONE",
+  "IBAN",
+  "ADDRESS",
+  "DATE_OF_BIRTH",
+  "CUSTOMER_ID"
+ ],
+ "documents": [
+  {
+   "id": "de-01",
+   "lang": "de",
+   "kind": "support-email",
+   "text": "Betreff: Rücksendung Bestellung 4471\n\nGuten Tag, mein Name ist Jana Kowalczyk, Kundennummer KD-2093-118. Die Kaffeemühle (Art.-Nr. 310-22) kam defekt an. Bitte erstatten Sie die 89,90 EUR auf mein Konto DE91 9999 0001 0648 4898 90. Sie erreichen mich unter 0151 0482 3317.\n\nViele Grüße\nJana Kowalczyk",
+   "spans": [
+    {
+     "start": 63,
+     "end": 77,
+     "type": "PERSON",
+     "text": "Jana Kowalczyk",
+     "entity": "PERSON:jana kowalczyk"
+    },
+    {
+     "start": 92,
+     "end": 103,
+     "type": "CUSTOMER_ID",
+     "text": "KD-2093-118",
+     "entity": "CUSTOMER_ID:kd-2093-118"
+    },
+    {
+     "start": 203,
+     "end": 230,
+     "type": "IBAN",
+     "text": "DE91 9999 0001 0648 4898 90",
+     "entity": "IBAN:de91 9999 0001 0648 4898 90"
+    },
+    {
+     "start": 257,
+     "end": 271,
+     "type": "PHONE",
+     "text": "0151 0482 3317",
+     "entity": "PHONE:0151 0482 3317"
+    },
+    {
+     "start": 286,
+     "end": 300,
+     "type": "PERSON",
+     "text": "Jana Kowalczyk",
+     "entity": "PERSON:jana kowalczyk"
+    }
+   ]
+  },
+  {
+   "id": "de-02",
+   "lang": "de",
+   "kind": "hr-note",
+   "text": "Notiz Personalabteilung, 03.11.2026\n\nThomas Brandl (Personalnummer PN 40917) beantragt Elternzeit ab dem 01.02.2027. Geburtsdatum laut Akte: 17.06.1989. Neue Anschrift: Quittenweg 7, 34121 Kassel. Rückfragen bitte an t.brandl@firma.example.",
+   "spans": [
+    {
+     "start": 37,
+     "end": 50,
+     "type": "PERSON",
+     "text": "Thomas Brandl",
+     "entity": "PERSON:brandl"
+    },
+    {
+     "start": 67,
+     "end": 75,
+     "type": "CUSTOMER_ID",
+     "text": "PN 40917",
+     "entity": "CUSTOMER_ID:pn 40917"
+    },
+    {
+     "start": 141,
+     "end": 151,
+     "type": "DATE_OF_BIRTH",
+     "text": "17.06.1989",
+     "entity": "DATE_OF_BIRTH:17.06.1989"
+    },
+    {
+     "start": 169,
+     "end": 195,
+     "type": "ADDRESS",
+     "text": "Quittenweg 7, 34121 Kassel",
+     "entity": "ADDRESS:quittenweg 7, 34121 kassel"
+    },
+    {
+     "start": 217,
+     "end": 239,
+     "type": "EMAIL",
+     "text": "t.brandl@firma.example",
+     "entity": "EMAIL:t.brandl@firma.example"
+    }
+   ]
+  },
+  {
+   "id": "de-03",
+   "lang": "de",
+   "kind": "invoice",
+   "text": "Rechnung Nr. 2026-0815\n\nRechnungsempfängerin: Sabine Oyelaran, Am Kalkofen 3a, 04109 Leipzig\nLeistung: Wartung Heizungsanlage, 4 Stunden à 62,00 EUR\nGesamtbetrag: 295,12 EUR inkl. 19 % USt.\nBitte überweisen Sie bis zum 15.12.2026 unter Angabe Ihrer Kundennummer 100-7734.",
+   "spans": [
+    {
+     "start": 46,
+     "end": 61,
+     "type": "PERSON",
+     "text": "Sabine Oyelaran",
+     "entity": "PERSON:sabine oyelaran"
+    },
+    {
+     "start": 63,
+     "end": 92,
+     "type": "ADDRESS",
+     "text": "Am Kalkofen 3a, 04109 Leipzig",
+     "entity": "ADDRESS:am kalkofen 3a, 04109 leipzig"
+    },
+    {
+     "start": 262,
+     "end": 270,
+     "type": "CUSTOMER_ID",
+     "text": "100-7734",
+     "entity": "CUSTOMER_ID:100-7734"
+    }
+   ]
+  },
+  {
+   "id": "de-04",
+   "lang": "de",
+   "kind": "meeting-notes",
+   "text": "Protokoll Teamrunde Vertrieb\n\nAnwesend: Martin Koch, Lea Sommer, Deniz Arslan\n1. Herr Koch stellt die Zahlen für Q3 vor: Umsatz plus 4,2 %.\n2. Frau Sommer plant die Messe im Sommer 2027, Stand in Halle 5.\n3. Der Koch der Kantine fragt nach der Teilnehmerzahl für das Mittagessen.",
+   "spans": [
+    {
+     "start": 40,
+     "end": 51,
+     "type": "PERSON",
+     "text": "Martin Koch",
+     "entity": "PERSON:koch"
+    },
+    {
+     "start": 53,
+     "end": 63,
+     "type": "PERSON",
+     "text": "Lea Sommer",
+     "entity": "PERSON:sommer"
+    },
+    {
+     "start": 65,
+     "end": 77,
+     "type": "PERSON",
+     "text": "Deniz Arslan",
+     "entity": "PERSON:deniz arslan"
+    },
+    {
+     "start": 86,
+     "end": 90,
+     "type": "PERSON",
+     "text": "Koch",
+     "entity": "PERSON:koch"
+    },
+    {
+     "start": 148,
+     "end": 154,
+     "type": "PERSON",
+     "text": "Sommer",
+     "entity": "PERSON:sommer"
+    }
+   ]
+  },
+  {
+   "id": "de-05",
+   "lang": "de",
+   "kind": "chat",
+   "text": "Hi, hast du Hoffmanns Urlaubsantrag schon gesehen? Die Hoffmann-Präsentation für Montag liegt im Teams-Ordner. Ruf Jörg an, falls was fehlt: +49 160 0731 4482.",
+   "spans": [
+    {
+     "start": 12,
+     "end": 20,
+     "type": "PERSON",
+     "text": "Hoffmann",
+     "entity": "PERSON:hoffmann"
+    },
+    {
+     "start": 55,
+     "end": 63,
+     "type": "PERSON",
+     "text": "Hoffmann",
+     "entity": "PERSON:hoffmann"
+    },
+    {
+     "start": 115,
+     "end": 119,
+     "type": "PERSON",
+     "text": "Jörg",
+     "entity": "PERSON:jörg"
+    },
+    {
+     "start": 141,
+     "end": 158,
+     "type": "PHONE",
+     "text": "+49 160 0731 4482",
+     "entity": "PHONE:+49 160 0731 4482"
+    }
+   ]
+  },
+  {
+   "id": "de-06",
+   "lang": "de",
+   "kind": "internal-email",
+   "text": "Hallo zusammen,\n\nab Dezember arbeiten Anna Lehmann (Einkauf) und Anna Petersen (Vertrieb) am Projekt Nordlicht. Bitte schickt Bestellungen an anna.lehmann@firma.example und Kundenanfragen an a.petersen@firma.example. Anna aus dem Vertrieb übernimmt außerdem die Schulung am 9.12.",
+   "spans": [
+    {
+     "start": 38,
+     "end": 50,
+     "type": "PERSON",
+     "text": "Anna Lehmann",
+     "entity": "PERSON:lehmann"
+    },
+    {
+     "start": 65,
+     "end": 78,
+     "type": "PERSON",
+     "text": "Anna Petersen",
+     "entity": "PERSON:petersen"
+    },
+    {
+     "start": 142,
+     "end": 168,
+     "type": "EMAIL",
+     "text": "anna.lehmann@firma.example",
+     "entity": "EMAIL:anna.lehmann@firma.example"
+    },
+    {
+     "start": 191,
+     "end": 215,
+     "type": "EMAIL",
+     "text": "a.petersen@firma.example",
+     "entity": "EMAIL:a.petersen@firma.example"
+    },
+    {
+     "start": 217,
+     "end": 221,
+     "type": "PERSON",
+     "text": "Anna",
+     "entity": "PERSON:petersen"
+    }
+   ]
+  },
+  {
+   "id": "de-07",
+   "lang": "de",
+   "kind": "support-email",
+   "text": "Sehr geehrte Damen und Herren,\n\nich habe mein Passwort vergessen und komme nicht mehr in mein Kundenkonto. Registriert bin ich mit moritz.engelhardt82@example.org, geboren am 02.09.1982. Meine Kundennummer finde ich leider nicht mehr.\n\nMit freundlichen Grüßen\nMoritz Engelhardt",
+   "spans": [
+    {
+     "start": 131,
+     "end": 162,
+     "type": "EMAIL",
+     "text": "moritz.engelhardt82@example.org",
+     "entity": "EMAIL:moritz.engelhardt82@example.org"
+    },
+    {
+     "start": 175,
+     "end": 185,
+     "type": "DATE_OF_BIRTH",
+     "text": "02.09.1982",
+     "entity": "DATE_OF_BIRTH:02.09.1982"
+    },
+    {
+     "start": 260,
+     "end": 277,
+     "type": "PERSON",
+     "text": "Moritz Engelhardt",
+     "entity": "PERSON:moritz engelhardt"
+    }
+   ]
+  },
+  {
+   "id": "de-08",
+   "lang": "de",
+   "kind": "insurance-claim",
+   "text": "Schadenmeldung\n\nVersicherungsnehmerin: Gül Demirtaş\nVertragsnummer: HV-5520-3391\nAnschrift: Birkenhain 21, 28195 Bremen\nTelefon: (0421) 0 55 61 23\nAm 18.11.2026 ist in der Küche ein Wasserschaden entstanden (ca. 12 m² Laminat). Der Handwerker kommt am Freitag um 10:30 Uhr.",
+   "spans": [
+    {
+     "start": 39,
+     "end": 51,
+     "type": "PERSON",
+     "text": "Gül Demirtaş",
+     "entity": "PERSON:gül demirtaş"
+    },
+    {
+     "start": 68,
+     "end": 80,
+     "type": "CUSTOMER_ID",
+     "text": "HV-5520-3391",
+     "entity": "CUSTOMER_ID:hv-5520-3391"
+    },
+    {
+     "start": 92,
+     "end": 119,
+     "type": "ADDRESS",
+     "text": "Birkenhain 21, 28195 Bremen",
+     "entity": "ADDRESS:birkenhain 21, 28195 bremen"
+    },
+    {
+     "start": 129,
+     "end": 146,
+     "type": "PHONE",
+     "text": "(0421) 0 55 61 23",
+     "entity": "PHONE:(0421) 0 55 61 23"
+    }
+   ]
+  },
+  {
+   "id": "de-09",
+   "lang": "de",
+   "kind": "meeting-notes",
+   "text": "Protokoll IT-Sicherheit, Raum 2.14\n\nTeilnehmende: Dr. Henrike Vossberg, Paul Nguyen\n- Das Audit nach ISO 27001 ist für den 14.04.2027 angesetzt.\n- Das Firewall-Update auf Version 7.4.2 ist erledigt, 3 von 112 Clients fehlen noch.\n- Herr Nguyen prüft bis KW 51 die Tickets 88213 bis 88240.",
+   "spans": [
+    {
+     "start": 54,
+     "end": 70,
+     "type": "PERSON",
+     "text": "Henrike Vossberg",
+     "entity": "PERSON:henrike vossberg"
+    },
+    {
+     "start": 72,
+     "end": 83,
+     "type": "PERSON",
+     "text": "Paul Nguyen",
+     "entity": "PERSON:nguyen"
+    },
+    {
+     "start": 237,
+     "end": 243,
+     "type": "PERSON",
+     "text": "Nguyen",
+     "entity": "PERSON:nguyen"
+    }
+   ]
+  },
+  {
+   "id": "de-10",
+   "lang": "de",
+   "kind": "contract",
+   "text": "Mietvertrag (Auszug)\n\nZwischen Klaus-Dieter Wiegand, Lerchenstraße 40, 50667 Köln (Vermieter), und Mira Okafor, geb. 23.01.1996 (Mieterin), wird folgender Vertrag geschlossen: Die Wohnung im 3. OG, 68 m², wird ab dem 01.01.2027 für monatlich 1.120 EUR kalt vermietet. Die Kaution von 3.360 EUR ist auf das Konto DE81 9999 0022 0012 3456 78 zu überweisen.",
+   "spans": [
+    {
+     "start": 31,
+     "end": 51,
+     "type": "PERSON",
+     "text": "Klaus-Dieter Wiegand",
+     "entity": "PERSON:klaus-dieter wiegand"
+    },
+    {
+     "start": 53,
+     "end": 81,
+     "type": "ADDRESS",
+     "text": "Lerchenstraße 40, 50667 Köln",
+     "entity": "ADDRESS:lerchenstrasse 40, 50667 köln"
+    },
+    {
+     "start": 99,
+     "end": 110,
+     "type": "PERSON",
+     "text": "Mira Okafor",
+     "entity": "PERSON:mira okafor"
+    },
+    {
+     "start": 117,
+     "end": 127,
+     "type": "DATE_OF_BIRTH",
+     "text": "23.01.1996",
+     "entity": "DATE_OF_BIRTH:23.01.1996"
+    },
+    {
+     "start": 312,
+     "end": 339,
+     "type": "IBAN",
+     "text": "DE81 9999 0022 0012 3456 78",
+     "entity": "IBAN:de81 9999 0022 0012 3456 78"
+    }
+   ]
+  },
+  {
+   "id": "de-11",
+   "lang": "de",
+   "kind": "chat",
+   "text": "Kurze Info: Benedikt ist bis einschließlich Mittwoch krankgeschrieben. Bitte übergebt seine drei Kundentermine an Frau Lindqvist. Die Präsentation für die Firma Lang & Söhne verschiebt sich auf nächste Woche.",
+   "spans": [
+    {
+     "start": 12,
+     "end": 20,
+     "type": "PERSON",
+     "text": "Benedikt",
+     "entity": "PERSON:benedikt"
+    },
+    {
+     "start": 119,
+     "end": 128,
+     "type": "PERSON",
+     "text": "Lindqvist",
+     "entity": "PERSON:lindqvist"
+    }
+   ]
+  },
+  {
+   "id": "de-12",
+   "lang": "de",
+   "kind": "delivery-notice",
+   "text": "Ihre Sendung 0034 0434 1610 9404 wird morgen zwischen 9 und 13 Uhr zugestellt.\nEmpfängerin: Ilse Brückner, Fasanenweg 2, 01067 Dresden\nTelefon der Empfängerin: +49 351 0420 6687\nBei Fragen erreichen Sie unser Servicecenter montags bis freitags von 8 bis 18 Uhr.",
+   "spans": [
+    {
+     "start": 92,
+     "end": 105,
+     "type": "PERSON",
+     "text": "Ilse Brückner",
+     "entity": "PERSON:ilse brückner"
+    },
+    {
+     "start": 107,
+     "end": 134,
+     "type": "ADDRESS",
+     "text": "Fasanenweg 2, 01067 Dresden",
+     "entity": "ADDRESS:fasanenweg 2, 01067 dresden"
+    },
+    {
+     "start": 160,
+     "end": 177,
+     "type": "PHONE",
+     "text": "+49 351 0420 6687",
+     "entity": "PHONE:+49 351 0420 6687"
+    }
+   ]
+  },
+  {
+   "id": "de-13",
+   "lang": "de",
+   "kind": "support-email",
+   "text": "Hallo Herr Fuchs,\n\nvielen Dank für Ihre Nachricht. Ihre Kollegin Frau Wolf hatte uns bereits informiert. Der Fuchsbau-Spielturm (Modell FB-200) wird in KW 2 geliefert.\n\nMit freundlichen Grüßen\nIhr Kundenservice",
+   "spans": [
+    {
+     "start": 11,
+     "end": 16,
+     "type": "PERSON",
+     "text": "Fuchs",
+     "entity": "PERSON:fuchs"
+    },
+    {
+     "start": 70,
+     "end": 74,
+     "type": "PERSON",
+     "text": "Wolf",
+     "entity": "PERSON:wolf"
+    }
+   ]
+  },
+  {
+   "id": "de-14",
+   "lang": "de",
+   "kind": "hr-request",
+   "text": "Betreff: Änderung Bankverbindung\n\nHallo, bitte zahlt mein Gehalt ab Januar auf mein neues Konto: DE91999900310190123456. Kontoinhaberin: Fatma Yıldırım, Personalnummer 40233.\nDanke!\nFatma",
+   "spans": [
+    {
+     "start": 97,
+     "end": 119,
+     "type": "IBAN",
+     "text": "DE91999900310190123456",
+     "entity": "IBAN:de91999900310190123456"
+    },
+    {
+     "start": 137,
+     "end": 151,
+     "type": "PERSON",
+     "text": "Fatma Yıldırım",
+     "entity": "PERSON:yildirim"
+    },
+    {
+     "start": 168,
+     "end": 173,
+     "type": "CUSTOMER_ID",
+     "text": "40233",
+     "entity": "CUSTOMER_ID:40233"
+    },
+    {
+     "start": 182,
+     "end": 187,
+     "type": "PERSON",
+     "text": "Fatma",
+     "entity": "PERSON:yildirim"
+    }
+   ]
+  },
+  {
+   "id": "de-15",
+   "lang": "de",
+   "kind": "meeting-notes",
+   "text": "Ergebnisprotokoll Kundentermin\n\nKunde: Schreinerei Albers GmbH, Ansprechpartner Herr Ole Albers (ole@schreinerei-albers.example, 05121 0 98 77 1)\nBesprochen: Angebot über 14 Werkbänke à 1.180 EUR, Lieferung bis 31.03.2027, Skonto 2 %.\nNächster Schritt: Lukas schickt bis Freitag das überarbeitete Angebot.",
+   "spans": [
+    {
+     "start": 85,
+     "end": 95,
+     "type": "PERSON",
+     "text": "Ole Albers",
+     "entity": "PERSON:ole albers"
+    },
+    {
+     "start": 97,
+     "end": 127,
+     "type": "EMAIL",
+     "text": "ole@schreinerei-albers.example",
+     "entity": "EMAIL:ole@schreinerei-albers.example"
+    },
+    {
+     "start": 129,
+     "end": 144,
+     "type": "PHONE",
+     "text": "05121 0 98 77 1",
+     "entity": "PHONE:05121 0 98 77 1"
+    },
+    {
+     "start": 253,
+     "end": 258,
+     "type": "PERSON",
+     "text": "Lukas",
+     "entity": "PERSON:lukas"
+    }
+   ]
+  },
+  {
+   "id": "de-16",
+   "lang": "de",
+   "kind": "cancellation",
+   "text": "Kündigung Mitgliedschaft\n\nHiermit kündige ich meine Mitgliedschaft (Mitgliedsnummer M-883021) zum nächstmöglichen Termin.\nSven Hollerbach, Ginsterweg 15, 22301 Hamburg, geb. 11.11.1990\nBitte bestätigen Sie die Kündigung an sven.h@example.net.",
+   "spans": [
+    {
+     "start": 84,
+     "end": 92,
+     "type": "CUSTOMER_ID",
+     "text": "M-883021",
+     "entity": "CUSTOMER_ID:m-883021"
+    },
+    {
+     "start": 122,
+     "end": 137,
+     "type": "PERSON",
+     "text": "Sven Hollerbach",
+     "entity": "PERSON:sven hollerbach"
+    },
+    {
+     "start": 139,
+     "end": 167,
+     "type": "ADDRESS",
+     "text": "Ginsterweg 15, 22301 Hamburg",
+     "entity": "ADDRESS:ginsterweg 15, 22301 hamburg"
+    },
+    {
+     "start": 174,
+     "end": 184,
+     "type": "DATE_OF_BIRTH",
+     "text": "11.11.1990",
+     "entity": "DATE_OF_BIRTH:11.11.1990"
+    },
+    {
+     "start": 223,
+     "end": 241,
+     "type": "EMAIL",
+     "text": "sven.h@example.net",
+     "entity": "EMAIL:sven.h@example.net"
+    }
+   ]
+  },
+  {
+   "id": "de-17",
+   "lang": "de",
+   "kind": "chat",
+   "text": "Frau Klein meint, das Budget ist zu klein für zwei neue Stellen. Herr Bauer fragt, ob der Bauer vom Gut Hohenfeld wieder Äpfel für das Sommerfest liefert.",
+   "spans": [
+    {
+     "start": 5,
+     "end": 10,
+     "type": "PERSON",
+     "text": "Klein",
+     "entity": "PERSON:klein"
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "type": "PERSON",
+     "text": "Bauer",
+     "entity": "PERSON:bauer"
+    }
+   ]
+  },
+  {
+   "id": "de-18",
+   "lang": "de",
+   "kind": "payment-reminder",
+   "text": "Zahlungserinnerung\n\nSehr geehrter Herr Petrović,\n\nzu Ihrer Rechnung 2026-1103 über 64,50 EUR ist noch keine Zahlung eingegangen. Kundennummer: KD-5512-090. Falls Sie bereits gezahlt haben, schreiben Sie uns bitte kurz an buchhaltung@shop.example.",
+   "spans": [
+    {
+     "start": 39,
+     "end": 47,
+     "type": "PERSON",
+     "text": "Petrović",
+     "entity": "PERSON:petrović"
+    },
+    {
+     "start": 143,
+     "end": 154,
+     "type": "CUSTOMER_ID",
+     "text": "KD-5512-090",
+     "entity": "CUSTOMER_ID:kd-5512-090"
+    }
+   ]
+  },
+  {
+   "id": "de-19",
+   "lang": "de",
+   "kind": "hr-note",
+   "text": "Neue Mitarbeitende im Dezember:\n- Emma Sauer (* 04.07.2001), Werkstudentin Marketing\n- Jonas Albrecht (* 29.02.1996), Entwickler, Start am 01.12.2026\nDie Laptops (ThinkPad T14, Inventar 7781 und 7782) sind bestellt.",
+   "spans": [
+    {
+     "start": 34,
+     "end": 44,
+     "type": "PERSON",
+     "text": "Emma Sauer",
+     "entity": "PERSON:emma sauer"
+    },
+    {
+     "start": 48,
+     "end": 58,
+     "type": "DATE_OF_BIRTH",
+     "text": "04.07.2001",
+     "entity": "DATE_OF_BIRTH:04.07.2001"
+    },
+    {
+     "start": 87,
+     "end": 101,
+     "type": "PERSON",
+     "text": "Jonas Albrecht",
+     "entity": "PERSON:jonas albrecht"
+    },
+    {
+     "start": 105,
+     "end": 115,
+     "type": "DATE_OF_BIRTH",
+     "text": "29.02.1996",
+     "entity": "DATE_OF_BIRTH:29.02.1996"
+    }
+   ]
+  },
+  {
+   "id": "de-20",
+   "lang": "de",
+   "kind": "complaint",
+   "text": "Guten Tag,\n\nich wohne in der Uhlandstraße 8 und seit drei Wochen kommt mein Paket nicht an. Der Bote klingelt angeblich, aber ich bin den ganzen Tag zu Hause. Bitte melden Sie sich bei mir: 0176 0012 9935.\n\nGruß, R. Lindemann",
+   "spans": [
+    {
+     "start": 29,
+     "end": 43,
+     "type": "ADDRESS",
+     "text": "Uhlandstraße 8",
+     "entity": "ADDRESS:uhlandstrasse 8"
+    },
+    {
+     "start": 190,
+     "end": 204,
+     "type": "PHONE",
+     "text": "0176 0012 9935",
+     "entity": "PHONE:0176 0012 9935"
+    },
+    {
+     "start": 213,
+     "end": 225,
+     "type": "PERSON",
+     "text": "R. Lindemann",
+     "entity": "PERSON:r. lindemann"
+    }
+   ]
+  },
+  {
+   "id": "de-21",
+   "lang": "de",
+   "kind": "calendar-invite",
+   "text": "Einladung: Jahresgespräch Nadine Feldmann / Erik Haas\nWann: Donnerstag, 10.12.2026, 14:00 bis 15:00 Uhr\nWo: Besprechungsraum Elbe, 4. Stock\nBitte bringt die Zielvereinbarung 2026 mit.",
+   "spans": [
+    {
+     "start": 26,
+     "end": 41,
+     "type": "PERSON",
+     "text": "Nadine Feldmann",
+     "entity": "PERSON:nadine feldmann"
+    },
+    {
+     "start": 44,
+     "end": 53,
+     "type": "PERSON",
+     "text": "Erik Haas",
+     "entity": "PERSON:erik haas"
+    }
+   ]
+  },
+  {
+   "id": "de-22",
+   "lang": "de",
+   "kind": "legal-letter",
+   "text": "Sehr geehrte Frau Marquardt,\n\nin der Sache Schulte ./. Bergmann GmbH (Az. 3 O 412/26) übersenden wir anbei die Klageerwiderung. Unsere Mandantin, Frau Karin Schulte, ist unter k.schulte@example.com erreichbar.",
+   "spans": [
+    {
+     "start": 18,
+     "end": 27,
+     "type": "PERSON",
+     "text": "Marquardt",
+     "entity": "PERSON:marquardt"
+    },
+    {
+     "start": 43,
+     "end": 50,
+     "type": "PERSON",
+     "text": "Schulte",
+     "entity": "PERSON:schulte"
+    },
+    {
+     "start": 151,
+     "end": 164,
+     "type": "PERSON",
+     "text": "Karin Schulte",
+     "entity": "PERSON:schulte"
+    },
+    {
+     "start": 176,
+     "end": 197,
+     "type": "EMAIL",
+     "text": "k.schulte@example.com",
+     "entity": "EMAIL:k.schulte@example.com"
+    }
+   ]
+  },
+  {
+   "id": "de-23",
+   "lang": "de",
+   "kind": "chat",
+   "text": "sorry, bin heute im homeoffice. kannst du max sagen, dass die lieferung für frau yilmaz erst am 5.1. kommt? ihre nummer ist 0157 0338 1220",
+   "spans": [
+    {
+     "start": 42,
+     "end": 45,
+     "type": "PERSON",
+     "text": "max",
+     "entity": "PERSON:max"
+    },
+    {
+     "start": 81,
+     "end": 87,
+     "type": "PERSON",
+     "text": "yilmaz",
+     "entity": "PERSON:yilmaz"
+    },
+    {
+     "start": 124,
+     "end": 138,
+     "type": "PHONE",
+     "text": "0157 0338 1220",
+     "entity": "PHONE:0157 0338 1220"
+    }
+   ]
+  },
+  {
+   "id": "de-24",
+   "lang": "de",
+   "kind": "crm-note",
+   "text": "CRM-Notiz\nKontakt: Wojciech Nowak | w.nowak@bau-nowak.example | Mobil +49 171 0259 3304\nKundennummer 20931: Interesse an 3 Lizenzen im Tarif Business (je 29 EUR im Monat). Rückruf vereinbart für Dienstag, 15 Uhr.",
+   "spans": [
+    {
+     "start": 19,
+     "end": 33,
+     "type": "PERSON",
+     "text": "Wojciech Nowak",
+     "entity": "PERSON:wojciech nowak"
+    },
+    {
+     "start": 36,
+     "end": 61,
+     "type": "EMAIL",
+     "text": "w.nowak@bau-nowak.example",
+     "entity": "EMAIL:w.nowak@bau-nowak.example"
+    },
+    {
+     "start": 70,
+     "end": 87,
+     "type": "PHONE",
+     "text": "+49 171 0259 3304",
+     "entity": "PHONE:+49 171 0259 3304"
+    },
+    {
+     "start": 101,
+     "end": 106,
+     "type": "CUSTOMER_ID",
+     "text": "20931",
+     "entity": "CUSTOMER_ID:20931"
+    }
+   ]
+  },
+  {
+   "id": "en-01",
+   "lang": "en",
+   "kind": "support-email",
+   "text": "Subject: Refund for order 55120\n\nHi, I'm Priya Raman and I returned the blender on 2 November. My customer number is C-448190. Could you refund the £74.99 to GB64 ZZTB 6016 1331 9268 19? You can reach me on 07700 900418.\n\nThanks,\nPriya",
+   "spans": [
+    {
+     "start": 41,
+     "end": 52,
+     "type": "PERSON",
+     "text": "Priya Raman",
+     "entity": "PERSON:raman"
+    },
+    {
+     "start": 117,
+     "end": 125,
+     "type": "CUSTOMER_ID",
+     "text": "C-448190",
+     "entity": "CUSTOMER_ID:c-448190"
+    },
+    {
+     "start": 158,
+     "end": 185,
+     "type": "IBAN",
+     "text": "GB64 ZZTB 6016 1331 9268 19",
+     "entity": "IBAN:gb64 zztb 6016 1331 9268 19"
+    },
+    {
+     "start": 207,
+     "end": 219,
+     "type": "PHONE",
+     "text": "07700 900418",
+     "entity": "PHONE:07700 900418"
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "type": "PERSON",
+     "text": "Priya",
+     "entity": "PERSON:raman"
+    }
+   ]
+  },
+  {
+   "id": "en-02",
+   "lang": "en",
+   "kind": "hr-note",
+   "text": "HR note, 4 Nov 2026\n\nDaniel O'Connor (employee no. E-20871) moves to the Dublin office on 1 March 2027. Date of birth on file: 14 August 1987. New home address: 27 Larkspur Close, Leeds LS6 4QT. Payroll questions go to daniel.oconnor@company.example.",
+   "spans": [
+    {
+     "start": 21,
+     "end": 36,
+     "type": "PERSON",
+     "text": "Daniel O'Connor",
+     "entity": "PERSON:daniel o'connor"
+    },
+    {
+     "start": 51,
+     "end": 58,
+     "type": "CUSTOMER_ID",
+     "text": "E-20871",
+     "entity": "CUSTOMER_ID:e-20871"
+    },
+    {
+     "start": 127,
+     "end": 141,
+     "type": "DATE_OF_BIRTH",
+     "text": "14 August 1987",
+     "entity": "DATE_OF_BIRTH:14 august 1987"
+    },
+    {
+     "start": 161,
+     "end": 193,
+     "type": "ADDRESS",
+     "text": "27 Larkspur Close, Leeds LS6 4QT",
+     "entity": "ADDRESS:27 larkspur close, leeds ls6 4qt"
+    },
+    {
+     "start": 219,
+     "end": 249,
+     "type": "EMAIL",
+     "text": "daniel.oconnor@company.example",
+     "entity": "EMAIL:daniel.oconnor@company.example"
+    }
+   ]
+  },
+  {
+   "id": "en-03",
+   "lang": "en",
+   "kind": "invoice",
+   "text": "INVOICE INV-2026-3381\n\nBill to: Graham Whitlock, 9 Fernhill Road, Bristol BS7 8XY\n3 x ergonomic chair at 189.00 = 567.00\nVAT 20%: 113.40, total: 680.40 GBP\nPayment due within 30 days. Account reference: ACC-77-1904",
+   "spans": [
+    {
+     "start": 32,
+     "end": 47,
+     "type": "PERSON",
+     "text": "Graham Whitlock",
+     "entity": "PERSON:graham whitlock"
+    },
+    {
+     "start": 49,
+     "end": 81,
+     "type": "ADDRESS",
+     "text": "9 Fernhill Road, Bristol BS7 8XY",
+     "entity": "ADDRESS:9 fernhill road, bristol bs7 8xy"
+    },
+    {
+     "start": 203,
+     "end": 214,
+     "type": "CUSTOMER_ID",
+     "text": "ACC-77-1904",
+     "entity": "CUSTOMER_ID:acc-77-1904"
+    }
+   ]
+  },
+  {
+   "id": "en-04",
+   "lang": "en",
+   "kind": "meeting-notes",
+   "text": "Weekly sync, 12 Nov\n\nPresent: Will Hartley, Mark Rose, Grace Baker\n- Will will mark the open tickets as urgent before Friday.\n- Mark said the rose garden photos for the brochure are ready.\n- Grace asked for a grace period of 14 days for the supplier.",
+   "spans": [
+    {
+     "start": 30,
+     "end": 42,
+     "type": "PERSON",
+     "text": "Will Hartley",
+     "entity": "PERSON:will"
+    },
+    {
+     "start": 44,
+     "end": 53,
+     "type": "PERSON",
+     "text": "Mark Rose",
+     "entity": "PERSON:mark"
+    },
+    {
+     "start": 55,
+     "end": 66,
+     "type": "PERSON",
+     "text": "Grace Baker",
+     "entity": "PERSON:grace"
+    },
+    {
+     "start": 69,
+     "end": 73,
+     "type": "PERSON",
+     "text": "Will",
+     "entity": "PERSON:will"
+    },
+    {
+     "start": 128,
+     "end": 132,
+     "type": "PERSON",
+     "text": "Mark",
+     "entity": "PERSON:mark"
+    },
+    {
+     "start": 191,
+     "end": 196,
+     "type": "PERSON",
+     "text": "Grace",
+     "entity": "PERSON:grace"
+    }
+   ]
+  },
+  {
+   "id": "en-05",
+   "lang": "en",
+   "kind": "chat",
+   "text": "Hey, two Sams on the call tomorrow: Sam Keller from legal and Sam Moretti from finance. Invite sam.keller@lawfirm.example and smoretti@company.example. Sam from finance will bring the Q4 numbers.",
+   "spans": [
+    {
+     "start": 36,
+     "end": 46,
+     "type": "PERSON",
+     "text": "Sam Keller",
+     "entity": "PERSON:keller"
+    },
+    {
+     "start": 62,
+     "end": 73,
+     "type": "PERSON",
+     "text": "Sam Moretti",
+     "entity": "PERSON:moretti"
+    },
+    {
+     "start": 95,
+     "end": 121,
+     "type": "EMAIL",
+     "text": "sam.keller@lawfirm.example",
+     "entity": "EMAIL:sam.keller@lawfirm.example"
+    },
+    {
+     "start": 126,
+     "end": 150,
+     "type": "EMAIL",
+     "text": "smoretti@company.example",
+     "entity": "EMAIL:smoretti@company.example"
+    },
+    {
+     "start": 152,
+     "end": 155,
+     "type": "PERSON",
+     "text": "Sam",
+     "entity": "PERSON:moretti"
+    }
+   ]
+  },
+  {
+   "id": "en-06",
+   "lang": "en",
+   "kind": "support-email",
+   "text": "Hello,\n\nI can't log into my account. Registered e-mail: lucy.fernsby@example.com, date of birth 03/05/1992. I moved recently, my new address is Flat 4, 112 Harrow Lane, Manchester M14 6RD.\n\nThanks,\nLucy Fernsby",
+   "spans": [
+    {
+     "start": 56,
+     "end": 80,
+     "type": "EMAIL",
+     "text": "lucy.fernsby@example.com",
+     "entity": "EMAIL:lucy.fernsby@example.com"
+    },
+    {
+     "start": 96,
+     "end": 106,
+     "type": "DATE_OF_BIRTH",
+     "text": "03/05/1992",
+     "entity": "DATE_OF_BIRTH:03/05/1992"
+    },
+    {
+     "start": 144,
+     "end": 187,
+     "type": "ADDRESS",
+     "text": "Flat 4, 112 Harrow Lane, Manchester M14 6RD",
+     "entity": "ADDRESS:flat 4, 112 harrow lane, manchester m14 6rd"
+    },
+    {
+     "start": 198,
+     "end": 210,
+     "type": "PERSON",
+     "text": "Lucy Fernsby",
+     "entity": "PERSON:lucy fernsby"
+    }
+   ]
+  },
+  {
+   "id": "en-07",
+   "lang": "en",
+   "kind": "internal-email",
+   "text": "Hi team, please ship the replacement router (model AX-3000, firmware 2.1.7) to Jamal Whitaker, 1847 Maple Ridge Drive, Columbus, OH 43215. He prefers calls at (614) 555-0142. His account ID is US-0093321.",
+   "spans": [
+    {
+     "start": 79,
+     "end": 93,
+     "type": "PERSON",
+     "text": "Jamal Whitaker",
+     "entity": "PERSON:whitaker"
+    },
+    {
+     "start": 95,
+     "end": 137,
+     "type": "ADDRESS",
+     "text": "1847 Maple Ridge Drive, Columbus, OH 43215",
+     "entity": "ADDRESS:1847 maple ridge drive, columbus, oh 43215"
+    },
+    {
+     "start": 159,
+     "end": 173,
+     "type": "PHONE",
+     "text": "(614) 555-0142",
+     "entity": "PHONE:(614) 555-0142"
+    },
+    {
+     "start": 193,
+     "end": 203,
+     "type": "CUSTOMER_ID",
+     "text": "US-0093321",
+     "entity": "CUSTOMER_ID:us-0093321"
+    }
+   ]
+  },
+  {
+   "id": "en-08",
+   "lang": "en",
+   "kind": "insurance-claim",
+   "text": "Claim summary\n\nPolicyholder: Hannah Sørensen\nPolicy number: POL-6620-1187\nPhone: +44 20 7946 0391\nOn 21 October 2026 a delivery van hit the parked car near the supermarket car park on Station Road. Repair estimate: £1,450.",
+   "spans": [
+    {
+     "start": 29,
+     "end": 44,
+     "type": "PERSON",
+     "text": "Hannah Sørensen",
+     "entity": "PERSON:hannah sørensen"
+    },
+    {
+     "start": 60,
+     "end": 73,
+     "type": "CUSTOMER_ID",
+     "text": "POL-6620-1187",
+     "entity": "CUSTOMER_ID:pol-6620-1187"
+    },
+    {
+     "start": 81,
+     "end": 97,
+     "type": "PHONE",
+     "text": "+44 20 7946 0391",
+     "entity": "PHONE:+44 20 7946 0391"
+    }
+   ]
+  },
+  {
+   "id": "en-09",
+   "lang": "en",
+   "kind": "meeting-notes",
+   "text": "Ops review, room 3B\n\nAttendees: Chloe Adeyemi, Ben Fraser\n- Uptime 99.94 % in October, 2 incidents (INC-4471, INC-4480).\n- Migrate the 14 servers to Ubuntu 26.04 by 15 January.\n- Ben owns the budget line 4410-220, £12,000 approved.",
+   "spans": [
+    {
+     "start": 32,
+     "end": 45,
+     "type": "PERSON",
+     "text": "Chloe Adeyemi",
+     "entity": "PERSON:chloe adeyemi"
+    },
+    {
+     "start": 47,
+     "end": 57,
+     "type": "PERSON",
+     "text": "Ben Fraser",
+     "entity": "PERSON:fraser"
+    },
+    {
+     "start": 179,
+     "end": 182,
+     "type": "PERSON",
+     "text": "Ben",
+     "entity": "PERSON:fraser"
+    }
+   ]
+  },
+  {
+   "id": "en-10",
+   "lang": "en",
+   "kind": "contract",
+   "text": "Consulting agreement (extract)\n\nThis agreement is made on 1 December 2026 between Northwind Analytics Ltd and Oliver Pemberton-Hayes, born 9 February 1979, of 3 Willow Mews, Cambridge CB1 2AB. The fee is £650 per day, payable to GB02 ZZTB 4027 1555 1209 34 within 14 days of each invoice.",
+   "spans": [
+    {
+     "start": 110,
+     "end": 132,
+     "type": "PERSON",
+     "text": "Oliver Pemberton-Hayes",
+     "entity": "PERSON:oliver pemberton-hayes"
+    },
+    {
+     "start": 139,
+     "end": 154,
+     "type": "DATE_OF_BIRTH",
+     "text": "9 February 1979",
+     "entity": "DATE_OF_BIRTH:9 february 1979"
+    },
+    {
+     "start": 159,
+     "end": 191,
+     "type": "ADDRESS",
+     "text": "3 Willow Mews, Cambridge CB1 2AB",
+     "entity": "ADDRESS:3 willow mews, cambridge cb1 2ab"
+    },
+    {
+     "start": 229,
+     "end": 256,
+     "type": "IBAN",
+     "text": "GB02 ZZTB 4027 1555 1209 34",
+     "entity": "IBAN:gb02 zztb 4027 1555 1209 34"
+    }
+   ]
+  },
+  {
+   "id": "en-11",
+   "lang": "en",
+   "kind": "chat",
+   "text": "Quick heads-up: Tom is off sick until Wednesday. Ms Okonkwo will cover his client calls. The Hill & Partners pitch moves to next week.",
+   "spans": [
+    {
+     "start": 16,
+     "end": 19,
+     "type": "PERSON",
+     "text": "Tom",
+     "entity": "PERSON:tom"
+    },
+    {
+     "start": 52,
+     "end": 59,
+     "type": "PERSON",
+     "text": "Okonkwo",
+     "entity": "PERSON:okonkwo"
+    }
+   ]
+  },
+  {
+   "id": "en-12",
+   "lang": "en",
+   "kind": "delivery-notice",
+   "text": "Your parcel 7781 0042 9913 will arrive tomorrow between 8 am and 12 pm.\nRecipient: Agnieszka Wróbel, 58 Kingfisher Way, Norwich NR4 7TJ\nQuestions? Call our depot hotline on 01632 960772, Monday to Friday.",
+   "spans": [
+    {
+     "start": 83,
+     "end": 99,
+     "type": "PERSON",
+     "text": "Agnieszka Wróbel",
+     "entity": "PERSON:agnieszka wróbel"
+    },
+    {
+     "start": 101,
+     "end": 135,
+     "type": "ADDRESS",
+     "text": "58 Kingfisher Way, Norwich NR4 7TJ",
+     "entity": "ADDRESS:58 kingfisher way, norwich nr4 7tj"
+    }
+   ]
+  },
+  {
+   "id": "en-13",
+   "lang": "en",
+   "kind": "support-email",
+   "text": "Dear Mr Hunter,\n\nthank you for your patience. The hunter green sofa (model HG-2) is back in stock, and Ms Rivers from our showroom will call you to arrange the delivery.\n\nKind regards,\nCustomer Care",
+   "spans": [
+    {
+     "start": 8,
+     "end": 14,
+     "type": "PERSON",
+     "text": "Hunter",
+     "entity": "PERSON:hunter"
+    },
+    {
+     "start": 106,
+     "end": 112,
+     "type": "PERSON",
+     "text": "Rivers",
+     "entity": "PERSON:rivers"
+    }
+   ]
+  },
+  {
+   "id": "en-14",
+   "lang": "en",
+   "kind": "hr-request",
+   "text": "Hi payroll, from January please pay my salary into my new account GB51ZZTB30009120477310. Account holder: Kwame Mensah, staff number 30418.\nThanks, Kwame",
+   "spans": [
+    {
+     "start": 66,
+     "end": 88,
+     "type": "IBAN",
+     "text": "GB51ZZTB30009120477310",
+     "entity": "IBAN:gb51zztb30009120477310"
+    },
+    {
+     "start": 106,
+     "end": 118,
+     "type": "PERSON",
+     "text": "Kwame Mensah",
+     "entity": "PERSON:mensah"
+    },
+    {
+     "start": 133,
+     "end": 138,
+     "type": "CUSTOMER_ID",
+     "text": "30418",
+     "entity": "CUSTOMER_ID:30418"
+    },
+    {
+     "start": 148,
+     "end": 153,
+     "type": "PERSON",
+     "text": "Kwame",
+     "entity": "PERSON:mensah"
+    }
+   ]
+  },
+  {
+   "id": "en-15",
+   "lang": "en",
+   "kind": "meeting-notes",
+   "text": "Client meeting notes\n\nClient: Patel Logistics Ltd, contact Mr Ravi Patel (ravi@patel-logistics.example, +44 7700 900651)\nDiscussed: 40 pallets per week, 2-year contract, 3 % discount above 500 pallets.\nNext: Ellie sends the revised quote by Friday.",
+   "spans": [
+    {
+     "start": 62,
+     "end": 72,
+     "type": "PERSON",
+     "text": "Ravi Patel",
+     "entity": "PERSON:ravi patel"
+    },
+    {
+     "start": 74,
+     "end": 102,
+     "type": "EMAIL",
+     "text": "ravi@patel-logistics.example",
+     "entity": "EMAIL:ravi@patel-logistics.example"
+    },
+    {
+     "start": 104,
+     "end": 119,
+     "type": "PHONE",
+     "text": "+44 7700 900651",
+     "entity": "PHONE:+44 7700 900651"
+    },
+    {
+     "start": 208,
+     "end": 213,
+     "type": "PERSON",
+     "text": "Ellie",
+     "entity": "PERSON:ellie"
+    }
+   ]
+  },
+  {
+   "id": "en-16",
+   "lang": "en",
+   "kind": "cancellation",
+   "text": "I want to cancel my membership, number GYM-551209. My name is Rhys Llewellyn, I live at 22 Bryn Road, Swansea SA2 0AB and my date of birth is 30 June 1985. Please confirm to rhys.l@example.net.",
+   "spans": [
+    {
+     "start": 39,
+     "end": 49,
+     "type": "CUSTOMER_ID",
+     "text": "GYM-551209",
+     "entity": "CUSTOMER_ID:gym-551209"
+    },
+    {
+     "start": 62,
+     "end": 76,
+     "type": "PERSON",
+     "text": "Rhys Llewellyn",
+     "entity": "PERSON:rhys llewellyn"
+    },
+    {
+     "start": 88,
+     "end": 117,
+     "type": "ADDRESS",
+     "text": "22 Bryn Road, Swansea SA2 0AB",
+     "entity": "ADDRESS:22 bryn road, swansea sa2 0ab"
+    },
+    {
+     "start": 142,
+     "end": 154,
+     "type": "DATE_OF_BIRTH",
+     "text": "30 June 1985",
+     "entity": "DATE_OF_BIRTH:30 june 1985"
+    },
+    {
+     "start": 174,
+     "end": 192,
+     "type": "EMAIL",
+     "text": "rhys.l@example.net",
+     "entity": "EMAIL:rhys.l@example.net"
+    }
+   ]
+  },
+  {
+   "id": "en-17",
+   "lang": "en",
+   "kind": "hr-note",
+   "text": "New starters in December:\n- Isla McKenzie (DOB 1999-04-12), marketing intern\n- Arjun Mehta (DOB 1994-10-03), backend developer, starts 1 Dec 2026\nLaptops (asset tags 7781 and 7782) are ordered.",
+   "spans": [
+    {
+     "start": 28,
+     "end": 41,
+     "type": "PERSON",
+     "text": "Isla McKenzie",
+     "entity": "PERSON:isla mckenzie"
+    },
+    {
+     "start": 47,
+     "end": 57,
+     "type": "DATE_OF_BIRTH",
+     "text": "1999-04-12",
+     "entity": "DATE_OF_BIRTH:1999-04-12"
+    },
+    {
+     "start": 79,
+     "end": 90,
+     "type": "PERSON",
+     "text": "Arjun Mehta",
+     "entity": "PERSON:arjun mehta"
+    },
+    {
+     "start": 96,
+     "end": 106,
+     "type": "DATE_OF_BIRTH",
+     "text": "1994-10-03",
+     "entity": "DATE_OF_BIRTH:1994-10-03"
+    }
+   ]
+  },
+  {
+   "id": "en-18",
+   "lang": "en",
+   "kind": "complaint",
+   "text": "hey, this is jess from flat 2. the heating still doesnt work since monday. can someone from maintenance call me on 07700 900233? my neighbour olu has the same problem.",
+   "spans": [
+    {
+     "start": 13,
+     "end": 17,
+     "type": "PERSON",
+     "text": "jess",
+     "entity": "PERSON:jess"
+    },
+    {
+     "start": 115,
+     "end": 127,
+     "type": "PHONE",
+     "text": "07700 900233",
+     "entity": "PHONE:07700 900233"
+    },
+    {
+     "start": 142,
+     "end": 145,
+     "type": "PERSON",
+     "text": "olu",
+     "entity": "PERSON:olu"
+    }
+   ]
+  },
+  {
+   "id": "en-19",
+   "lang": "en",
+   "kind": "calendar-invite",
+   "text": "Invitation: 1:1 Megan Clarke / Stefan Novak\nWhen: Thursday 10 December 2026, 2:00 to 2:30 pm\nWhere: meeting room Thames, 4th floor\nAgenda: goals for 2027, training budget (£1,500).",
+   "spans": [
+    {
+     "start": 16,
+     "end": 28,
+     "type": "PERSON",
+     "text": "Megan Clarke",
+     "entity": "PERSON:megan clarke"
+    },
+    {
+     "start": 31,
+     "end": 43,
+     "type": "PERSON",
+     "text": "Stefan Novak",
+     "entity": "PERSON:stefan novak"
+    }
+   ]
+  },
+  {
+   "id": "en-20",
+   "lang": "en",
+   "kind": "legal-letter",
+   "text": "Dear Ms Achterberg,\n\nRe: Doyle v. Harbour Freight Ltd (claim no. HQ26X01234)\n\nplease find attached our client's witness statement. Our client, Mrs Fiona Doyle, can be reached at fiona.doyle@example.org or 020 7946 0815.",
+   "spans": [
+    {
+     "start": 8,
+     "end": 18,
+     "type": "PERSON",
+     "text": "Achterberg",
+     "entity": "PERSON:achterberg"
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "type": "PERSON",
+     "text": "Doyle",
+     "entity": "PERSON:doyle"
+    },
+    {
+     "start": 147,
+     "end": 158,
+     "type": "PERSON",
+     "text": "Fiona Doyle",
+     "entity": "PERSON:doyle"
+    },
+    {
+     "start": 178,
+     "end": 201,
+     "type": "EMAIL",
+     "text": "fiona.doyle@example.org",
+     "entity": "EMAIL:fiona.doyle@example.org"
+    },
+    {
+     "start": 205,
+     "end": 218,
+     "type": "PHONE",
+     "text": "020 7946 0815",
+     "entity": "PHONE:020 7946 0815"
+    }
+   ]
+  },
+  {
+   "id": "en-21",
+   "lang": "en",
+   "kind": "crm-note",
+   "text": "CRM note\nContact: Mateo Álvarez | m.alvarez@example.com | mobile +44 7700 900127\nCustomer no. 58820: interested in 12 seats of the Team plan (£9 per seat and month). Call back on Tuesday at 3 pm.",
+   "spans": [
+    {
+     "start": 18,
+     "end": 31,
+     "type": "PERSON",
+     "text": "Mateo Álvarez",
+     "entity": "PERSON:mateo álvarez"
+    },
+    {
+     "start": 34,
+     "end": 55,
+     "type": "EMAIL",
+     "text": "m.alvarez@example.com",
+     "entity": "EMAIL:m.alvarez@example.com"
+    },
+    {
+     "start": 65,
+     "end": 80,
+     "type": "PHONE",
+     "text": "+44 7700 900127",
+     "entity": "PHONE:+44 7700 900127"
+    },
+    {
+     "start": 94,
+     "end": 99,
+     "type": "CUSTOMER_ID",
+     "text": "58820",
+     "entity": "CUSTOMER_ID:58820"
+    }
+   ]
+  },
+  {
+   "id": "en-22",
+   "lang": "en",
+   "kind": "internal-email",
+   "text": "Hi, I spoke with Herr Brandl from our Kassel office today. He asked that the travel refund of €212.40 goes to his German account DE15 9999 0044 0731 8220 45. His employee number is PN 40917.",
+   "spans": [
+    {
+     "start": 22,
+     "end": 28,
+     "type": "PERSON",
+     "text": "Brandl",
+     "entity": "PERSON:brandl"
+    },
+    {
+     "start": 129,
+     "end": 156,
+     "type": "IBAN",
+     "text": "DE15 9999 0044 0731 8220 45",
+     "entity": "IBAN:de15 9999 0044 0731 8220 45"
+    },
+    {
+     "start": 181,
+     "end": 189,
+     "type": "CUSTOMER_ID",
+     "text": "PN 40917",
+     "entity": "CUSTOMER_ID:pn 40917"
+    }
+   ]
+  },
+  {
+   "id": "en-23",
+   "lang": "en",
+   "kind": "reception-note",
+   "text": "Note from reception: Joy Fisher called about the fishing licence renewal for her father, Mr Fisher (customer FL-30092). She will come by on Friday.",
+   "spans": [
+    {
+     "start": 21,
+     "end": 31,
+     "type": "PERSON",
+     "text": "Joy Fisher",
+     "entity": "PERSON:joy"
+    },
+    {
+     "start": 92,
+     "end": 98,
+     "type": "PERSON",
+     "text": "Fisher",
+     "entity": "PERSON:father"
+    },
+    {
+     "start": 109,
+     "end": 117,
+     "type": "CUSTOMER_ID",
+     "text": "FL-30092",
+     "entity": "CUSTOMER_ID:fl-30092"
+    }
+   ]
+  },
+  {
+   "id": "en-24",
+   "lang": "en",
+   "kind": "enrolment",
+   "text": "Enrolment form received for Lily Chen, date of birth May 3, 2015. Parent: David Chen, dchen@example.com, (212) 555-0187. Start date: January 8, 2027, class 4B.",
+   "spans": [
+    {
+     "start": 28,
+     "end": 37,
+     "type": "PERSON",
+     "text": "Lily Chen",
+     "entity": "PERSON:lily chen"
+    },
+    {
+     "start": 53,
+     "end": 64,
+     "type": "DATE_OF_BIRTH",
+     "text": "May 3, 2015",
+     "entity": "DATE_OF_BIRTH:may 3, 2015"
+    },
+    {
+     "start": 74,
+     "end": 84,
+     "type": "PERSON",
+     "text": "David Chen",
+     "entity": "PERSON:david chen"
+    },
+    {
+     "start": 86,
+     "end": 103,
+     "type": "EMAIL",
+     "text": "dchen@example.com",
+     "entity": "EMAIL:dchen@example.com"
+    },
+    {
+     "start": 105,
+     "end": 119,
+     "type": "PHONE",
+     "text": "(212) 555-0187",
+     "entity": "PHONE:(212) 555-0187"
+    }
+   ]
+  }
+ ]
+}

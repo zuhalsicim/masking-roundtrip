@@ -1,0 +1,284 @@
+# Test set: short business texts with hand-labelled personal data.
+# Every value below is invented. See data/README.md for the labelling rules.
+#
+# Format: a line "=== <id> | <lang> | <kind>" starts a document; the text follows.
+# A labelled span is written [[TYPE:value]] or [[TYPE#entity:value]].
+# The entity key ties mentions of the same person together ("Martin Koch" and "Herr Koch").
+# Lines starting with "#" before the first document are comments.
+
+=== de-01 | de | support-email
+Betreff: Rücksendung Bestellung 4471
+
+Guten Tag, mein Name ist [[PERSON:Jana Kowalczyk]], Kundennummer [[CUSTOMER_ID:KD-2093-118]]. Die Kaffeemühle (Art.-Nr. 310-22) kam defekt an. Bitte erstatten Sie die 89,90 EUR auf mein Konto [[IBAN:DE91 9999 0001 0648 4898 90]]. Sie erreichen mich unter [[PHONE:0151 0482 3317]].
+
+Viele Grüße
+[[PERSON:Jana Kowalczyk]]
+
+=== de-02 | de | hr-note
+Notiz Personalabteilung, 03.11.2026
+
+[[PERSON#brandl:Thomas Brandl]] (Personalnummer [[CUSTOMER_ID:PN 40917]]) beantragt Elternzeit ab dem 01.02.2027. Geburtsdatum laut Akte: [[DATE_OF_BIRTH:17.06.1989]]. Neue Anschrift: [[ADDRESS:Quittenweg 7, 34121 Kassel]]. Rückfragen bitte an [[EMAIL:t.brandl@firma.example]].
+
+=== de-03 | de | invoice
+Rechnung Nr. 2026-0815
+
+Rechnungsempfängerin: [[PERSON:Sabine Oyelaran]], [[ADDRESS:Am Kalkofen 3a, 04109 Leipzig]]
+Leistung: Wartung Heizungsanlage, 4 Stunden à 62,00 EUR
+Gesamtbetrag: 295,12 EUR inkl. 19 % USt.
+Bitte überweisen Sie bis zum 15.12.2026 unter Angabe Ihrer Kundennummer [[CUSTOMER_ID:100-7734]].
+
+=== de-04 | de | meeting-notes
+Protokoll Teamrunde Vertrieb
+
+Anwesend: [[PERSON#koch:Martin Koch]], [[PERSON#sommer:Lea Sommer]], [[PERSON:Deniz Arslan]]
+1. Herr [[PERSON#koch:Koch]] stellt die Zahlen für Q3 vor: Umsatz plus 4,2 %.
+2. Frau [[PERSON#sommer:Sommer]] plant die Messe im Sommer 2027, Stand in Halle 5.
+3. Der Koch der Kantine fragt nach der Teilnehmerzahl für das Mittagessen.
+
+=== de-05 | de | chat
+Hi, hast du [[PERSON#hoffmann:Hoffmann]]s Urlaubsantrag schon gesehen? Die [[PERSON#hoffmann:Hoffmann]]-Präsentation für Montag liegt im Teams-Ordner. Ruf [[PERSON:Jörg]] an, falls was fehlt: [[PHONE:+49 160 0731 4482]].
+
+=== de-06 | de | internal-email
+Hallo zusammen,
+
+ab Dezember arbeiten [[PERSON#lehmann:Anna Lehmann]] (Einkauf) und [[PERSON#petersen:Anna Petersen]] (Vertrieb) am Projekt Nordlicht. Bitte schickt Bestellungen an [[EMAIL:anna.lehmann@firma.example]] und Kundenanfragen an [[EMAIL:a.petersen@firma.example]]. [[PERSON#petersen:Anna]] aus dem Vertrieb übernimmt außerdem die Schulung am 9.12.
+
+=== de-07 | de | support-email
+Sehr geehrte Damen und Herren,
+
+ich habe mein Passwort vergessen und komme nicht mehr in mein Kundenkonto. Registriert bin ich mit [[EMAIL:moritz.engelhardt82@example.org]], geboren am [[DATE_OF_BIRTH:02.09.1982]]. Meine Kundennummer finde ich leider nicht mehr.
+
+Mit freundlichen Grüßen
+[[PERSON:Moritz Engelhardt]]
+
+=== de-08 | de | insurance-claim
+Schadenmeldung
+
+Versicherungsnehmerin: [[PERSON:Gül Demirtaş]]
+Vertragsnummer: [[CUSTOMER_ID:HV-5520-3391]]
+Anschrift: [[ADDRESS:Birkenhain 21, 28195 Bremen]]
+Telefon: [[PHONE:(0421) 0 55 61 23]]
+Am 18.11.2026 ist in der Küche ein Wasserschaden entstanden (ca. 12 m² Laminat). Der Handwerker kommt am Freitag um 10:30 Uhr.
+
+=== de-09 | de | meeting-notes
+Protokoll IT-Sicherheit, Raum 2.14
+
+Teilnehmende: Dr. [[PERSON:Henrike Vossberg]], [[PERSON#nguyen:Paul Nguyen]]
+- Das Audit nach ISO 27001 ist für den 14.04.2027 angesetzt.
+- Das Firewall-Update auf Version 7.4.2 ist erledigt, 3 von 112 Clients fehlen noch.
+- Herr [[PERSON#nguyen:Nguyen]] prüft bis KW 51 die Tickets 88213 bis 88240.
+
+=== de-10 | de | contract
+Mietvertrag (Auszug)
+
+Zwischen [[PERSON:Klaus-Dieter Wiegand]], [[ADDRESS:Lerchenstraße 40, 50667 Köln]] (Vermieter), und [[PERSON:Mira Okafor]], geb. [[DATE_OF_BIRTH:23.01.1996]] (Mieterin), wird folgender Vertrag geschlossen: Die Wohnung im 3. OG, 68 m², wird ab dem 01.01.2027 für monatlich 1.120 EUR kalt vermietet. Die Kaution von 3.360 EUR ist auf das Konto [[IBAN:DE81 9999 0022 0012 3456 78]] zu überweisen.
+
+=== de-11 | de | chat
+Kurze Info: [[PERSON:Benedikt]] ist bis einschließlich Mittwoch krankgeschrieben. Bitte übergebt seine drei Kundentermine an Frau [[PERSON:Lindqvist]]. Die Präsentation für die Firma Lang & Söhne verschiebt sich auf nächste Woche.
+
+=== de-12 | de | delivery-notice
+Ihre Sendung 0034 0434 1610 9404 wird morgen zwischen 9 und 13 Uhr zugestellt.
+Empfängerin: [[PERSON:Ilse Brückner]], [[ADDRESS:Fasanenweg 2, 01067 Dresden]]
+Telefon der Empfängerin: [[PHONE:+49 351 0420 6687]]
+Bei Fragen erreichen Sie unser Servicecenter montags bis freitags von 8 bis 18 Uhr.
+
+=== de-13 | de | support-email
+Hallo Herr [[PERSON:Fuchs]],
+
+vielen Dank für Ihre Nachricht. Ihre Kollegin Frau [[PERSON:Wolf]] hatte uns bereits informiert. Der Fuchsbau-Spielturm (Modell FB-200) wird in KW 2 geliefert.
+
+Mit freundlichen Grüßen
+Ihr Kundenservice
+
+=== de-14 | de | hr-request
+Betreff: Änderung Bankverbindung
+
+Hallo, bitte zahlt mein Gehalt ab Januar auf mein neues Konto: [[IBAN:DE91999900310190123456]]. Kontoinhaberin: [[PERSON#yildirim:Fatma Yıldırım]], Personalnummer [[CUSTOMER_ID:40233]].
+Danke!
+[[PERSON#yildirim:Fatma]]
+
+=== de-15 | de | meeting-notes
+Ergebnisprotokoll Kundentermin
+
+Kunde: Schreinerei Albers GmbH, Ansprechpartner Herr [[PERSON:Ole Albers]] ([[EMAIL:ole@schreinerei-albers.example]], [[PHONE:05121 0 98 77 1]])
+Besprochen: Angebot über 14 Werkbänke à 1.180 EUR, Lieferung bis 31.03.2027, Skonto 2 %.
+Nächster Schritt: [[PERSON:Lukas]] schickt bis Freitag das überarbeitete Angebot.
+
+=== de-16 | de | cancellation
+Kündigung Mitgliedschaft
+
+Hiermit kündige ich meine Mitgliedschaft (Mitgliedsnummer [[CUSTOMER_ID:M-883021]]) zum nächstmöglichen Termin.
+[[PERSON:Sven Hollerbach]], [[ADDRESS:Ginsterweg 15, 22301 Hamburg]], geb. [[DATE_OF_BIRTH:11.11.1990]]
+Bitte bestätigen Sie die Kündigung an [[EMAIL:sven.h@example.net]].
+
+=== de-17 | de | chat
+Frau [[PERSON:Klein]] meint, das Budget ist zu klein für zwei neue Stellen. Herr [[PERSON:Bauer]] fragt, ob der Bauer vom Gut Hohenfeld wieder Äpfel für das Sommerfest liefert.
+
+=== de-18 | de | payment-reminder
+Zahlungserinnerung
+
+Sehr geehrter Herr [[PERSON:Petrović]],
+
+zu Ihrer Rechnung 2026-1103 über 64,50 EUR ist noch keine Zahlung eingegangen. Kundennummer: [[CUSTOMER_ID:KD-5512-090]]. Falls Sie bereits gezahlt haben, schreiben Sie uns bitte kurz an buchhaltung@shop.example.
+
+=== de-19 | de | hr-note
+Neue Mitarbeitende im Dezember:
+- [[PERSON:Emma Sauer]] (* [[DATE_OF_BIRTH:04.07.2001]]), Werkstudentin Marketing
+- [[PERSON:Jonas Albrecht]] (* [[DATE_OF_BIRTH:29.02.1996]]), Entwickler, Start am 01.12.2026
+Die Laptops (ThinkPad T14, Inventar 7781 und 7782) sind bestellt.
+
+=== de-20 | de | complaint
+Guten Tag,
+
+ich wohne in der [[ADDRESS:Uhlandstraße 8]] und seit drei Wochen kommt mein Paket nicht an. Der Bote klingelt angeblich, aber ich bin den ganzen Tag zu Hause. Bitte melden Sie sich bei mir: [[PHONE:0176 0012 9935]].
+
+Gruß, [[PERSON:R. Lindemann]]
+
+=== de-21 | de | calendar-invite
+Einladung: Jahresgespräch [[PERSON:Nadine Feldmann]] / [[PERSON:Erik Haas]]
+Wann: Donnerstag, 10.12.2026, 14:00 bis 15:00 Uhr
+Wo: Besprechungsraum Elbe, 4. Stock
+Bitte bringt die Zielvereinbarung 2026 mit.
+
+=== de-22 | de | legal-letter
+Sehr geehrte Frau [[PERSON:Marquardt]],
+
+in der Sache [[PERSON#schulte:Schulte]] ./. Bergmann GmbH (Az. 3 O 412/26) übersenden wir anbei die Klageerwiderung. Unsere Mandantin, Frau [[PERSON#schulte:Karin Schulte]], ist unter [[EMAIL:k.schulte@example.com]] erreichbar.
+
+=== de-23 | de | chat
+sorry, bin heute im homeoffice. kannst du [[PERSON:max]] sagen, dass die lieferung für frau [[PERSON:yilmaz]] erst am 5.1. kommt? ihre nummer ist [[PHONE:0157 0338 1220]]
+
+=== de-24 | de | crm-note
+CRM-Notiz
+Kontakt: [[PERSON:Wojciech Nowak]] | [[EMAIL:w.nowak@bau-nowak.example]] | Mobil [[PHONE:+49 171 0259 3304]]
+Kundennummer [[CUSTOMER_ID:20931]]: Interesse an 3 Lizenzen im Tarif Business (je 29 EUR im Monat). Rückruf vereinbart für Dienstag, 15 Uhr.
+
+=== en-01 | en | support-email
+Subject: Refund for order 55120
+
+Hi, I'm [[PERSON#raman:Priya Raman]] and I returned the blender on 2 November. My customer number is [[CUSTOMER_ID:C-448190]]. Could you refund the £74.99 to [[IBAN:GB64 ZZTB 6016 1331 9268 19]]? You can reach me on [[PHONE:07700 900418]].
+
+Thanks,
+[[PERSON#raman:Priya]]
+
+=== en-02 | en | hr-note
+HR note, 4 Nov 2026
+
+[[PERSON:Daniel O'Connor]] (employee no. [[CUSTOMER_ID:E-20871]]) moves to the Dublin office on 1 March 2027. Date of birth on file: [[DATE_OF_BIRTH:14 August 1987]]. New home address: [[ADDRESS:27 Larkspur Close, Leeds LS6 4QT]]. Payroll questions go to [[EMAIL:daniel.oconnor@company.example]].
+
+=== en-03 | en | invoice
+INVOICE INV-2026-3381
+
+Bill to: [[PERSON:Graham Whitlock]], [[ADDRESS:9 Fernhill Road, Bristol BS7 8XY]]
+3 x ergonomic chair at 189.00 = 567.00
+VAT 20%: 113.40, total: 680.40 GBP
+Payment due within 30 days. Account reference: [[CUSTOMER_ID:ACC-77-1904]]
+
+=== en-04 | en | meeting-notes
+Weekly sync, 12 Nov
+
+Present: [[PERSON#will:Will Hartley]], [[PERSON#mark:Mark Rose]], [[PERSON#grace:Grace Baker]]
+- [[PERSON#will:Will]] will mark the open tickets as urgent before Friday.
+- [[PERSON#mark:Mark]] said the rose garden photos for the brochure are ready.
+- [[PERSON#grace:Grace]] asked for a grace period of 14 days for the supplier.
+
+=== en-05 | en | chat
+Hey, two Sams on the call tomorrow: [[PERSON#keller:Sam Keller]] from legal and [[PERSON#moretti:Sam Moretti]] from finance. Invite [[EMAIL:sam.keller@lawfirm.example]] and [[EMAIL:smoretti@company.example]]. [[PERSON#moretti:Sam]] from finance will bring the Q4 numbers.
+
+=== en-06 | en | support-email
+Hello,
+
+I can't log into my account. Registered e-mail: [[EMAIL:lucy.fernsby@example.com]], date of birth [[DATE_OF_BIRTH:03/05/1992]]. I moved recently, my new address is [[ADDRESS:Flat 4, 112 Harrow Lane, Manchester M14 6RD]].
+
+Thanks,
+[[PERSON:Lucy Fernsby]]
+
+=== en-07 | en | internal-email
+Hi team, please ship the replacement router (model AX-3000, firmware 2.1.7) to [[PERSON#whitaker:Jamal Whitaker]], [[ADDRESS:1847 Maple Ridge Drive, Columbus, OH 43215]]. He prefers calls at [[PHONE:(614) 555-0142]]. His account ID is [[CUSTOMER_ID:US-0093321]].
+
+=== en-08 | en | insurance-claim
+Claim summary
+
+Policyholder: [[PERSON:Hannah Sørensen]]
+Policy number: [[CUSTOMER_ID:POL-6620-1187]]
+Phone: [[PHONE:+44 20 7946 0391]]
+On 21 October 2026 a delivery van hit the parked car near the supermarket car park on Station Road. Repair estimate: £1,450.
+
+=== en-09 | en | meeting-notes
+Ops review, room 3B
+
+Attendees: [[PERSON:Chloe Adeyemi]], [[PERSON#fraser:Ben Fraser]]
+- Uptime 99.94 % in October, 2 incidents (INC-4471, INC-4480).
+- Migrate the 14 servers to Ubuntu 26.04 by 15 January.
+- [[PERSON#fraser:Ben]] owns the budget line 4410-220, £12,000 approved.
+
+=== en-10 | en | contract
+Consulting agreement (extract)
+
+This agreement is made on 1 December 2026 between Northwind Analytics Ltd and [[PERSON:Oliver Pemberton-Hayes]], born [[DATE_OF_BIRTH:9 February 1979]], of [[ADDRESS:3 Willow Mews, Cambridge CB1 2AB]]. The fee is £650 per day, payable to [[IBAN:GB02 ZZTB 4027 1555 1209 34]] within 14 days of each invoice.
+
+=== en-11 | en | chat
+Quick heads-up: [[PERSON:Tom]] is off sick until Wednesday. Ms [[PERSON:Okonkwo]] will cover his client calls. The Hill & Partners pitch moves to next week.
+
+=== en-12 | en | delivery-notice
+Your parcel 7781 0042 9913 will arrive tomorrow between 8 am and 12 pm.
+Recipient: [[PERSON:Agnieszka Wróbel]], [[ADDRESS:58 Kingfisher Way, Norwich NR4 7TJ]]
+Questions? Call our depot hotline on 01632 960772, Monday to Friday.
+
+=== en-13 | en | support-email
+Dear Mr [[PERSON:Hunter]],
+
+thank you for your patience. The hunter green sofa (model HG-2) is back in stock, and Ms [[PERSON:Rivers]] from our showroom will call you to arrange the delivery.
+
+Kind regards,
+Customer Care
+
+=== en-14 | en | hr-request
+Hi payroll, from January please pay my salary into my new account [[IBAN:GB51ZZTB30009120477310]]. Account holder: [[PERSON#mensah:Kwame Mensah]], staff number [[CUSTOMER_ID:30418]].
+Thanks, [[PERSON#mensah:Kwame]]
+
+=== en-15 | en | meeting-notes
+Client meeting notes
+
+Client: Patel Logistics Ltd, contact Mr [[PERSON:Ravi Patel]] ([[EMAIL:ravi@patel-logistics.example]], [[PHONE:+44 7700 900651]])
+Discussed: 40 pallets per week, 2-year contract, 3 % discount above 500 pallets.
+Next: [[PERSON:Ellie]] sends the revised quote by Friday.
+
+=== en-16 | en | cancellation
+I want to cancel my membership, number [[CUSTOMER_ID:GYM-551209]]. My name is [[PERSON:Rhys Llewellyn]], I live at [[ADDRESS:22 Bryn Road, Swansea SA2 0AB]] and my date of birth is [[DATE_OF_BIRTH:30 June 1985]]. Please confirm to [[EMAIL:rhys.l@example.net]].
+
+=== en-17 | en | hr-note
+New starters in December:
+- [[PERSON:Isla McKenzie]] (DOB [[DATE_OF_BIRTH:1999-04-12]]), marketing intern
+- [[PERSON:Arjun Mehta]] (DOB [[DATE_OF_BIRTH:1994-10-03]]), backend developer, starts 1 Dec 2026
+Laptops (asset tags 7781 and 7782) are ordered.
+
+=== en-18 | en | complaint
+hey, this is [[PERSON:jess]] from flat 2. the heating still doesnt work since monday. can someone from maintenance call me on [[PHONE:07700 900233]]? my neighbour [[PERSON:olu]] has the same problem.
+
+=== en-19 | en | calendar-invite
+Invitation: 1:1 [[PERSON:Megan Clarke]] / [[PERSON:Stefan Novak]]
+When: Thursday 10 December 2026, 2:00 to 2:30 pm
+Where: meeting room Thames, 4th floor
+Agenda: goals for 2027, training budget (£1,500).
+
+=== en-20 | en | legal-letter
+Dear Ms [[PERSON:Achterberg]],
+
+Re: [[PERSON#doyle:Doyle]] v. Harbour Freight Ltd (claim no. HQ26X01234)
+
+please find attached our client's witness statement. Our client, Mrs [[PERSON#doyle:Fiona Doyle]], can be reached at [[EMAIL:fiona.doyle@example.org]] or [[PHONE:020 7946 0815]].
+
+=== en-21 | en | crm-note
+CRM note
+Contact: [[PERSON:Mateo Álvarez]] | [[EMAIL:m.alvarez@example.com]] | mobile [[PHONE:+44 7700 900127]]
+Customer no. [[CUSTOMER_ID:58820]]: interested in 12 seats of the Team plan (£9 per seat and month). Call back on Tuesday at 3 pm.
+
+=== en-22 | en | internal-email
+Hi, I spoke with Herr [[PERSON:Brandl]] from our Kassel office today. He asked that the travel refund of €212.40 goes to his German account [[IBAN:DE15 9999 0044 0731 8220 45]]. His employee number is [[CUSTOMER_ID:PN 40917]].
+
+=== en-23 | en | reception-note
+Note from reception: [[PERSON#joy:Joy Fisher]] called about the fishing licence renewal for her father, Mr [[PERSON#father:Fisher]] (customer [[CUSTOMER_ID:FL-30092]]). She will come by on Friday.
+
+=== en-24 | en | enrolment
+Enrolment form received for [[PERSON:Lily Chen]], date of birth [[DATE_OF_BIRTH:May 3, 2015]]. Parent: [[PERSON:David Chen]], [[EMAIL:dchen@example.com]], [[PHONE:(212) 555-0187]]. Start date: January 8, 2027, class 4B.

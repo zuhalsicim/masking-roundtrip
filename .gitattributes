@@ -1,0 +1,2 @@
+# Keep LF everywhere so the SHA-256 manifest of the test set holds on every system.
+* text=auto eol=lf
