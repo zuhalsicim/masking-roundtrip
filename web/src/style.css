@@ -1,0 +1,99 @@
+:root {
+  --bg: #fbfbfa;
+  --fg: #1d1d1b;
+  --muted: #66645e;
+  --line: #deddd8;
+  --label: #d9ecd9;
+  --leak: #f6cfcf;
+  --placeholder: #d8e4f4;
+  --altered: #f7e3b5;
+  --invented: #e7d6f2;
+  font-family: system-ui, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1b1a;
+    --fg: #ecebe6;
+    --muted: #a3a19a;
+    --line: #3a3936;
+    --label: #2d4a2f;
+    --leak: #5b2b2b;
+    --placeholder: #283c58;
+    --altered: #57461c;
+    --invented: #47304f;
+  }
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 16px;
+  background: var(--bg);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  align-items: baseline;
+}
+
+h1 {
+  font-size: 1.3rem;
+  margin: 0 24px 0 0;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+label {
+  color: var(--muted);
+}
+
+select {
+  margin-left: 6px;
+  font: inherit;
+}
+
+#panes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr));
+  gap: 16px;
+}
+
+section {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 12px;
+  min-width: 0;
+}
+
+.note,
+#legend {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 0.95rem/1.5 ui-monospace, monospace;
+  margin: 0;
+}
+
+mark {
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+mark.label { background: var(--label); }
+mark.leak { background: var(--leak); }
+mark.placeholder { background: var(--placeholder); }
+mark.altered { background: var(--altered); }
+mark.invented { background: var(--invented); }
