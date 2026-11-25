@@ -1,0 +1,4356 @@
+{
+ "dataset_version": "8f2a64384296",
+ "detector": "combined",
+ "documents": [
+  {
+   "id": "de-01",
+   "lang": "de",
+   "kind": "support-email",
+   "text": "Betreff: Rücksendung Bestellung 4471\n\nGuten Tag, mein Name ist Jana Kowalczyk, Kundennummer KD-2093-118. Die Kaffeemühle (Art.-Nr. 310-22) kam defekt an. Bitte erstatten Sie die 89,90 EUR auf mein Konto DE91 9999 0001 0648 4898 90. Sie erreichen mich unter 0151 0482 3317.\n\nViele Grüße\nJana Kowalczyk",
+   "spans": [
+    {
+     "start": 63,
+     "end": 77,
+     "type": "PERSON"
+    },
+    {
+     "start": 92,
+     "end": 103,
+     "type": "CUSTOMER_ID"
+    },
+    {
+     "start": 203,
+     "end": 230,
+     "type": "IBAN"
+    },
+    {
+     "start": 257,
+     "end": 271,
+     "type": "PHONE"
+    },
+    {
+     "start": 286,
+     "end": 300,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "[PERSON_1]: Rücksendung Bestellung 4471\n\nGuten Tag, mein Name ist [PERSON_2], [CUSTOMER_ID_1]. Die Kaffeemühle (Art.-Nr. 310-22) kam defekt an. Bitte erstatten Sie die 89,90 EUR auf mein Konto [IBAN_1]. Sie erreichen mich unter [PHONE_1].\n\nViele Grüße\n[PERSON_2]",
+   "mapping": {
+    "[PERSON_1]": "Betreff",
+    "[PERSON_2]": "Jana Kowalczyk",
+    "[CUSTOMER_ID_1]": "Kundennummer KD-2093-118",
+    "[IBAN_1]": "DE91 9999 0001 0648 4898 90",
+    "[PHONE_1]": "0151 0482 3317"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 7,
+     "masked_start": 0,
+     "masked_end": 10,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 63,
+     "end": 77,
+     "masked_start": 66,
+     "masked_end": 76,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 79,
+     "end": 103,
+     "masked_start": 78,
+     "masked_end": 93,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 203,
+     "end": 230,
+     "masked_start": 193,
+     "masked_end": 201,
+     "placeholder": "[IBAN_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 257,
+     "end": 271,
+     "masked_start": 228,
+     "masked_end": 237,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    },
+    {
+     "start": 286,
+     "end": 300,
+     "masked_start": 252,
+     "masked_end": 262,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The customer, [PERSON_2], from [CUSTOMER_ID_1], received a defective product, specifically the Kaffeemühle (Art.-Nr. 310-22), and is requesting a refund of 89.90 EUR on their account [IBAN_1]. They can contact [PERSON_2] at [PHONE_1] for further assistance.",
+     "restored_strict": "The customer, Jana Kowalczyk, from Kundennummer KD-2093-118, received a defective product, specifically the Kaffeemühle (Art.-Nr. 310-22), and is requesting a refund of 89.90 EUR on their account DE91 9999 0001 0648 4898 90. They can contact Jana Kowalczyk at 0151 0482 3317 for further assistance.",
+     "restored_robust": "The customer, Jana Kowalczyk, from Kundennummer KD-2093-118, received a defective product, specifically the Kaffeemühle (Art.-Nr. 310-22), and is requesting a refund of 89.90 EUR on their account DE91 9999 0001 0648 4898 90. They can contact Jana Kowalczyk at 0151 0482 3317 for further assistance.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is a customer service response regarding a defective product. The customer, [PERSON_2], from [CUSTOMER_ID_1], received a defective Kaffeemühle (Art.-Nr. 310-22) and is requesting a refund of 89.90 EUR on their account [IBAN_1]. They can contact [PERSON_2] at [PHONE_1] for further assistance.",
+     "restored_strict": "The message is a customer service response regarding a defective product. The customer, Jana Kowalczyk, from Kundennummer KD-2093-118, received a defective Kaffeemühle (Art.-Nr. 310-22) and is requesting a refund of 89.90 EUR on their account DE91 9999 0001 0648 4898 90. They can contact Jana Kowalczyk at 0151 0482 3317 for further assistance.",
+     "restored_robust": "The message is a customer service response regarding a defective product. The customer, Jana Kowalczyk, from Kundennummer KD-2093-118, received a defective Kaffeemühle (Art.-Nr. 310-22) and is requesting a refund of 89.90 EUR on their account DE91 9999 0001 0648 4898 90. They can contact Jana Kowalczyk at 0151 0482 3317 for further assistance.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-02",
+   "lang": "de",
+   "kind": "hr-note",
+   "text": "Notiz Personalabteilung, 03.11.2026\n\nThomas Brandl (Personalnummer PN 40917) beantragt Elternzeit ab dem 01.02.2027. Geburtsdatum laut Akte: 17.06.1989. Neue Anschrift: Quittenweg 7, 34121 Kassel. Rückfragen bitte an t.brandl@firma.example.",
+   "spans": [
+    {
+     "start": 37,
+     "end": 50,
+     "type": "PERSON"
+    },
+    {
+     "start": 67,
+     "end": 75,
+     "type": "CUSTOMER_ID"
+    },
+    {
+     "start": 141,
+     "end": 151,
+     "type": "DATE_OF_BIRTH"
+    },
+    {
+     "start": 169,
+     "end": 195,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 217,
+     "end": 239,
+     "type": "EMAIL"
+    }
+   ],
+   "masked": "[PERSON_1], 03.11.2026\n\n[PERSON_2] (Personalnummer [CUSTOMER_ID_1]) beantragt Elternzeit ab dem 01.02.2027. Geburtsdatum laut Akte: [DATE_OF_BIRTH_1]. Neue Anschrift: [ADDRESS_1]. [PERSON_3] bitte an [EMAIL_1].",
+   "mapping": {
+    "[PERSON_1]": "Notiz Personalabteilung",
+    "[PERSON_2]": "Thomas Brandl",
+    "[CUSTOMER_ID_1]": "PN 40917",
+    "[DATE_OF_BIRTH_1]": "17.06.1989",
+    "[ADDRESS_1]": "Quittenweg 7, 34121 Kassel",
+    "[PERSON_3]": "Rückfragen",
+    "[EMAIL_1]": "t.brandl@firma.example"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 23,
+     "masked_start": 0,
+     "masked_end": 10,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 37,
+     "end": 50,
+     "masked_start": 24,
+     "masked_end": 34,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 67,
+     "end": 75,
+     "masked_start": 51,
+     "masked_end": 66,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    },
+    {
+     "start": 141,
+     "end": 151,
+     "masked_start": 132,
+     "masked_end": 149,
+     "placeholder": "[DATE_OF_BIRTH_1]",
+     "source": "rules"
+    },
+    {
+     "start": 169,
+     "end": 195,
+     "masked_start": 167,
+     "masked_end": 178,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 197,
+     "end": 207,
+     "masked_start": 180,
+     "masked_end": 190,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 217,
+     "end": 239,
+     "masked_start": 200,
+     "masked_end": 209,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "[PERSON_1] requests parental leave starting from February 1, 2027. The birth date is listed as [DATE_OF_BIRTH_1], and the new address is [ADDRESS_1]. Please contact [EMAIL_1] for further information.",
+     "restored_strict": "Notiz Personalabteilung requests parental leave starting from February 1, 2027. The birth date is listed as 17.06.1989, and the new address is Quittenweg 7, 34121 Kassel. Please contact t.brandl@firma.example for further information.",
+     "restored_robust": "Notiz Personalabteilung requests parental leave starting from February 1, 2027. The birth date is listed as 17.06.1989, and the new address is Quittenweg 7, 34121 Kassel. Please contact t.brandl@firma.example for further information.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is about a request for parental leave by [PERSON_2] starting on 01.02.2027, with their birth date being [DATE_OF_BIRTH_1] and new address being [ADDRESS_1]. [PERSON_3] should contact [EMAIL_1] for further information.",
+     "restored_strict": "The message is about a request for parental leave by Thomas Brandl starting on 01.02.2027, with their birth date being 17.06.1989 and new address being Quittenweg 7, 34121 Kassel. Rückfragen should contact t.brandl@firma.example for further information.",
+     "restored_robust": "The message is about a request for parental leave by Thomas Brandl starting on 01.02.2027, with their birth date being 17.06.1989 and new address being Quittenweg 7, 34121 Kassel. Rückfragen should contact t.brandl@firma.example for further information.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-03",
+   "lang": "de",
+   "kind": "invoice",
+   "text": "Rechnung Nr. 2026-0815\n\nRechnungsempfängerin: Sabine Oyelaran, Am Kalkofen 3a, 04109 Leipzig\nLeistung: Wartung Heizungsanlage, 4 Stunden à 62,00 EUR\nGesamtbetrag: 295,12 EUR inkl. 19 % USt.\nBitte überweisen Sie bis zum 15.12.2026 unter Angabe Ihrer Kundennummer 100-7734.",
+   "spans": [
+    {
+     "start": 46,
+     "end": 61,
+     "type": "PERSON"
+    },
+    {
+     "start": 63,
+     "end": 92,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 262,
+     "end": 270,
+     "type": "CUSTOMER_ID"
+    }
+   ],
+   "masked": "Rechnung Nr. 2026-0815\n\nRechnungsempfängerin: [PERSON_1], [ADDRESS_1]\nLeistung: Wartung Heizungsanlage, 4 Stunden à 62,00 EUR\nGesamtbetrag: 295,12 EUR inkl. 19 % USt.\nBitte überweisen Sie bis zum 15.12.2026 unter Angabe Ihrer Kundennummer [CUSTOMER_ID_1].",
+   "mapping": {
+    "[PERSON_1]": "Sabine Oyelaran",
+    "[ADDRESS_1]": "Am Kalkofen 3a, 04109 Leipzig",
+    "[CUSTOMER_ID_1]": "100-7734"
+   },
+   "replacements": [
+    {
+     "start": 46,
+     "end": 61,
+     "masked_start": 46,
+     "masked_end": 56,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 63,
+     "end": 92,
+     "masked_start": 58,
+     "masked_end": 69,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 262,
+     "end": 270,
+     "masked_start": 239,
+     "masked_end": 254,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message is a reimbursement for a heating system maintenance service provided to [PERSON_1] at [ADDRESS_1]. The total cost is 295.12 EUR including 19% VAT, and the payment must be made by 15th December 2026 using the customer ID [CUSTOMER_ID_1].",
+     "restored_strict": "The message is a reimbursement for a heating system maintenance service provided to Sabine Oyelaran at Am Kalkofen 3a, 04109 Leipzig. The total cost is 295.12 EUR including 19% VAT, and the payment must be made by 15th December 2026 using the customer ID 100-7734.",
+     "restored_robust": "The message is a reimbursement for a heating system maintenance service provided to Sabine Oyelaran at Am Kalkofen 3a, 04109 Leipzig. The total cost is 295.12 EUR including 19% VAT, and the payment must be made by 15th December 2026 using the customer ID 100-7734.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is a reimbursement for a heating system maintenance service provided on August 15, 2026. The invoice amount is 295.12 euros, including 19% VAT. The customer is [PERSON_1], who is located at [ADDRESS_1]. The invoice must be paid by [CUSTOMER_ID_1] by December 15, 2026.",
+     "restored_strict": "The message is a reimbursement for a heating system maintenance service provided on August 15, 2026. The invoice amount is 295.12 euros, including 19% VAT. The customer is Sabine Oyelaran, who is located at Am Kalkofen 3a, 04109 Leipzig. The invoice must be paid by 100-7734 by December 15, 2026.",
+     "restored_robust": "The message is a reimbursement for a heating system maintenance service provided on August 15, 2026. The invoice amount is 295.12 euros, including 19% VAT. The customer is Sabine Oyelaran, who is located at Am Kalkofen 3a, 04109 Leipzig. The invoice must be paid by 100-7734 by December 15, 2026.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-04",
+   "lang": "de",
+   "kind": "meeting-notes",
+   "text": "Protokoll Teamrunde Vertrieb\n\nAnwesend: Martin Koch, Lea Sommer, Deniz Arslan\n1. Herr Koch stellt die Zahlen für Q3 vor: Umsatz plus 4,2 %.\n2. Frau Sommer plant die Messe im Sommer 2027, Stand in Halle 5.\n3. Der Koch der Kantine fragt nach der Teilnehmerzahl für das Mittagessen.",
+   "spans": [
+    {
+     "start": 40,
+     "end": 51,
+     "type": "PERSON"
+    },
+    {
+     "start": 53,
+     "end": 63,
+     "type": "PERSON"
+    },
+    {
+     "start": 65,
+     "end": 77,
+     "type": "PERSON"
+    },
+    {
+     "start": 86,
+     "end": 90,
+     "type": "PERSON"
+    },
+    {
+     "start": 148,
+     "end": 154,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "[PERSON_1] Vertrieb\n\nAnwesend: [PERSON_2], [PERSON_3], [PERSON_4]\n1. [PERSON_2] stellt die Zahlen für [LOCATION_1] vor: Umsatz plus 4,2 %.\n2. Frau Sommer plant die Messe im Sommer 2027, Stand in [LOCATION_2] 5.\n3. Der Koch der Kantine fragt nach der Teilnehmerzahl für das [LOCATION_3].",
+   "mapping": {
+    "[PERSON_1]": "Protokoll Teamrunde",
+    "[PERSON_2]": "Martin Koch",
+    "[PERSON_3]": "Lea Sommer",
+    "[PERSON_4]": "Deniz Arslan",
+    "[LOCATION_1]": "Q3",
+    "[LOCATION_2]": "Halle",
+    "[LOCATION_3]": "Mittagessen"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 19,
+     "masked_start": 0,
+     "masked_end": 10,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 40,
+     "end": 51,
+     "masked_start": 31,
+     "masked_end": 41,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 53,
+     "end": 63,
+     "masked_start": 43,
+     "masked_end": 53,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 65,
+     "end": 77,
+     "masked_start": 55,
+     "masked_end": 65,
+     "placeholder": "[PERSON_4]",
+     "source": "ner"
+    },
+    {
+     "start": 81,
+     "end": 90,
+     "masked_start": 69,
+     "masked_end": 79,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 113,
+     "end": 115,
+     "masked_start": 102,
+     "masked_end": 114,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 196,
+     "end": 201,
+     "masked_start": 195,
+     "masked_end": 207,
+     "placeholder": "[LOCATION_2]",
+     "source": "ner"
+    },
+    {
+     "start": 267,
+     "end": 278,
+     "masked_start": 273,
+     "masked_end": 285,
+     "placeholder": "[LOCATION_3]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [
+    "Sommer"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "The message discusses the activities of [PERSON_1] in [LOCATION_1], where [PERSON_2] presented the sales figures including a 4.2% increase, [PERSON_3] plans a summer event in [LOCATION_2], and [PERSON_4] inquires about the number of participants for a [LOCATION_3] event.",
+     "restored_strict": "The message discusses the activities of Protokoll Teamrunde in Q3, where Martin Koch presented the sales figures including a 4.2% increase, Lea Sommer plans a summer event in Halle, and Deniz Arslan inquires about the number of participants for a Mittagessen event.",
+     "restored_robust": "The message discusses the activities of Protokoll Teamrunde in Q3, where Martin Koch presented the sales figures including a 4.2% increase, Lea Sommer plans a summer event in Halle, and Deniz Arslan inquires about the number of participants for a Mittagessen event.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is about a sales presentation. [PERSON_1] is the presenter, and [PERSON_2], [PERSON_3], and [PERSON_4] are attendees. [LOCATION_1] is a location where the sales presentation is taking place, and [LOCATION_2] and [LOCATION_3] are other locations mentioned.",
+     "restored_strict": "The message is about a sales presentation. Protokoll Teamrunde is the presenter, and Martin Koch, Lea Sommer, and Deniz Arslan are attendees. Q3 is a location where the sales presentation is taking place, and Halle and Mittagessen are other locations mentioned.",
+     "restored_robust": "The message is about a sales presentation. Protokoll Teamrunde is the presenter, and Martin Koch, Lea Sommer, and Deniz Arslan are attendees. Q3 is a location where the sales presentation is taking place, and Halle and Mittagessen are other locations mentioned.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-05",
+   "lang": "de",
+   "kind": "chat",
+   "text": "Hi, hast du Hoffmanns Urlaubsantrag schon gesehen? Die Hoffmann-Präsentation für Montag liegt im Teams-Ordner. Ruf Jörg an, falls was fehlt: +49 160 0731 4482.",
+   "spans": [
+    {
+     "start": 12,
+     "end": 20,
+     "type": "PERSON"
+    },
+    {
+     "start": 55,
+     "end": 63,
+     "type": "PERSON"
+    },
+    {
+     "start": 115,
+     "end": 119,
+     "type": "PERSON"
+    },
+    {
+     "start": 141,
+     "end": 158,
+     "type": "PHONE"
+    }
+   ],
+   "masked": "Hi, hast du [LOCATION_1] schon gesehen? Die Hoffmann-Präsentation für Montag liegt im [LOCATION_2]. Ruf [PERSON_1] an, falls was fehlt: [PHONE_1].",
+   "mapping": {
+    "[LOCATION_1]": "Hoffmanns Urlaubsantrag",
+    "[LOCATION_2]": "Teams-Ordner",
+    "[PERSON_1]": "Jörg",
+    "[PHONE_1]": "+49 160 0731 4482"
+   },
+   "replacements": [
+    {
+     "start": 12,
+     "end": 35,
+     "masked_start": 12,
+     "masked_end": 24,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 97,
+     "end": 109,
+     "masked_start": 86,
+     "masked_end": 98,
+     "placeholder": "[LOCATION_2]",
+     "source": "ner"
+    },
+    {
+     "start": 115,
+     "end": 119,
+     "masked_start": 104,
+     "masked_end": 114,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 141,
+     "end": 158,
+     "masked_start": 136,
+     "masked_end": 145,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [
+    "Hoffmann"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "The message is asking if the speaker has visited [LOCATION_1] yet, as the Hoffmann presentation for Monday is located at [LOCATION_2]. If something is missing, the speaker should contact [PERSON_1] at [PHONE_1].",
+     "restored_strict": "The message is asking if the speaker has visited Hoffmanns Urlaubsantrag yet, as the Hoffmann presentation for Monday is located at Teams-Ordner. If something is missing, the speaker should contact Jörg at +49 160 0731 4482.",
+     "restored_robust": "The message is asking if the speaker has visited Hoffmanns Urlaubsantrag yet, as the Hoffmann presentation for Monday is located at Teams-Ordner. If something is missing, the speaker should contact Jörg at +49 160 0731 4482.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "Hello, have you seen [LOCATION_1] yet? The Hoffmann presentation for Monday is in [LOCATION_2]. If something is missing, please call [PERSON_1] at [PHONE_1].",
+     "restored_strict": "Hello, have you seen Hoffmanns Urlaubsantrag yet? The Hoffmann presentation for Monday is in Teams-Ordner. If something is missing, please call Jörg at +49 160 0731 4482.",
+     "restored_robust": "Hello, have you seen Hoffmanns Urlaubsantrag yet? The Hoffmann presentation for Monday is in Teams-Ordner. If something is missing, please call Jörg at +49 160 0731 4482.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-06",
+   "lang": "de",
+   "kind": "internal-email",
+   "text": "Hallo zusammen,\n\nab Dezember arbeiten Anna Lehmann (Einkauf) und Anna Petersen (Vertrieb) am Projekt Nordlicht. Bitte schickt Bestellungen an anna.lehmann@firma.example und Kundenanfragen an a.petersen@firma.example. Anna aus dem Vertrieb übernimmt außerdem die Schulung am 9.12.",
+   "spans": [
+    {
+     "start": 38,
+     "end": 50,
+     "type": "PERSON"
+    },
+    {
+     "start": 65,
+     "end": 78,
+     "type": "PERSON"
+    },
+    {
+     "start": 142,
+     "end": 168,
+     "type": "EMAIL"
+    },
+    {
+     "start": 191,
+     "end": 215,
+     "type": "EMAIL"
+    },
+    {
+     "start": 217,
+     "end": 221,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Hallo zusammen,\n\nab Dezember arbeiten [PERSON_1] (Einkauf) und [PERSON_2] (Vertrieb) am Projekt Nordlicht. Bitte schickt Bestellungen an [EMAIL_1] und Kundenanfragen an [EMAIL_2]. [PERSON_3] aus dem Vertrieb übernimmt außerdem die Schulung am 9.12.",
+   "mapping": {
+    "[PERSON_1]": "Anna Lehmann",
+    "[PERSON_2]": "Anna Petersen",
+    "[EMAIL_1]": "anna.lehmann@firma.example",
+    "[EMAIL_2]": "a.petersen@firma.example",
+    "[PERSON_3]": "Anna"
+   },
+   "replacements": [
+    {
+     "start": 38,
+     "end": 50,
+     "masked_start": 38,
+     "masked_end": 48,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 65,
+     "end": 78,
+     "masked_start": 63,
+     "masked_end": 73,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 142,
+     "end": 168,
+     "masked_start": 137,
+     "masked_end": 146,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 191,
+     "end": 215,
+     "masked_start": 169,
+     "masked_end": 178,
+     "placeholder": "[EMAIL_2]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 217,
+     "end": 221,
+     "masked_start": 180,
+     "masked_end": 190,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message informs that [PERSON_1] and [PERSON_2] will be working on the Nordlicht project from December, while [PERSON_3] will take over the training on December 9th. Bestellungen should be sent to [EMAIL_1] and customer inquiries to [EMAIL_2].",
+     "restored_strict": "The message informs that Anna Lehmann and Anna Petersen will be working on the Nordlicht project from December, while Anna will take over the training on December 9th. Bestellungen should be sent to anna.lehmann@firma.example and customer inquiries to a.petersen@firma.example.",
+     "restored_robust": "The message informs that Anna Lehmann and Anna Petersen will be working on the Nordlicht project from December, while Anna will take over the training on December 9th. Bestellungen should be sent to anna.lehmann@firma.example and customer inquiries to a.petersen@firma.example.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is about a project called Nordlicht that will be worked on by [PERSON_1] and [PERSON_2] in December. [PERSON_1] and [PERSON_2] will handle orders and sales, while [PERSON_3] will conduct training on the 9th of December.",
+     "restored_strict": "The message is about a project called Nordlicht that will be worked on by Anna Lehmann and Anna Petersen in December. Anna Lehmann and Anna Petersen will handle orders and sales, while Anna will conduct training on the 9th of December.",
+     "restored_robust": "The message is about a project called Nordlicht that will be worked on by Anna Lehmann and Anna Petersen in December. Anna Lehmann and Anna Petersen will handle orders and sales, while Anna will conduct training on the 9th of December.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-07",
+   "lang": "de",
+   "kind": "support-email",
+   "text": "Sehr geehrte Damen und Herren,\n\nich habe mein Passwort vergessen und komme nicht mehr in mein Kundenkonto. Registriert bin ich mit moritz.engelhardt82@example.org, geboren am 02.09.1982. Meine Kundennummer finde ich leider nicht mehr.\n\nMit freundlichen Grüßen\nMoritz Engelhardt",
+   "spans": [
+    {
+     "start": 131,
+     "end": 162,
+     "type": "EMAIL"
+    },
+    {
+     "start": 175,
+     "end": 185,
+     "type": "DATE_OF_BIRTH"
+    },
+    {
+     "start": 260,
+     "end": 277,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Sehr geehrte Damen und Herren,\n\nich habe mein Passwort vergessen und komme nicht mehr in mein Kundenkonto. [PERSON_1] mit [EMAIL_1], geboren am [DATE_OF_BIRTH_1] finde ich leider nicht mehr.\n\nMit freundlichen Grüßen\n[PERSON_2]",
+   "mapping": {
+    "[PERSON_1]": "Registriert bin ich",
+    "[EMAIL_1]": "moritz.engelhardt82@example.org",
+    "[DATE_OF_BIRTH_1]": "02.09.1982. Meine Kundennummer",
+    "[PERSON_2]": "Moritz Engelhardt"
+   },
+   "replacements": [
+    {
+     "start": 107,
+     "end": 126,
+     "masked_start": 107,
+     "masked_end": 117,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 131,
+     "end": 162,
+     "masked_start": 122,
+     "masked_end": 131,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 175,
+     "end": 205,
+     "masked_start": 144,
+     "masked_end": 161,
+     "placeholder": "[DATE_OF_BIRTH_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 260,
+     "end": 277,
+     "masked_start": 216,
+     "masked_end": 226,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The sender has forgotten their password and cannot access their customer account. They have tried contacting [PERSON_1] with [EMAIL_1], but unfortunately, they cannot find the information they need.",
+     "restored_strict": "The sender has forgotten their password and cannot access their customer account. They have tried contacting Registriert bin ich with moritz.engelhardt82@example.org, but unfortunately, they cannot find the information they need.",
+     "restored_robust": "The sender has forgotten their password and cannot access their customer account. They have tried contacting Registriert bin ich with moritz.engelhardt82@example.org, but unfortunately, they cannot find the information they need.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The sender is unable to access their customer account due to a forgotten password. They have tried contacting [PERSON_1] with [EMAIL_1], but it is not possible to reach them. The sender is also unable to find their date of birth.",
+     "restored_strict": "The sender is unable to access their customer account due to a forgotten password. They have tried contacting Registriert bin ich with moritz.engelhardt82@example.org, but it is not possible to reach them. The sender is also unable to find their date of birth.",
+     "restored_robust": "The sender is unable to access their customer account due to a forgotten password. They have tried contacting Registriert bin ich with moritz.engelhardt82@example.org, but it is not possible to reach them. The sender is also unable to find their date of birth.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-08",
+   "lang": "de",
+   "kind": "insurance-claim",
+   "text": "Schadenmeldung\n\nVersicherungsnehmerin: Gül Demirtaş\nVertragsnummer: HV-5520-3391\nAnschrift: Birkenhain 21, 28195 Bremen\nTelefon: (0421) 0 55 61 23\nAm 18.11.2026 ist in der Küche ein Wasserschaden entstanden (ca. 12 m² Laminat). Der Handwerker kommt am Freitag um 10:30 Uhr.",
+   "spans": [
+    {
+     "start": 39,
+     "end": 51,
+     "type": "PERSON"
+    },
+    {
+     "start": 68,
+     "end": 80,
+     "type": "CUSTOMER_ID"
+    },
+    {
+     "start": 92,
+     "end": 119,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 129,
+     "end": 146,
+     "type": "PHONE"
+    }
+   ],
+   "masked": "Schadenmeldung\n\nVersicherungsnehmerin: [PERSON_1]\n[PERSON_2]: [CUSTOMER_ID_1]\nAnschrift: [ADDRESS_1]\n[LOCATION_1]: [PHONE_1]\nAm 18.11.2026 ist in der Küche ein Wasserschaden entstanden (ca. 12 m² Laminat). Der Handwerker kommt am Freitag um 10:30 Uhr.",
+   "mapping": {
+    "[PERSON_1]": "Gül Demirtaş",
+    "[PERSON_2]": "Vertragsnummer",
+    "[CUSTOMER_ID_1]": "HV-5520-3391",
+    "[ADDRESS_1]": "Birkenhain 21, 28195 Bremen",
+    "[LOCATION_1]": "Telefon",
+    "[PHONE_1]": "(0421) 0 55 61 23"
+   },
+   "replacements": [
+    {
+     "start": 39,
+     "end": 51,
+     "masked_start": 39,
+     "masked_end": 49,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 52,
+     "end": 66,
+     "masked_start": 50,
+     "masked_end": 60,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 68,
+     "end": 80,
+     "masked_start": 62,
+     "masked_end": 77,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    },
+    {
+     "start": 92,
+     "end": 119,
+     "masked_start": 89,
+     "masked_end": 100,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 120,
+     "end": 127,
+     "masked_start": 101,
+     "masked_end": 113,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 129,
+     "end": 146,
+     "masked_start": 115,
+     "masked_end": 124,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "A customer reported a water damage incident in the kitchen on November 18, 2026, affecting approximately 12 square meters of laminate flooring. The customer's address is [ADDRESS_1], located in [LOCATION_1]. The customer's phone number is [PHONE_1]. The repair will be handled by a contractor who will arrive at 10:30 AM on Friday.",
+     "restored_strict": "A customer reported a water damage incident in the kitchen on November 18, 2026, affecting approximately 12 square meters of laminate flooring. The customer's address is Birkenhain 21, 28195 Bremen, located in Telefon. The customer's phone number is (0421) 0 55 61 23. The repair will be handled by a contractor who will arrive at 10:30 AM on Friday.",
+     "restored_robust": "A customer reported a water damage incident in the kitchen on November 18, 2026, affecting approximately 12 square meters of laminate flooring. The customer's address is Birkenhain 21, 28195 Bremen, located in Telefon. The customer's phone number is (0421) 0 55 61 23. The repair will be handled by a contractor who will arrive at 10:30 AM on Friday.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is about a home insurance claim. The insured person is [PERSON_1], and the customer ID is [CUSTOMER_ID_1]. The address is [ADDRESS_1], and the phone number is [PHONE_1]. The claim occurred in the kitchen on 18.11.2026, and the handymen will arrive on Friday at 10:30.",
+     "restored_strict": "The message is about a home insurance claim. The insured person is Gül Demirtaş, and the customer ID is HV-5520-3391. The address is Birkenhain 21, 28195 Bremen, and the phone number is (0421) 0 55 61 23. The claim occurred in the kitchen on 18.11.2026, and the handymen will arrive on Friday at 10:30.",
+     "restored_robust": "The message is about a home insurance claim. The insured person is Gül Demirtaş, and the customer ID is HV-5520-3391. The address is Birkenhain 21, 28195 Bremen, and the phone number is (0421) 0 55 61 23. The claim occurred in the kitchen on 18.11.2026, and the handymen will arrive on Friday at 10:30.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-09",
+   "lang": "de",
+   "kind": "meeting-notes",
+   "text": "Protokoll IT-Sicherheit, Raum 2.14\n\nTeilnehmende: Dr. Henrike Vossberg, Paul Nguyen\n- Das Audit nach ISO 27001 ist für den 14.04.2027 angesetzt.\n- Das Firewall-Update auf Version 7.4.2 ist erledigt, 3 von 112 Clients fehlen noch.\n- Herr Nguyen prüft bis KW 51 die Tickets 88213 bis 88240.",
+   "spans": [
+    {
+     "start": 54,
+     "end": 70,
+     "type": "PERSON"
+    },
+    {
+     "start": 72,
+     "end": 83,
+     "type": "PERSON"
+    },
+    {
+     "start": 237,
+     "end": 243,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Protokoll IT-Sicherheit, Raum 2.14\n\nTeilnehmende: Dr. [PERSON_1], [PERSON_2]\n- [PERSON_3] nach ISO 27001 ist für den 14.04.2027 angesetzt.\n- Das Firewall-Update auf Version 7.4.2 ist erledigt, 3 von 112 Clients fehlen noch.\n- Herr Nguyen prüft bis [LOCATION_1] die Tickets 88213 bis 88240.",
+   "mapping": {
+    "[PERSON_1]": "Henrike Vossberg",
+    "[PERSON_2]": "Paul Nguyen",
+    "[PERSON_3]": "Das Audit",
+    "[LOCATION_1]": "KW 51"
+   },
+   "replacements": [
+    {
+     "start": 54,
+     "end": 70,
+     "masked_start": 54,
+     "masked_end": 64,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 72,
+     "end": 83,
+     "masked_start": 66,
+     "masked_end": 76,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 86,
+     "end": 95,
+     "masked_start": 79,
+     "masked_end": 89,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 254,
+     "end": 259,
+     "masked_start": 248,
+     "masked_end": 260,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [
+    "Nguyen"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "The message discusses the status of IT security protocols, including the appointment of a person for ISO 27001 compliance, the completion of a firewall update, and the ongoing ticket review by a specific individual.",
+     "restored_strict": "The message discusses the status of IT security protocols, including the appointment of a person for ISO 27001 compliance, the completion of a firewall update, and the ongoing ticket review by a specific individual.",
+     "restored_robust": "The message discusses the status of IT security protocols, including the appointment of a person for ISO 27001 compliance, the completion of a firewall update, and the ongoing ticket review by a specific individual.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message discusses the IT security protocol, mentioning that Dr. [PERSON_1] and [PERSON_2] are participants. [PERSON_3] has ISO 27001 certification for the 14th of April 2027. The firewall update to version 7.4.2 is complete, with 3 out of 112 clients still needing to be updated. [LOCATION_1] is where [HERR_Nguyen] is checking tickets 88213 to 88240.",
+     "restored_strict": "The message discusses the IT security protocol, mentioning that Dr. Henrike Vossberg and Paul Nguyen are participants. Das Audit has ISO 27001 certification for the 14th of April 2027. The firewall update to version 7.4.2 is complete, with 3 out of 112 clients still needing to be updated. KW 51 is where [HERR_Nguyen] is checking tickets 88213 to 88240.",
+     "restored_robust": "The message discusses the IT security protocol, mentioning that Dr. Henrike Vossberg and Paul Nguyen are participants. Das Audit has ISO 27001 certification for the 14th of April 2027. The firewall update to version 7.4.2 is complete, with 3 out of 112 clients still needing to be updated. KW 51 is where [HERR_Nguyen] is checking tickets 88213 to 88240.",
+     "altered_forms": [],
+     "invented_forms": [
+      "[HERR_Nguyen]"
+     ]
+    }
+   }
+  },
+  {
+   "id": "de-10",
+   "lang": "de",
+   "kind": "contract",
+   "text": "Mietvertrag (Auszug)\n\nZwischen Klaus-Dieter Wiegand, Lerchenstraße 40, 50667 Köln (Vermieter), und Mira Okafor, geb. 23.01.1996 (Mieterin), wird folgender Vertrag geschlossen: Die Wohnung im 3. OG, 68 m², wird ab dem 01.01.2027 für monatlich 1.120 EUR kalt vermietet. Die Kaution von 3.360 EUR ist auf das Konto DE81 9999 0022 0012 3456 78 zu überweisen.",
+   "spans": [
+    {
+     "start": 31,
+     "end": 51,
+     "type": "PERSON"
+    },
+    {
+     "start": 53,
+     "end": 81,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 99,
+     "end": 110,
+     "type": "PERSON"
+    },
+    {
+     "start": 117,
+     "end": 127,
+     "type": "DATE_OF_BIRTH"
+    },
+    {
+     "start": 312,
+     "end": 339,
+     "type": "IBAN"
+    }
+   ],
+   "masked": "Mietvertrag (Auszug)\n\nZwischen [PERSON_1], [ADDRESS_1] (Vermieter), und [PERSON_2], geb. [DATE_OF_BIRTH_1] (Mieterin), wird folgender Vertrag geschlossen: Die Wohnung im [LOCATION_1], 68 m², wird ab dem 01.01.2027 für monatlich 1.120 EUR kalt vermietet. Die Kaution von 3.360 EUR ist auf das Konto [IBAN_1] zu überweisen.",
+   "mapping": {
+    "[PERSON_1]": "Klaus-Dieter Wiegand",
+    "[ADDRESS_1]": "Lerchenstraße 40, 50667 Köln",
+    "[PERSON_2]": "Mira Okafor",
+    "[DATE_OF_BIRTH_1]": "23.01.1996",
+    "[LOCATION_1]": "3. OG",
+    "[IBAN_1]": "DE81 9999 0022 0012 3456 78"
+   },
+   "replacements": [
+    {
+     "start": 31,
+     "end": 51,
+     "masked_start": 31,
+     "masked_end": 41,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 53,
+     "end": 81,
+     "masked_start": 43,
+     "masked_end": 54,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 99,
+     "end": 110,
+     "masked_start": 72,
+     "masked_end": 82,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 117,
+     "end": 127,
+     "masked_start": 89,
+     "masked_end": 106,
+     "placeholder": "[DATE_OF_BIRTH_1]",
+     "source": "rules"
+    },
+    {
+     "start": 191,
+     "end": 196,
+     "masked_start": 170,
+     "masked_end": 182,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 312,
+     "end": 339,
+     "masked_start": 298,
+     "masked_end": 306,
+     "placeholder": "[IBAN_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message is in German and concerns a rental agreement between two parties. It states that a property located at [LOCATION_1] with an area of 68 square meters will be rented out starting January 1, 2027, for 1,120 euros per month. The initial deposit of 3,360 euros must be transferred to the account [IBAN_1].",
+     "restored_strict": "The message is in German and concerns a rental agreement between two parties. It states that a property located at 3. OG with an area of 68 square meters will be rented out starting January 1, 2027, for 1,120 euros per month. The initial deposit of 3,360 euros must be transferred to the account DE81 9999 0022 0012 3456 78.",
+     "restored_robust": "The message is in German and concerns a rental agreement between two parties. It states that a property located at 3. OG with an area of 68 square meters will be rented out starting January 1, 2027, for 1,120 euros per month. The initial deposit of 3,360 euros must be transferred to the account DE81 9999 0022 0012 3456 78.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is a contract for renting a flat. The tenant, [PERSON_2], is due to move in on January 1, 2027, for 1,120 euros per month. A security deposit of 3,360 euros must be paid to the landlord, [IBAN_1].",
+     "restored_strict": "The message is a contract for renting a flat. The tenant, Mira Okafor, is due to move in on January 1, 2027, for 1,120 euros per month. A security deposit of 3,360 euros must be paid to the landlord, DE81 9999 0022 0012 3456 78.",
+     "restored_robust": "The message is a contract for renting a flat. The tenant, Mira Okafor, is due to move in on January 1, 2027, for 1,120 euros per month. A security deposit of 3,360 euros must be paid to the landlord, DE81 9999 0022 0012 3456 78.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-11",
+   "lang": "de",
+   "kind": "chat",
+   "text": "Kurze Info: Benedikt ist bis einschließlich Mittwoch krankgeschrieben. Bitte übergebt seine drei Kundentermine an Frau Lindqvist. Die Präsentation für die Firma Lang & Söhne verschiebt sich auf nächste Woche.",
+   "spans": [
+    {
+     "start": 12,
+     "end": 20,
+     "type": "PERSON"
+    },
+    {
+     "start": 119,
+     "end": 128,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "[PERSON_1]: [LOCATION_1] ist bis einschließlich Mittwoch krankgeschrieben. [PERSON_2] übergebt seine drei Kundentermine an Frau [PERSON_3]. Die Präsentation für die Firma Lang & Söhne verschiebt sich auf nächste Woche.",
+   "mapping": {
+    "[PERSON_1]": "Kurze Info",
+    "[LOCATION_1]": "Benedikt",
+    "[PERSON_2]": "Bitte",
+    "[PERSON_3]": "Lindqvist"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 10,
+     "masked_start": 0,
+     "masked_end": 10,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 12,
+     "end": 20,
+     "masked_start": 12,
+     "masked_end": 24,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 71,
+     "end": 76,
+     "masked_start": 75,
+     "masked_end": 85,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 119,
+     "end": 128,
+     "masked_start": 128,
+     "masked_end": 138,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "[PERSON_1] is sick from Wednesday until the end of the week. [PERSON_2] has taken over [PERSON_2]'s three customer appointments for [PERSON_3]. The presentation for Lang & Söhne has been postponed to next week.",
+     "restored_strict": "Kurze Info is sick from Wednesday until the end of the week. Bitte has taken over Bitte's three customer appointments for Lindqvist. The presentation for Lang & Söhne has been postponed to next week.",
+     "restored_robust": "Kurze Info is sick from Wednesday until the end of the week. Bitte has taken over Bitte's three customer appointments for Lindqvist. The presentation for Lang & Söhne has been postponed to next week.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "[PERSON_1] is sick from Monday to Wednesday. [PERSON_2] is handing over their three customer appointments to Mrs. [PERSON_3]. The presentation for Lang & Söhne is postponed to next week.",
+     "restored_strict": "Kurze Info is sick from Monday to Wednesday. Bitte is handing over their three customer appointments to Mrs. Lindqvist. The presentation for Lang & Söhne is postponed to next week.",
+     "restored_robust": "Kurze Info is sick from Monday to Wednesday. Bitte is handing over their three customer appointments to Mrs. Lindqvist. The presentation for Lang & Söhne is postponed to next week.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-12",
+   "lang": "de",
+   "kind": "delivery-notice",
+   "text": "Ihre Sendung 0034 0434 1610 9404 wird morgen zwischen 9 und 13 Uhr zugestellt.\nEmpfängerin: Ilse Brückner, Fasanenweg 2, 01067 Dresden\nTelefon der Empfängerin: +49 351 0420 6687\nBei Fragen erreichen Sie unser Servicecenter montags bis freitags von 8 bis 18 Uhr.",
+   "spans": [
+    {
+     "start": 92,
+     "end": 105,
+     "type": "PERSON"
+    },
+    {
+     "start": 107,
+     "end": 134,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 160,
+     "end": 177,
+     "type": "PHONE"
+    }
+   ],
+   "masked": "Ihre Sendung 0034 0434 1610 9404 wird [LOCATION_1] zwischen 9 und 13 Uhr zugestellt.\nEmpfängerin: [PERSON_1], [ADDRESS_1]\n[LOCATION_2] der Empfängerin: [PHONE_1]\nBei Fragen erreichen Sie unser Servicecenter montags bis freitags von 8 bis 18 Uhr.",
+   "mapping": {
+    "[LOCATION_1]": "morgen",
+    "[PERSON_1]": "Ilse Brückner",
+    "[ADDRESS_1]": "Fasanenweg 2, 01067 Dresden",
+    "[LOCATION_2]": "Telefon",
+    "[PHONE_1]": "+49 351 0420 6687"
+   },
+   "replacements": [
+    {
+     "start": 38,
+     "end": 44,
+     "masked_start": 38,
+     "masked_end": 50,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 92,
+     "end": 105,
+     "masked_start": 98,
+     "masked_end": 108,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 107,
+     "end": 134,
+     "masked_start": 110,
+     "masked_end": 121,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 135,
+     "end": 142,
+     "masked_start": 122,
+     "masked_end": 134,
+     "placeholder": "[LOCATION_2]",
+     "source": "ner"
+    },
+    {
+     "start": 160,
+     "end": 177,
+     "masked_start": 152,
+     "masked_end": 161,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message informs that the call number 0034 0434 1610 9404 has been assigned to [LOCATION_1] between 9 and 13 o'clock. The caller is [PERSON_1] at [ADDRESS_1], and the recipient is [LOCATION_2] at [PHONE_1]. The service center can be reached from Monday to Friday from 8 to 18 hours.",
+     "restored_strict": "The message informs that the call number 0034 0434 1610 9404 has been assigned to morgen between 9 and 13 o'clock. The caller is Ilse Brückner at Fasanenweg 2, 01067 Dresden, and the recipient is Telefon at +49 351 0420 6687. The service center can be reached from Monday to Friday from 8 to 18 hours.",
+     "restored_robust": "The message informs that the call number 0034 0434 1610 9404 has been assigned to morgen between 9 and 13 o'clock. The caller is Ilse Brückner at Fasanenweg 2, 01067 Dresden, and the recipient is Telefon at +49 351 0420 6687. The service center can be reached from Monday to Friday from 8 to 18 hours.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is about a reservation for a call from [LOCATION_1] to [LOCATION_2] on [PERSON_1] at 9-13 hours. The service center is available from 8-18 on weekdays.",
+     "restored_strict": "The message is about a reservation for a call from morgen to Telefon on Ilse Brückner at 9-13 hours. The service center is available from 8-18 on weekdays.",
+     "restored_robust": "The message is about a reservation for a call from morgen to Telefon on Ilse Brückner at 9-13 hours. The service center is available from 8-18 on weekdays.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-13",
+   "lang": "de",
+   "kind": "support-email",
+   "text": "Hallo Herr Fuchs,\n\nvielen Dank für Ihre Nachricht. Ihre Kollegin Frau Wolf hatte uns bereits informiert. Der Fuchsbau-Spielturm (Modell FB-200) wird in KW 2 geliefert.\n\nMit freundlichen Grüßen\nIhr Kundenservice",
+   "spans": [
+    {
+     "start": 11,
+     "end": 16,
+     "type": "PERSON"
+    },
+    {
+     "start": 70,
+     "end": 74,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "[PERSON_1],\n\nvielen Dank für Ihre Nachricht. Ihre Kollegin Frau [PERSON_2] hatte uns bereits informiert. Der [LOCATION_1] (Modell FB-200) wird in KW 2 geliefert.\n\nMit freundlichen Grüßen\nIhr Kundenservice",
+   "mapping": {
+    "[PERSON_1]": "Hallo Herr Fuchs",
+    "[PERSON_2]": "Wolf",
+    "[LOCATION_1]": "Fuchsbau-Spielturm"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 16,
+     "masked_start": 0,
+     "masked_end": 10,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 70,
+     "end": 74,
+     "masked_start": 64,
+     "masked_end": 74,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 109,
+     "end": 127,
+     "masked_start": 109,
+     "masked_end": 121,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "Dear [PERSON_1],\nThank you for your message. Your colleague Frau [PERSON_2] has already informed us. The [LOCATION_1] (Model FB-200) will be delivered in KW 2.\nBest regards,\nCustomer Service",
+     "restored_strict": "Dear Hallo Herr Fuchs,\nThank you for your message. Your colleague Frau Wolf has already informed us. The Fuchsbau-Spielturm (Model FB-200) will be delivered in KW 2.\nBest regards,\nCustomer Service",
+     "restored_robust": "Dear Hallo Herr Fuchs,\nThank you for your message. Your colleague Frau Wolf has already informed us. The Fuchsbau-Spielturm (Model FB-200) will be delivered in KW 2.\nBest regards,\nCustomer Service",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "Dear [PERSON_1],\n\nThank you for your message. Your colleague Frau [PERSON_2] has already informed us. The [LOCATION_1] (Model FB-200) will be delivered in KW 2.\n\nBest regards,\nCustomer Service",
+     "restored_strict": "Dear Hallo Herr Fuchs,\n\nThank you for your message. Your colleague Frau Wolf has already informed us. The Fuchsbau-Spielturm (Model FB-200) will be delivered in KW 2.\n\nBest regards,\nCustomer Service",
+     "restored_robust": "Dear Hallo Herr Fuchs,\n\nThank you for your message. Your colleague Frau Wolf has already informed us. The Fuchsbau-Spielturm (Model FB-200) will be delivered in KW 2.\n\nBest regards,\nCustomer Service",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-14",
+   "lang": "de",
+   "kind": "hr-request",
+   "text": "Betreff: Änderung Bankverbindung\n\nHallo, bitte zahlt mein Gehalt ab Januar auf mein neues Konto: DE91999900310190123456. Kontoinhaberin: Fatma Yıldırım, Personalnummer 40233.\nDanke!\nFatma",
+   "spans": [
+    {
+     "start": 97,
+     "end": 119,
+     "type": "IBAN"
+    },
+    {
+     "start": 137,
+     "end": 151,
+     "type": "PERSON"
+    },
+    {
+     "start": 168,
+     "end": 173,
+     "type": "CUSTOMER_ID"
+    },
+    {
+     "start": 182,
+     "end": 187,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "[PERSON_1]: Änderung Bankverbindung\n\nHallo, bitte zahlt mein Gehalt ab Januar auf mein neues Konto: [IBAN_1]. Kontoinhaberin: [PERSON_2], [PERSON_3] [CUSTOMER_ID_1].\nDanke!\nFatma",
+   "mapping": {
+    "[PERSON_1]": "Betreff",
+    "[IBAN_1]": "DE91999900310190123456",
+    "[PERSON_2]": "Fatma Yıldırım",
+    "[PERSON_3]": "Personalnummer",
+    "[CUSTOMER_ID_1]": "40233"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 7,
+     "masked_start": 0,
+     "masked_end": 10,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 97,
+     "end": 119,
+     "masked_start": 100,
+     "masked_end": 108,
+     "placeholder": "[IBAN_1]",
+     "source": "rules"
+    },
+    {
+     "start": 137,
+     "end": 151,
+     "masked_start": 126,
+     "masked_end": 136,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 153,
+     "end": 167,
+     "masked_start": 138,
+     "masked_end": 148,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 168,
+     "end": 173,
+     "masked_start": 149,
+     "masked_end": 164,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [
+    "Fatma"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "The message is a request for a salary transfer to a new bank account. The sender, Fatma, is informing PERSON_1 that they need to pay their salary in January to the new account, which is linked to PERSON_2's IBAN number. The sender also mentions that the new account is associated with PERSON_3 and PERSON_1's customer ID.",
+     "restored_strict": "The message is a request for a salary transfer to a new bank account. The sender, Fatma, is informing PERSON_1 that they need to pay their salary in January to the new account, which is linked to PERSON_2's IBAN number. The sender also mentions that the new account is associated with PERSON_3 and PERSON_1's customer ID.",
+     "restored_robust": "The message is a request for a salary transfer to a new bank account. The sender, Fatma, is informing Betreff that they need to pay their salary in January to the new account, which is linked to Fatma Yıldırım's IBAN number. The sender also mentions that the new account is associated with Personalnummer and Betreff's customer ID.",
+     "altered_forms": [
+      "PERSON_1",
+      "PERSON_2",
+      "PERSON_3"
+     ],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is about a change in bank account details for a salary payment. The sender asks the recipient to transfer the salary to a new bank account with IBAN [IBAN_1]. The account holder is [PERSON_2] and the customer ID is [CUSTOMER_ID_1]. The sender thanks the recipient for the transfer.",
+     "restored_strict": "The message is about a change in bank account details for a salary payment. The sender asks the recipient to transfer the salary to a new bank account with IBAN DE91999900310190123456. The account holder is Fatma Yıldırım and the customer ID is 40233. The sender thanks the recipient for the transfer.",
+     "restored_robust": "The message is about a change in bank account details for a salary payment. The sender asks the recipient to transfer the salary to a new bank account with IBAN DE91999900310190123456. The account holder is Fatma Yıldırım and the customer ID is 40233. The sender thanks the recipient for the transfer.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-15",
+   "lang": "de",
+   "kind": "meeting-notes",
+   "text": "Ergebnisprotokoll Kundentermin\n\nKunde: Schreinerei Albers GmbH, Ansprechpartner Herr Ole Albers (ole@schreinerei-albers.example, 05121 0 98 77 1)\nBesprochen: Angebot über 14 Werkbänke à 1.180 EUR, Lieferung bis 31.03.2027, Skonto 2 %.\nNächster Schritt: Lukas schickt bis Freitag das überarbeitete Angebot.",
+   "spans": [
+    {
+     "start": 85,
+     "end": 95,
+     "type": "PERSON"
+    },
+    {
+     "start": 97,
+     "end": 127,
+     "type": "EMAIL"
+    },
+    {
+     "start": 129,
+     "end": 144,
+     "type": "PHONE"
+    },
+    {
+     "start": 253,
+     "end": 258,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "[PERSON_1]\n\nKunde: Schreinerei Albers GmbH, Ansprechpartner Herr [PERSON_2] ([EMAIL_1], [PHONE_1])\n[LOCATION_1]: Angebot über 14 Werkbänke à 1.180 EUR, Lieferung bis 31.03.2027, [LOCATION_2] 2 %.\n[PERSON_3]: [PERSON_4] schickt bis Freitag das überarbeitete Angebot.",
+   "mapping": {
+    "[PERSON_1]": "Ergebnisprotokoll Kundentermin",
+    "[PERSON_2]": "Ole Albers",
+    "[EMAIL_1]": "ole@schreinerei-albers.example",
+    "[PHONE_1]": "05121 0 98 77 1",
+    "[LOCATION_1]": "Besprochen",
+    "[LOCATION_2]": "Skonto",
+    "[PERSON_3]": "Nächster Schritt",
+    "[PERSON_4]": "Lukas"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 30,
+     "masked_start": 0,
+     "masked_end": 10,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 85,
+     "end": 95,
+     "masked_start": 65,
+     "masked_end": 75,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 97,
+     "end": 127,
+     "masked_start": 77,
+     "masked_end": 86,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules"
+    },
+    {
+     "start": 129,
+     "end": 144,
+     "masked_start": 88,
+     "masked_end": 97,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    },
+    {
+     "start": 146,
+     "end": 156,
+     "masked_start": 99,
+     "masked_end": 111,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 223,
+     "end": 229,
+     "masked_start": 178,
+     "masked_end": 190,
+     "placeholder": "[LOCATION_2]",
+     "source": "ner"
+    },
+    {
+     "start": 235,
+     "end": 251,
+     "masked_start": 196,
+     "masked_end": 206,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 253,
+     "end": 258,
+     "masked_start": 208,
+     "masked_end": 218,
+     "placeholder": "[PERSON_4]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message is from a customer named [PERSON_1] to a supplier named Schreinerei Albers GmbH. The supplier has offered 14 workbenches for 1,180 EUR each, with delivery by 31.03.2027, and a 2% discount. The customer is waiting for [PERSON_3] to send an updated offer by Friday.",
+     "restored_strict": "The message is from a customer named Ergebnisprotokoll Kundentermin to a supplier named Schreinerei Albers GmbH. The supplier has offered 14 workbenches for 1,180 EUR each, with delivery by 31.03.2027, and a 2% discount. The customer is waiting for Nächster Schritt to send an updated offer by Friday.",
+     "restored_robust": "The message is from a customer named Ergebnisprotokoll Kundentermin to a supplier named Schreinerei Albers GmbH. The supplier has offered 14 workbenches for 1,180 EUR each, with delivery by 31.03.2027, and a 2% discount. The customer is waiting for Nächster Schritt to send an updated offer by Friday.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is about a potential order for 14 workbenches from Schreinerei Albers GmbH. The order is for 1.180 EUR each and will be delivered by 31.03.2027. The sender, [PERSON_3], will send an updated offer by Friday.",
+     "restored_strict": "The message is about a potential order for 14 workbenches from Schreinerei Albers GmbH. The order is for 1.180 EUR each and will be delivered by 31.03.2027. The sender, Nächster Schritt, will send an updated offer by Friday.",
+     "restored_robust": "The message is about a potential order for 14 workbenches from Schreinerei Albers GmbH. The order is for 1.180 EUR each and will be delivered by 31.03.2027. The sender, Nächster Schritt, will send an updated offer by Friday.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-16",
+   "lang": "de",
+   "kind": "cancellation",
+   "text": "Kündigung Mitgliedschaft\n\nHiermit kündige ich meine Mitgliedschaft (Mitgliedsnummer M-883021) zum nächstmöglichen Termin.\nSven Hollerbach, Ginsterweg 15, 22301 Hamburg, geb. 11.11.1990\nBitte bestätigen Sie die Kündigung an sven.h@example.net.",
+   "spans": [
+    {
+     "start": 84,
+     "end": 92,
+     "type": "CUSTOMER_ID"
+    },
+    {
+     "start": 122,
+     "end": 137,
+     "type": "PERSON"
+    },
+    {
+     "start": 139,
+     "end": 167,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 174,
+     "end": 184,
+     "type": "DATE_OF_BIRTH"
+    },
+    {
+     "start": 223,
+     "end": 241,
+     "type": "EMAIL"
+    }
+   ],
+   "masked": "Kündigung Mitgliedschaft\n\nHiermit kündige ich meine Mitgliedschaft (Mitgliedsnummer [CUSTOMER_ID_1]) zum nächstmöglichen Termin.\n[PERSON_1], [ADDRESS_1], geb. [DATE_OF_BIRTH_1]\nBitte bestätigen Sie die Kündigung an [EMAIL_1].",
+   "mapping": {
+    "[CUSTOMER_ID_1]": "M-883021",
+    "[PERSON_1]": "Sven Hollerbach",
+    "[ADDRESS_1]": "Ginsterweg 15, 22301 Hamburg",
+    "[DATE_OF_BIRTH_1]": "11.11.1990",
+    "[EMAIL_1]": "sven.h@example.net"
+   },
+   "replacements": [
+    {
+     "start": 84,
+     "end": 92,
+     "masked_start": 84,
+     "masked_end": 99,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    },
+    {
+     "start": 122,
+     "end": 137,
+     "masked_start": 129,
+     "masked_end": 139,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 139,
+     "end": 167,
+     "masked_start": 141,
+     "masked_end": 152,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 174,
+     "end": 184,
+     "masked_start": 159,
+     "masked_end": 176,
+     "placeholder": "[DATE_OF_BIRTH_1]",
+     "source": "rules"
+    },
+    {
+     "start": 223,
+     "end": 241,
+     "masked_start": 215,
+     "masked_end": 224,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message is a formal notice of resignation from a membership, with the member's personal details and contact information provided. The member is requesting that the organization confirm the resignation by contacting the designated email address.",
+     "restored_strict": "The message is a formal notice of resignation from a membership, with the member's personal details and contact information provided. The member is requesting that the organization confirm the resignation by contacting the designated email address.",
+     "restored_robust": "The message is a formal notice of resignation from a membership, with the member's personal details and contact information provided. The member is requesting that the organization confirm the resignation by contacting the designated email address.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is a formal notice of resignation from a membership, stating that the member will be leaving the organization by the next available date. The member's personal information, including their name, address, and date of birth, is provided, as well as the email address of the person to whom the resignation must be acknowledged.",
+     "restored_strict": "The message is a formal notice of resignation from a membership, stating that the member will be leaving the organization by the next available date. The member's personal information, including their name, address, and date of birth, is provided, as well as the email address of the person to whom the resignation must be acknowledged.",
+     "restored_robust": "The message is a formal notice of resignation from a membership, stating that the member will be leaving the organization by the next available date. The member's personal information, including their name, address, and date of birth, is provided, as well as the email address of the person to whom the resignation must be acknowledged.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-17",
+   "lang": "de",
+   "kind": "chat",
+   "text": "Frau Klein meint, das Budget ist zu klein für zwei neue Stellen. Herr Bauer fragt, ob der Bauer vom Gut Hohenfeld wieder Äpfel für das Sommerfest liefert.",
+   "spans": [
+    {
+     "start": 5,
+     "end": 10,
+     "type": "PERSON"
+    },
+    {
+     "start": 70,
+     "end": 75,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Frau [PERSON_1] meint, das Budget ist zu klein für zwei neue Stellen. Herr Bauer fragt, ob der Bauer vom Gut [LOCATION_1] wieder Äpfel für das Sommerfest liefert.",
+   "mapping": {
+    "[PERSON_1]": "Klein",
+    "[LOCATION_1]": "Hohenfeld"
+   },
+   "replacements": [
+    {
+     "start": 5,
+     "end": 10,
+     "masked_start": 5,
+     "masked_end": 15,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 104,
+     "end": 113,
+     "masked_start": 109,
+     "masked_end": 121,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [
+    "Bauer"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "The message discusses a request for two new positions, with Frau [PERSON_1] indicating that the budget is insufficient. Additionally, it mentions that Herr Bauer is inquiring about the availability of apples for the summer festival from the Bauer family farm.",
+     "restored_strict": "The message discusses a request for two new positions, with Frau Klein indicating that the budget is insufficient. Additionally, it mentions that Herr Bauer is inquiring about the availability of apples for the summer festival from the Bauer family farm.",
+     "restored_robust": "The message discusses a request for two new positions, with Frau Klein indicating that the budget is insufficient. Additionally, it mentions that Herr Bauer is inquiring about the availability of apples for the summer festival from the Bauer family farm.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message discusses a request for two new positions due to a tight budget. A question is also raised about whether the Bauer from the [LOCATION_1] orchard can provide apples for the summer festival.",
+     "restored_strict": "The message discusses a request for two new positions due to a tight budget. A question is also raised about whether the Bauer from the Hohenfeld orchard can provide apples for the summer festival.",
+     "restored_robust": "The message discusses a request for two new positions due to a tight budget. A question is also raised about whether the Bauer from the Hohenfeld orchard can provide apples for the summer festival.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-18",
+   "lang": "de",
+   "kind": "payment-reminder",
+   "text": "Zahlungserinnerung\n\nSehr geehrter Herr Petrović,\n\nzu Ihrer Rechnung 2026-1103 über 64,50 EUR ist noch keine Zahlung eingegangen. Kundennummer: KD-5512-090. Falls Sie bereits gezahlt haben, schreiben Sie uns bitte kurz an buchhaltung@shop.example.",
+   "spans": [
+    {
+     "start": 39,
+     "end": 47,
+     "type": "PERSON"
+    },
+    {
+     "start": 143,
+     "end": 154,
+     "type": "CUSTOMER_ID"
+    }
+   ],
+   "masked": "Zahlungserinnerung\n\nSehr geehrter Herr Petrović,\n\nzu Ihrer Rechnung 2026-1103 über 64,50 EUR ist noch keine Zahlung eingegangen. Kundennummer: [CUSTOMER_ID_1]. Falls Sie bereits gezahlt haben, schreiben Sie uns bitte kurz an [EMAIL_1].",
+   "mapping": {
+    "[CUSTOMER_ID_1]": "KD-5512-090",
+    "[EMAIL_1]": "buchhaltung@shop.example"
+   },
+   "replacements": [
+    {
+     "start": 143,
+     "end": 154,
+     "masked_start": 143,
+     "masked_end": 158,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    },
+    {
+     "start": 221,
+     "end": 245,
+     "masked_start": 225,
+     "masked_end": 234,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [
+    "Petrović"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "The message is a reminder for a customer to pay a bill of 64.50 EUR for invoice 2026-1103, as no payment has been received. The customer's customer number is [CUSTOMER_ID_1] and they should contact [EMAIL_1] if they have already paid.",
+     "restored_strict": "The message is a reminder for a customer to pay a bill of 64.50 EUR for invoice 2026-1103, as no payment has been received. The customer's customer number is KD-5512-090 and they should contact buchhaltung@shop.example if they have already paid.",
+     "restored_robust": "The message is a reminder for a customer to pay a bill of 64.50 EUR for invoice 2026-1103, as no payment has been received. The customer's customer number is KD-5512-090 and they should contact buchhaltung@shop.example if they have already paid.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "A reminder for payment of invoice 2026-1103 for 64.50 EUR has not been received yet. Customer ID: [CUSTOMER_ID_1]. If you have already paid, please contact us at [EMAIL_1] for further instructions.",
+     "restored_strict": "A reminder for payment of invoice 2026-1103 for 64.50 EUR has not been received yet. Customer ID: KD-5512-090. If you have already paid, please contact us at buchhaltung@shop.example for further instructions.",
+     "restored_robust": "A reminder for payment of invoice 2026-1103 for 64.50 EUR has not been received yet. Customer ID: KD-5512-090. If you have already paid, please contact us at buchhaltung@shop.example for further instructions.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-19",
+   "lang": "de",
+   "kind": "hr-note",
+   "text": "Neue Mitarbeitende im Dezember:\n- Emma Sauer (* 04.07.2001), Werkstudentin Marketing\n- Jonas Albrecht (* 29.02.1996), Entwickler, Start am 01.12.2026\nDie Laptops (ThinkPad T14, Inventar 7781 und 7782) sind bestellt.",
+   "spans": [
+    {
+     "start": 34,
+     "end": 44,
+     "type": "PERSON"
+    },
+    {
+     "start": 48,
+     "end": 58,
+     "type": "DATE_OF_BIRTH"
+    },
+    {
+     "start": 87,
+     "end": 101,
+     "type": "PERSON"
+    },
+    {
+     "start": 105,
+     "end": 115,
+     "type": "DATE_OF_BIRTH"
+    }
+   ],
+   "masked": "Neue Mitarbeitende im Dezember:\n- [PERSON_1] (* [DATE_OF_BIRTH_1]), [PERSON_2]\n- [PERSON_3] (* [DATE_OF_BIRTH_2]), Entwickler, Start am 01.12.2026\nDie Laptops (ThinkPad T14, [LOCATION_1] 7781 und 7782) sind bestellt.",
+   "mapping": {
+    "[PERSON_1]": "Emma Sauer",
+    "[DATE_OF_BIRTH_1]": "04.07.2001",
+    "[PERSON_2]": "Werkstudentin Marketing",
+    "[PERSON_3]": "Jonas Albrecht",
+    "[DATE_OF_BIRTH_2]": "29.02.1996",
+    "[LOCATION_1]": "Inventar"
+   },
+   "replacements": [
+    {
+     "start": 34,
+     "end": 44,
+     "masked_start": 34,
+     "masked_end": 44,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 48,
+     "end": 58,
+     "masked_start": 48,
+     "masked_end": 65,
+     "placeholder": "[DATE_OF_BIRTH_1]",
+     "source": "rules"
+    },
+    {
+     "start": 61,
+     "end": 84,
+     "masked_start": 68,
+     "masked_end": 78,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 87,
+     "end": 101,
+     "masked_start": 81,
+     "masked_end": 91,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 105,
+     "end": 115,
+     "masked_start": 95,
+     "masked_end": 112,
+     "placeholder": "[DATE_OF_BIRTH_2]",
+     "source": "rules"
+    },
+    {
+     "start": 177,
+     "end": 185,
+     "masked_start": 174,
+     "masked_end": 186,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "New employees joining in December:\n- [PERSON_1] (* [DATE_OF_BIRTH_1]), [PERSON_2]\n- [PERSON_3] (* [DATE_OF_BIRTH_2]), Developer, starting on 1st December 2026\nThe laptops (ThinkPad T14, [LOCATION_1] 7781 and 7782) have been ordered.",
+     "restored_strict": "New employees joining in December:\n- Emma Sauer (* 04.07.2001), Werkstudentin Marketing\n- Jonas Albrecht (* 29.02.1996), Developer, starting on 1st December 2026\nThe laptops (ThinkPad T14, Inventar 7781 and 7782) have been ordered.",
+     "restored_robust": "New employees joining in December:\n- Emma Sauer (* 04.07.2001), Werkstudentin Marketing\n- Jonas Albrecht (* 29.02.1996), Developer, starting on 1st December 2026\nThe laptops (ThinkPad T14, Inventar 7781 and 7782) have been ordered.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message announces the hiring of new employees in December, including [PERSON_1] (* [DATE_OF_BIRTH_1]) and [PERSON_2]. [PERSON_3] (* [DATE_OF_BIRTH_2]), an employee with a start date of December 1, 2026, has joined the team. The company has ordered laptops, including ThinkPad T14s located at [LOCATION_1] 7781 and 7782.",
+     "restored_strict": "The message announces the hiring of new employees in December, including Emma Sauer (* 04.07.2001) and Werkstudentin Marketing. Jonas Albrecht (* 29.02.1996), an employee with a start date of December 1, 2026, has joined the team. The company has ordered laptops, including ThinkPad T14s located at Inventar 7781 and 7782.",
+     "restored_robust": "The message announces the hiring of new employees in December, including Emma Sauer (* 04.07.2001) and Werkstudentin Marketing. Jonas Albrecht (* 29.02.1996), an employee with a start date of December 1, 2026, has joined the team. The company has ordered laptops, including ThinkPad T14s located at Inventar 7781 and 7782.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-20",
+   "lang": "de",
+   "kind": "complaint",
+   "text": "Guten Tag,\n\nich wohne in der Uhlandstraße 8 und seit drei Wochen kommt mein Paket nicht an. Der Bote klingelt angeblich, aber ich bin den ganzen Tag zu Hause. Bitte melden Sie sich bei mir: 0176 0012 9935.\n\nGruß, R. Lindemann",
+   "spans": [
+    {
+     "start": 29,
+     "end": 43,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 190,
+     "end": 204,
+     "type": "PHONE"
+    },
+    {
+     "start": 213,
+     "end": 225,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Guten Tag,\n\nich wohne in der [ADDRESS_1]und seit drei Wochen kommt mein Paket nicht an. Der Bote klingelt angeblich, aber ich bin den ganzen Tag zu Hause. Bitte melden Sie sich bei mir: [PHONE_1].\n\nGruß, [PERSON_1]",
+   "mapping": {
+    "[ADDRESS_1]": "Uhlandstraße 8 ",
+    "[PHONE_1]": "0176 0012 9935",
+    "[PERSON_1]": "R. Lindemann"
+   },
+   "replacements": [
+    {
+     "start": 29,
+     "end": 44,
+     "masked_start": 29,
+     "masked_end": 40,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 190,
+     "end": 204,
+     "masked_start": 186,
+     "masked_end": 195,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    },
+    {
+     "start": 213,
+     "end": 225,
+     "masked_start": 204,
+     "masked_end": 214,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The sender is located at [ADDRESS_1] and has been waiting for three weeks for their package to arrive, but the delivery person claims they have been ringing the doorbell, but the sender is always home. The sender requests that the recipient contact them at [PHONE_1].",
+     "restored_strict": "The sender is located at Uhlandstraße 8  and has been waiting for three weeks for their package to arrive, but the delivery person claims they have been ringing the doorbell, but the sender is always home. The sender requests that the recipient contact them at 0176 0012 9935.",
+     "restored_robust": "The sender is located at Uhlandstraße 8  and has been waiting for three weeks for their package to arrive, but the delivery person claims they have been ringing the doorbell, but the sender is always home. The sender requests that the recipient contact them at 0176 0012 9935.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is in German and is a request for help. The sender, [PERSON_1], lives at [ADDRESS_1] and has been waiting for three weeks for a package that has not arrived. The sender's phone number is [PHONE_1].",
+     "restored_strict": "The message is in German and is a request for help. The sender, R. Lindemann, lives at Uhlandstraße 8  and has been waiting for three weeks for a package that has not arrived. The sender's phone number is 0176 0012 9935.",
+     "restored_robust": "The message is in German and is a request for help. The sender, R. Lindemann, lives at Uhlandstraße 8  and has been waiting for three weeks for a package that has not arrived. The sender's phone number is 0176 0012 9935.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-21",
+   "lang": "de",
+   "kind": "calendar-invite",
+   "text": "Einladung: Jahresgespräch Nadine Feldmann / Erik Haas\nWann: Donnerstag, 10.12.2026, 14:00 bis 15:00 Uhr\nWo: Besprechungsraum Elbe, 4. Stock\nBitte bringt die Zielvereinbarung 2026 mit.",
+   "spans": [
+    {
+     "start": 26,
+     "end": 41,
+     "type": "PERSON"
+    },
+    {
+     "start": 44,
+     "end": 53,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Einladung: [PERSON_1] / [PERSON_2]\n[PERSON_3]: [PERSON_4], 10.12.2026, 14:00 bis 15:00 Uhr\nWo: [LOCATION_1], 4. [PERSON_5]\n[PERSON_6] bringt die Zielvereinbarung 2026 mit.",
+   "mapping": {
+    "[PERSON_1]": "Jahresgespräch Nadine Feldmann",
+    "[PERSON_2]": "Erik Haas",
+    "[PERSON_3]": "Wann",
+    "[PERSON_4]": "Donnerstag",
+    "[LOCATION_1]": "Besprechungsraum Elbe",
+    "[PERSON_5]": "Stock",
+    "[PERSON_6]": "Bitte"
+   },
+   "replacements": [
+    {
+     "start": 11,
+     "end": 41,
+     "masked_start": 11,
+     "masked_end": 21,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 44,
+     "end": 53,
+     "masked_start": 24,
+     "masked_end": 34,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 54,
+     "end": 58,
+     "masked_start": 35,
+     "masked_end": 45,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 60,
+     "end": 70,
+     "masked_start": 47,
+     "masked_end": 57,
+     "placeholder": "[PERSON_4]",
+     "source": "ner"
+    },
+    {
+     "start": 108,
+     "end": 129,
+     "masked_start": 95,
+     "masked_end": 107,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 134,
+     "end": 139,
+     "masked_start": 112,
+     "masked_end": 122,
+     "placeholder": "[PERSON_5]",
+     "source": "ner"
+    },
+    {
+     "start": 140,
+     "end": 145,
+     "masked_start": 123,
+     "masked_end": 133,
+     "placeholder": "[PERSON_6]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message is an invitation for a meeting between [PERSON_1] and [PERSON_2] on December 10, 2026, from 14:00 to 15:00 at [LOCATION_1], 4. [PERSON_5]. [PERSON_6] is bringing the 2026 target agreement.",
+     "restored_strict": "The message is an invitation for a meeting between Jahresgespräch Nadine Feldmann and Erik Haas on December 10, 2026, from 14:00 to 15:00 at Besprechungsraum Elbe, 4. Stock. Bitte is bringing the 2026 target agreement.",
+     "restored_robust": "The message is an invitation for a meeting between Jahresgespräch Nadine Feldmann and Erik Haas on December 10, 2026, from 14:00 to 15:00 at Besprechungsraum Elbe, 4. Stock. Bitte is bringing the 2026 target agreement.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is an invitation for two people, [PERSON_1] and [PERSON_2], to a meeting on December 10, 2026, from 14:00 to 15:00 at [LOCATION_1], 4. [PERSON_5]. [PERSON_6] will bring the 2026 agreement.",
+     "restored_strict": "The message is an invitation for two people, Jahresgespräch Nadine Feldmann and Erik Haas, to a meeting on December 10, 2026, from 14:00 to 15:00 at Besprechungsraum Elbe, 4. Stock. Bitte will bring the 2026 agreement.",
+     "restored_robust": "The message is an invitation for two people, Jahresgespräch Nadine Feldmann and Erik Haas, to a meeting on December 10, 2026, from 14:00 to 15:00 at Besprechungsraum Elbe, 4. Stock. Bitte will bring the 2026 agreement.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-22",
+   "lang": "de",
+   "kind": "legal-letter",
+   "text": "Sehr geehrte Frau Marquardt,\n\nin der Sache Schulte ./. Bergmann GmbH (Az. 3 O 412/26) übersenden wir anbei die Klageerwiderung. Unsere Mandantin, Frau Karin Schulte, ist unter k.schulte@example.com erreichbar.",
+   "spans": [
+    {
+     "start": 18,
+     "end": 27,
+     "type": "PERSON"
+    },
+    {
+     "start": 43,
+     "end": 50,
+     "type": "PERSON"
+    },
+    {
+     "start": 151,
+     "end": 164,
+     "type": "PERSON"
+    },
+    {
+     "start": 176,
+     "end": 197,
+     "type": "EMAIL"
+    }
+   ],
+   "masked": "Sehr geehrte Frau [PERSON_1],\n\nin der Sache Schulte ./. Bergmann GmbH (Az. 3 O 412/26) übersenden wir anbei die Klageerwiderung. Unsere Mandantin, Frau [PERSON_2], ist unter [EMAIL_1] erreichbar.",
+   "mapping": {
+    "[PERSON_1]": "Marquardt",
+    "[PERSON_2]": "Karin Schulte",
+    "[EMAIL_1]": "k.schulte@example.com"
+   },
+   "replacements": [
+    {
+     "start": 18,
+     "end": 27,
+     "masked_start": 18,
+     "masked_end": 28,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 151,
+     "end": 164,
+     "masked_start": 152,
+     "masked_end": 162,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 176,
+     "end": 197,
+     "masked_start": 174,
+     "masked_end": 183,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [
+    "Schulte"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "The sender is sending a reply to a complaint from Bergmann GmbH, which is a company with the registration number 3 O 412/26. The company is asking for a response to a complaint, and the sender is providing a reply. The sender's contact information is provided in the email.",
+     "restored_strict": "The sender is sending a reply to a complaint from Bergmann GmbH, which is a company with the registration number 3 O 412/26. The company is asking for a response to a complaint, and the sender is providing a reply. The sender's contact information is provided in the email.",
+     "restored_robust": "The sender is sending a reply to a complaint from Bergmann GmbH, which is a company with the registration number 3 O 412/26. The company is asking for a response to a complaint, and the sender is providing a reply. The sender's contact information is provided in the email.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "Dear [PERSON_1],\n\nin the matter of Schulte ./. Bergmann GmbH (Az. 3 O 412/26), we are sending you the counterclaim. Our client, Frau [PERSON_2], can be reached at [EMAIL_1].",
+     "restored_strict": "Dear Marquardt,\n\nin the matter of Schulte ./. Bergmann GmbH (Az. 3 O 412/26), we are sending you the counterclaim. Our client, Frau Karin Schulte, can be reached at k.schulte@example.com.",
+     "restored_robust": "Dear Marquardt,\n\nin the matter of Schulte ./. Bergmann GmbH (Az. 3 O 412/26), we are sending you the counterclaim. Our client, Frau Karin Schulte, can be reached at k.schulte@example.com.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-23",
+   "lang": "de",
+   "kind": "chat",
+   "text": "sorry, bin heute im homeoffice. kannst du max sagen, dass die lieferung für frau yilmaz erst am 5.1. kommt? ihre nummer ist 0157 0338 1220",
+   "spans": [
+    {
+     "start": 42,
+     "end": 45,
+     "type": "PERSON"
+    },
+    {
+     "start": 81,
+     "end": 87,
+     "type": "PERSON"
+    },
+    {
+     "start": 124,
+     "end": 138,
+     "type": "PHONE"
+    }
+   ],
+   "masked": "[PERSON_1], [PERSON_2] heute im [LOCATION_1]. kannst du max sagen, dass die lieferung für frau [PERSON_3] erst am 5.1. kommt? ihre nummer ist [PHONE_1]",
+   "mapping": {
+    "[PERSON_1]": "sorry",
+    "[PERSON_2]": "bin",
+    "[LOCATION_1]": "homeoffice",
+    "[PERSON_3]": "yilmaz",
+    "[PHONE_1]": "0157 0338 1220"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 5,
+     "masked_start": 0,
+     "masked_end": 10,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 7,
+     "end": 10,
+     "masked_start": 12,
+     "masked_end": 22,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 20,
+     "end": 30,
+     "masked_start": 32,
+     "masked_end": 44,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 81,
+     "end": 87,
+     "masked_start": 95,
+     "masked_end": 105,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 124,
+     "end": 138,
+     "masked_start": 142,
+     "masked_end": 151,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [
+    "max"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "The message is about scheduling a delivery for Frau [PERSON_3] who has a phone number [PHONE_1]. The delivery is set for 5.1.",
+     "restored_strict": "The message is about scheduling a delivery for Frau yilmaz who has a phone number 0157 0338 1220. The delivery is set for 5.1.",
+     "restored_robust": "The message is about scheduling a delivery for Frau yilmaz who has a phone number 0157 0338 1220. The delivery is set for 5.1.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is about scheduling a delivery for Frau [PERSON_3] who has the phone number [PHONE_1]. The delivery is set for 5.1.",
+     "restored_strict": "The message is about scheduling a delivery for Frau yilmaz who has the phone number 0157 0338 1220. The delivery is set for 5.1.",
+     "restored_robust": "The message is about scheduling a delivery for Frau yilmaz who has the phone number 0157 0338 1220. The delivery is set for 5.1.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "de-24",
+   "lang": "de",
+   "kind": "crm-note",
+   "text": "CRM-Notiz\nKontakt: Wojciech Nowak | w.nowak@bau-nowak.example | Mobil +49 171 0259 3304\nKundennummer 20931: Interesse an 3 Lizenzen im Tarif Business (je 29 EUR im Monat). Rückruf vereinbart für Dienstag, 15 Uhr.",
+   "spans": [
+    {
+     "start": 19,
+     "end": 33,
+     "type": "PERSON"
+    },
+    {
+     "start": 36,
+     "end": 61,
+     "type": "EMAIL"
+    },
+    {
+     "start": 70,
+     "end": 87,
+     "type": "PHONE"
+    },
+    {
+     "start": 101,
+     "end": 106,
+     "type": "CUSTOMER_ID"
+    }
+   ],
+   "masked": "[LOCATION_1]\n[LOCATION_2]: [PERSON_1] | [EMAIL_1] | [LOCATION_3] [PHONE_1]\nKundennummer [CUSTOMER_ID_1]: Interesse an 3 Lizenzen im Tarif Business (je 29 EUR im Monat). [PERSON_2] vereinbart für Dienstag, 15 Uhr.",
+   "mapping": {
+    "[LOCATION_1]": "CRM-Notiz",
+    "[LOCATION_2]": "Kontakt",
+    "[PERSON_1]": "Wojciech Nowak",
+    "[EMAIL_1]": "w.nowak@bau-nowak.example",
+    "[LOCATION_3]": "Mobil",
+    "[PHONE_1]": "+49 171 0259 3304",
+    "[CUSTOMER_ID_1]": "20931",
+    "[PERSON_2]": "Rückruf"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 9,
+     "masked_start": 0,
+     "masked_end": 12,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 10,
+     "end": 17,
+     "masked_start": 13,
+     "masked_end": 25,
+     "placeholder": "[LOCATION_2]",
+     "source": "ner"
+    },
+    {
+     "start": 19,
+     "end": 33,
+     "masked_start": 27,
+     "masked_end": 37,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 36,
+     "end": 61,
+     "masked_start": 40,
+     "masked_end": 49,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 64,
+     "end": 69,
+     "masked_start": 52,
+     "masked_end": 64,
+     "placeholder": "[LOCATION_3]",
+     "source": "ner"
+    },
+    {
+     "start": 70,
+     "end": 87,
+     "masked_start": 65,
+     "masked_end": 74,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    },
+    {
+     "start": 101,
+     "end": 106,
+     "masked_start": 88,
+     "masked_end": 103,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    },
+    {
+     "start": 172,
+     "end": 179,
+     "masked_start": 169,
+     "masked_end": 179,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message is about a potential customer interested in purchasing 3 licenses for the Business Tariff at 29 EUR per month, with a meeting scheduled for Tuesday at 15:00.",
+     "restored_strict": "The message is about a potential customer interested in purchasing 3 licenses for the Business Tariff at 29 EUR per month, with a meeting scheduled for Tuesday at 15:00.",
+     "restored_robust": "The message is about a potential customer interested in purchasing 3 licenses for the Business Tariff at 29 EUR per month, with a meeting scheduled for Tuesday at 15:00.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is about a customer interested in purchasing three licenses for the Business Tariff, which costs 29 euros per month. The customer's name and email address are [PERSON_1] and [EMAIL_1], respectively. The appointment is scheduled for Tuesday at 15:00.",
+     "restored_strict": "The message is about a customer interested in purchasing three licenses for the Business Tariff, which costs 29 euros per month. The customer's name and email address are Wojciech Nowak and w.nowak@bau-nowak.example, respectively. The appointment is scheduled for Tuesday at 15:00.",
+     "restored_robust": "The message is about a customer interested in purchasing three licenses for the Business Tariff, which costs 29 euros per month. The customer's name and email address are Wojciech Nowak and w.nowak@bau-nowak.example, respectively. The appointment is scheduled for Tuesday at 15:00.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-01",
+   "lang": "en",
+   "kind": "support-email",
+   "text": "Subject: Refund for order 55120\n\nHi, I'm Priya Raman and I returned the blender on 2 November. My customer number is C-448190. Could you refund the £74.99 to GB64 ZZTB 6016 1331 9268 19? You can reach me on 07700 900418.\n\nThanks,\nPriya",
+   "spans": [
+    {
+     "start": 41,
+     "end": 52,
+     "type": "PERSON"
+    },
+    {
+     "start": 117,
+     "end": 125,
+     "type": "CUSTOMER_ID"
+    },
+    {
+     "start": 158,
+     "end": 185,
+     "type": "IBAN"
+    },
+    {
+     "start": 207,
+     "end": 219,
+     "type": "PHONE"
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Subject: Refund for order 55120\n\nHi, I'm [PERSON_1] and I returned the blender on 2 November. My customer number is [CUSTOMER_ID_1]. Could you refund the £74.99 to [IBAN_1]? You can reach me on [PHONE_1].\n\nThanks,\n[PERSON_1]",
+   "mapping": {
+    "[PERSON_1]": "Priya Raman",
+    "[CUSTOMER_ID_1]": "C-448190",
+    "[IBAN_1]": "GB64 ZZTB 6016 1331 9268 19",
+    "[PHONE_1]": "07700 900418"
+   },
+   "replacements": [
+    {
+     "start": 41,
+     "end": 52,
+     "masked_start": 41,
+     "masked_end": 51,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 117,
+     "end": 125,
+     "masked_start": 116,
+     "masked_end": 131,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 158,
+     "end": 185,
+     "masked_start": 164,
+     "masked_end": 172,
+     "placeholder": "[IBAN_1]",
+     "source": "rules"
+    },
+    {
+     "start": 207,
+     "end": 219,
+     "masked_start": 194,
+     "masked_end": 203,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    },
+    {
+     "start": 230,
+     "end": 235,
+     "masked_start": 214,
+     "masked_end": 224,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The sender, [PERSON_1], returned a blender on November 2nd and requested a refund of £74.99 to [IBAN_1]. They can be reached on [PHONE_1].",
+     "restored_strict": "The sender, Priya Raman, returned a blender on November 2nd and requested a refund of £74.99 to GB64 ZZTB 6016 1331 9268 19. They can be reached on 07700 900418.",
+     "restored_robust": "The sender, Priya Raman, returned a blender on November 2nd and requested a refund of £74.99 to GB64 ZZTB 6016 1331 9268 19. They can be reached on 07700 900418.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is a refund request for an order. The sender, [PERSON_1], returned a blender on November 2nd and provided their customer ID, IBAN, and phone number. They are asking for a refund of £74.99 to [IBAN_1].",
+     "restored_strict": "The message is a refund request for an order. The sender, Priya Raman, returned a blender on November 2nd and provided their customer ID, IBAN, and phone number. They are asking for a refund of £74.99 to GB64 ZZTB 6016 1331 9268 19.",
+     "restored_robust": "The message is a refund request for an order. The sender, Priya Raman, returned a blender on November 2nd and provided their customer ID, IBAN, and phone number. They are asking for a refund of £74.99 to GB64 ZZTB 6016 1331 9268 19.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-02",
+   "lang": "en",
+   "kind": "hr-note",
+   "text": "HR note, 4 Nov 2026\n\nDaniel O'Connor (employee no. E-20871) moves to the Dublin office on 1 March 2027. Date of birth on file: 14 August 1987. New home address: 27 Larkspur Close, Leeds LS6 4QT. Payroll questions go to daniel.oconnor@company.example.",
+   "spans": [
+    {
+     "start": 21,
+     "end": 36,
+     "type": "PERSON"
+    },
+    {
+     "start": 51,
+     "end": 58,
+     "type": "CUSTOMER_ID"
+    },
+    {
+     "start": 127,
+     "end": 141,
+     "type": "DATE_OF_BIRTH"
+    },
+    {
+     "start": 161,
+     "end": 193,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 219,
+     "end": 249,
+     "type": "EMAIL"
+    }
+   ],
+   "masked": "HR note, 4 Nov 2026\n\n[PERSON_1] (employee no. [CUSTOMER_ID_1]) moves to the [LOCATION_1] office on 1 March 2027. Date of birth on file: [DATE_OF_BIRTH_1]. New home address: [ADDRESS_1]. Payroll questions go to [EMAIL_1].",
+   "mapping": {
+    "[PERSON_1]": "Daniel O'Connor",
+    "[CUSTOMER_ID_1]": "E-20871",
+    "[LOCATION_1]": "Dublin",
+    "[DATE_OF_BIRTH_1]": "14 August 1987",
+    "[ADDRESS_1]": "27 Larkspur Close, Leeds LS6 4QT",
+    "[EMAIL_1]": "daniel.oconnor@company.example"
+   },
+   "replacements": [
+    {
+     "start": 21,
+     "end": 36,
+     "masked_start": 21,
+     "masked_end": 31,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 51,
+     "end": 58,
+     "masked_start": 46,
+     "masked_end": 61,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    },
+    {
+     "start": 73,
+     "end": 79,
+     "masked_start": 76,
+     "masked_end": 88,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 127,
+     "end": 141,
+     "masked_start": 136,
+     "masked_end": 153,
+     "placeholder": "[DATE_OF_BIRTH_1]",
+     "source": "rules"
+    },
+    {
+     "start": 161,
+     "end": 193,
+     "masked_start": 173,
+     "masked_end": 184,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 219,
+     "end": 249,
+     "masked_start": 210,
+     "masked_end": 219,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The HR note indicates that [PERSON_1], with employee ID [CUSTOMER_ID_1], will relocate to the [LOCATION_1] office on March 1, 2027. Their date of birth is [DATE_OF_BIRTH_1], and their new home address is [ADDRESS_1]. Payroll inquiries should be directed to [EMAIL_1].",
+     "restored_strict": "The HR note indicates that Daniel O'Connor, with employee ID E-20871, will relocate to the Dublin office on March 1, 2027. Their date of birth is 14 August 1987, and their new home address is 27 Larkspur Close, Leeds LS6 4QT. Payroll inquiries should be directed to daniel.oconnor@company.example.",
+     "restored_robust": "The HR note indicates that Daniel O'Connor, with employee ID E-20871, will relocate to the Dublin office on March 1, 2027. Their date of birth is 14 August 1987, and their new home address is 27 Larkspur Close, Leeds LS6 4QT. Payroll inquiries should be directed to daniel.oconnor@company.example.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The HR note indicates that [PERSON_1], an employee with employee number [CUSTOMER_ID_1], will be relocating to the [LOCATION_1] office on March 1, 2027. Their date of birth is [DATE_OF_BIRTH_1], and their new home address is [ADDRESS_1]. Payroll inquiries should be directed to [EMAIL_1].",
+     "restored_strict": "The HR note indicates that Daniel O'Connor, an employee with employee number E-20871, will be relocating to the Dublin office on March 1, 2027. Their date of birth is 14 August 1987, and their new home address is 27 Larkspur Close, Leeds LS6 4QT. Payroll inquiries should be directed to daniel.oconnor@company.example.",
+     "restored_robust": "The HR note indicates that Daniel O'Connor, an employee with employee number E-20871, will be relocating to the Dublin office on March 1, 2027. Their date of birth is 14 August 1987, and their new home address is 27 Larkspur Close, Leeds LS6 4QT. Payroll inquiries should be directed to daniel.oconnor@company.example.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-03",
+   "lang": "en",
+   "kind": "invoice",
+   "text": "INVOICE INV-2026-3381\n\nBill to: Graham Whitlock, 9 Fernhill Road, Bristol BS7 8XY\n3 x ergonomic chair at 189.00 = 567.00\nVAT 20%: 113.40, total: 680.40 GBP\nPayment due within 30 days. Account reference: ACC-77-1904",
+   "spans": [
+    {
+     "start": 32,
+     "end": 47,
+     "type": "PERSON"
+    },
+    {
+     "start": 49,
+     "end": 81,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 203,
+     "end": 214,
+     "type": "CUSTOMER_ID"
+    }
+   ],
+   "masked": "INVOICE INV-2026-3381\n\n[PERSON_1] to: [PERSON_2], [ADDRESS_1]\n3 x ergonomic chair at 189.00 = 567.00\nVAT 20%: 113.40, total: 680.40 GBP\nPayment due within 30 days. Account reference: [CUSTOMER_ID_1]",
+   "mapping": {
+    "[PERSON_1]": "Bill",
+    "[PERSON_2]": "Graham Whitlock",
+    "[ADDRESS_1]": "9 Fernhill Road, Bristol BS7 8XY",
+    "[CUSTOMER_ID_1]": "ACC-77-1904"
+   },
+   "replacements": [
+    {
+     "start": 23,
+     "end": 27,
+     "masked_start": 23,
+     "masked_end": 33,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 32,
+     "end": 47,
+     "masked_start": 38,
+     "masked_end": 48,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 49,
+     "end": 81,
+     "masked_start": 50,
+     "masked_end": 61,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 203,
+     "end": 214,
+     "masked_start": 183,
+     "masked_end": 198,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The invoice for 3 ergonomic chairs at £189 each, including VAT, totals £680.40, due within 30 days, with account reference [CUSTOMER_ID_1].",
+     "restored_strict": "The invoice for 3 ergonomic chairs at £189 each, including VAT, totals £680.40, due within 30 days, with account reference ACC-77-1904.",
+     "restored_robust": "The invoice for 3 ergonomic chairs at £189 each, including VAT, totals £680.40, due within 30 days, with account reference ACC-77-1904.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The invoice for 3 ergonomic chairs at 189.00 each, totaling 567.00 GBP, with a VAT of 20%, amounts to a total of 680.40 GBP. Payment is due within 30 days, and the account reference is [CUSTOMER_ID_1].",
+     "restored_strict": "The invoice for 3 ergonomic chairs at 189.00 each, totaling 567.00 GBP, with a VAT of 20%, amounts to a total of 680.40 GBP. Payment is due within 30 days, and the account reference is ACC-77-1904.",
+     "restored_robust": "The invoice for 3 ergonomic chairs at 189.00 each, totaling 567.00 GBP, with a VAT of 20%, amounts to a total of 680.40 GBP. Payment is due within 30 days, and the account reference is ACC-77-1904.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-04",
+   "lang": "en",
+   "kind": "meeting-notes",
+   "text": "Weekly sync, 12 Nov\n\nPresent: Will Hartley, Mark Rose, Grace Baker\n- Will will mark the open tickets as urgent before Friday.\n- Mark said the rose garden photos for the brochure are ready.\n- Grace asked for a grace period of 14 days for the supplier.",
+   "spans": [
+    {
+     "start": 30,
+     "end": 42,
+     "type": "PERSON"
+    },
+    {
+     "start": 44,
+     "end": 53,
+     "type": "PERSON"
+    },
+    {
+     "start": 55,
+     "end": 66,
+     "type": "PERSON"
+    },
+    {
+     "start": 69,
+     "end": 73,
+     "type": "PERSON"
+    },
+    {
+     "start": 128,
+     "end": 132,
+     "type": "PERSON"
+    },
+    {
+     "start": 191,
+     "end": 196,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Weekly sync, 12 Nov\n\nPresent: [PERSON_1], [PERSON_2], [PERSON_3]\n- [PERSON_1] will mark the open tickets as urgent before Friday.\n- Mark said the rose garden photos for the brochure are ready.\n- Grace asked for a grace period of 14 days for the supplier.",
+   "mapping": {
+    "[PERSON_1]": "Will Hartley",
+    "[PERSON_2]": "Mark Rose",
+    "[PERSON_3]": "Grace Baker"
+   },
+   "replacements": [
+    {
+     "start": 30,
+     "end": 42,
+     "masked_start": 30,
+     "masked_end": 40,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 44,
+     "end": 53,
+     "masked_start": 42,
+     "masked_end": 52,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 55,
+     "end": 66,
+     "masked_start": 54,
+     "masked_end": 64,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 69,
+     "end": 73,
+     "masked_start": 67,
+     "masked_end": 77,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [
+    "Mark",
+    "Grace"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "The message is about a weekly sync on November 12th. It mentions that [PERSON_1] will mark open tickets as urgent by Friday, [PERSON_2] has completed the rose garden photos for the brochure, and [PERSON_3] requested a 14-day grace period for a supplier.",
+     "restored_strict": "The message is about a weekly sync on November 12th. It mentions that Will Hartley will mark open tickets as urgent by Friday, Mark Rose has completed the rose garden photos for the brochure, and Grace Baker requested a 14-day grace period for a supplier.",
+     "restored_robust": "The message is about a weekly sync on November 12th. It mentions that Will Hartley will mark open tickets as urgent by Friday, Mark Rose has completed the rose garden photos for the brochure, and Grace Baker requested a 14-day grace period for a supplier.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is about a weekly sync scheduled for November 12th. Present attendees are [PERSON_1], [PERSON_2], and [PERSON_3]. [PERSON_1] will prioritize open tickets as urgent by Friday. Mark confirmed the rose garden photos for the brochure are ready. Grace requested a 14-day grace period for the supplier.",
+     "restored_strict": "The message is about a weekly sync scheduled for November 12th. Present attendees are Will Hartley, Mark Rose, and Grace Baker. Will Hartley will prioritize open tickets as urgent by Friday. Mark confirmed the rose garden photos for the brochure are ready. Grace requested a 14-day grace period for the supplier.",
+     "restored_robust": "The message is about a weekly sync scheduled for November 12th. Present attendees are Will Hartley, Mark Rose, and Grace Baker. Will Hartley will prioritize open tickets as urgent by Friday. Mark confirmed the rose garden photos for the brochure are ready. Grace requested a 14-day grace period for the supplier.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-05",
+   "lang": "en",
+   "kind": "chat",
+   "text": "Hey, two Sams on the call tomorrow: Sam Keller from legal and Sam Moretti from finance. Invite sam.keller@lawfirm.example and smoretti@company.example. Sam from finance will bring the Q4 numbers.",
+   "spans": [
+    {
+     "start": 36,
+     "end": 46,
+     "type": "PERSON"
+    },
+    {
+     "start": 62,
+     "end": 73,
+     "type": "PERSON"
+    },
+    {
+     "start": 95,
+     "end": 121,
+     "type": "EMAIL"
+    },
+    {
+     "start": 126,
+     "end": 150,
+     "type": "EMAIL"
+    },
+    {
+     "start": 152,
+     "end": 155,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "[PERSON_1], two [PERSON_2] on the call tomorrow: [PERSON_3] from legal and [PERSON_4] from finance. Invite [EMAIL_1] and [EMAIL_2]. [PERSON_5] from finance will bring the Q4 numbers.",
+   "mapping": {
+    "[PERSON_1]": "Hey",
+    "[PERSON_2]": "Sams",
+    "[PERSON_3]": "Sam Keller",
+    "[PERSON_4]": "Sam Moretti",
+    "[EMAIL_1]": "sam.keller@lawfirm.example",
+    "[EMAIL_2]": "smoretti@company.example",
+    "[PERSON_5]": "Sam"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 3,
+     "masked_start": 0,
+     "masked_end": 10,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 9,
+     "end": 13,
+     "masked_start": 16,
+     "masked_end": 26,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 36,
+     "end": 46,
+     "masked_start": 49,
+     "masked_end": 59,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 62,
+     "end": 73,
+     "masked_start": 75,
+     "masked_end": 85,
+     "placeholder": "[PERSON_4]",
+     "source": "ner"
+    },
+    {
+     "start": 95,
+     "end": 121,
+     "masked_start": 107,
+     "masked_end": 116,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules"
+    },
+    {
+     "start": 126,
+     "end": 150,
+     "masked_start": 121,
+     "masked_end": 130,
+     "placeholder": "[EMAIL_2]",
+     "source": "rules"
+    },
+    {
+     "start": 152,
+     "end": 155,
+     "masked_start": 132,
+     "masked_end": 142,
+     "placeholder": "[PERSON_5]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message is inviting two individuals, [PERSON_2], to a call scheduled for tomorrow. It mentions that [PERSON_3] from legal and [PERSON_4] from finance will be present, and [EMAIL_1] and [EMAIL_2] should be invited. Additionally, [PERSON_5] from finance will bring the Q4 numbers.",
+     "restored_strict": "The message is inviting two individuals, Sams, to a call scheduled for tomorrow. It mentions that Sam Keller from legal and Sam Moretti from finance will be present, and sam.keller@lawfirm.example and smoretti@company.example should be invited. Additionally, Sam from finance will bring the Q4 numbers.",
+     "restored_robust": "The message is inviting two individuals, Sams, to a call scheduled for tomorrow. It mentions that Sam Keller from legal and Sam Moretti from finance will be present, and sam.keller@lawfirm.example and smoretti@company.example should be invited. Additionally, Sam from finance will bring the Q4 numbers.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is about an upcoming call with two people [PERSON_2] on the call tomorrow, with representatives from legal [PERSON_3] and finance [PERSON_4] joining. The call will also include [EMAIL_1] and [EMAIL_2] as invitees. [PERSON_5] from finance will present the Q4 numbers.",
+     "restored_strict": "The message is about an upcoming call with two people Sams on the call tomorrow, with representatives from legal Sam Keller and finance Sam Moretti joining. The call will also include sam.keller@lawfirm.example and smoretti@company.example as invitees. Sam from finance will present the Q4 numbers.",
+     "restored_robust": "The message is about an upcoming call with two people Sams on the call tomorrow, with representatives from legal Sam Keller and finance Sam Moretti joining. The call will also include sam.keller@lawfirm.example and smoretti@company.example as invitees. Sam from finance will present the Q4 numbers.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-06",
+   "lang": "en",
+   "kind": "support-email",
+   "text": "Hello,\n\nI can't log into my account. Registered e-mail: lucy.fernsby@example.com, date of birth 03/05/1992. I moved recently, my new address is Flat 4, 112 Harrow Lane, Manchester M14 6RD.\n\nThanks,\nLucy Fernsby",
+   "spans": [
+    {
+     "start": 56,
+     "end": 80,
+     "type": "EMAIL"
+    },
+    {
+     "start": 96,
+     "end": 106,
+     "type": "DATE_OF_BIRTH"
+    },
+    {
+     "start": 144,
+     "end": 187,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 198,
+     "end": 210,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Hello,\n\nI can't log into my account. Registered e-mail: [EMAIL_1], date of birth [DATE_OF_BIRTH_1]. I moved recently, my new address is [ADDRESS_1].\n\nThanks,\n[PERSON_1]",
+   "mapping": {
+    "[EMAIL_1]": "lucy.fernsby@example.com",
+    "[DATE_OF_BIRTH_1]": "03/05/1992",
+    "[ADDRESS_1]": "Flat 4, 112 Harrow Lane, Manchester M14 6RD",
+    "[PERSON_1]": "Lucy Fernsby"
+   },
+   "replacements": [
+    {
+     "start": 56,
+     "end": 80,
+     "masked_start": 56,
+     "masked_end": 65,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules"
+    },
+    {
+     "start": 96,
+     "end": 106,
+     "masked_start": 81,
+     "masked_end": 98,
+     "placeholder": "[DATE_OF_BIRTH_1]",
+     "source": "rules"
+    },
+    {
+     "start": 144,
+     "end": 187,
+     "masked_start": 136,
+     "masked_end": 147,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 198,
+     "end": 210,
+     "masked_start": 158,
+     "masked_end": 168,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The sender is experiencing issues logging into their account, with their registered email being [EMAIL_1], date of birth [DATE_OF_BIRTH_1], and their new address being [ADDRESS_1].",
+     "restored_strict": "The sender is experiencing issues logging into their account, with their registered email being lucy.fernsby@example.com, date of birth 03/05/1992, and their new address being Flat 4, 112 Harrow Lane, Manchester M14 6RD.",
+     "restored_robust": "The sender is experiencing issues logging into their account, with their registered email being lucy.fernsby@example.com, date of birth 03/05/1992, and their new address being Flat 4, 112 Harrow Lane, Manchester M14 6RD.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message is a response to a user who is unable to log into their account. The user provides their email address [EMAIL_1], date of birth [DATE_OF_BIRTH_1], and new address [ADDRESS_1]. The sender thanks the user for their email and asks for their assistance in resolving the issue.",
+     "restored_strict": "The message is a response to a user who is unable to log into their account. The user provides their email address lucy.fernsby@example.com, date of birth 03/05/1992, and new address Flat 4, 112 Harrow Lane, Manchester M14 6RD. The sender thanks the user for their email and asks for their assistance in resolving the issue.",
+     "restored_robust": "The message is a response to a user who is unable to log into their account. The user provides their email address lucy.fernsby@example.com, date of birth 03/05/1992, and new address Flat 4, 112 Harrow Lane, Manchester M14 6RD. The sender thanks the user for their email and asks for their assistance in resolving the issue.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-07",
+   "lang": "en",
+   "kind": "internal-email",
+   "text": "Hi team, please ship the replacement router (model AX-3000, firmware 2.1.7) to Jamal Whitaker, 1847 Maple Ridge Drive, Columbus, OH 43215. He prefers calls at (614) 555-0142. His account ID is US-0093321.",
+   "spans": [
+    {
+     "start": 79,
+     "end": 93,
+     "type": "PERSON"
+    },
+    {
+     "start": 95,
+     "end": 137,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 159,
+     "end": 173,
+     "type": "PHONE"
+    },
+    {
+     "start": 193,
+     "end": 203,
+     "type": "CUSTOMER_ID"
+    }
+   ],
+   "masked": "Hi team, please ship the replacement router (model AX-3000, firmware 2.1.7) to [PERSON_1], [ADDRESS_1]. He prefers calls at [PHONE_1]. His account ID is [CUSTOMER_ID_1].",
+   "mapping": {
+    "[PERSON_1]": "Jamal Whitaker",
+    "[ADDRESS_1]": "1847 Maple Ridge Drive, Columbus, OH 43215",
+    "[PHONE_1]": "(614) 555-0142",
+    "[CUSTOMER_ID_1]": "US-0093321"
+   },
+   "replacements": [
+    {
+     "start": 79,
+     "end": 93,
+     "masked_start": 79,
+     "masked_end": 89,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 95,
+     "end": 137,
+     "masked_start": 91,
+     "masked_end": 102,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 159,
+     "end": 173,
+     "masked_start": 124,
+     "masked_end": 133,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    },
+    {
+     "start": 193,
+     "end": 203,
+     "masked_start": 153,
+     "masked_end": 168,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules+ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message instructs team members to ship a replacement router (AX-3000, firmware 2.1.7) to [PERSON_1], who prefers calls at [PHONE_1], with account ID [CUSTOMER_ID_1].",
+     "restored_strict": "The message instructs team members to ship a replacement router (AX-3000, firmware 2.1.7) to Jamal Whitaker, who prefers calls at (614) 555-0142, with account ID US-0093321.",
+     "restored_robust": "The message instructs team members to ship a replacement router (AX-3000, firmware 2.1.7) to Jamal Whitaker, who prefers calls at (614) 555-0142, with account ID US-0093321.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message instructs the team to ship a replacement router (AX-3000, firmware 2.1.7) to [PERSON_1], who prefers calls at [PHONE_1], and has an account ID of [CUSTOMER_ID_1].",
+     "restored_strict": "The message instructs the team to ship a replacement router (AX-3000, firmware 2.1.7) to Jamal Whitaker, who prefers calls at (614) 555-0142, and has an account ID of US-0093321.",
+     "restored_robust": "The message instructs the team to ship a replacement router (AX-3000, firmware 2.1.7) to Jamal Whitaker, who prefers calls at (614) 555-0142, and has an account ID of US-0093321.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-08",
+   "lang": "en",
+   "kind": "insurance-claim",
+   "text": "Claim summary\n\nPolicyholder: Hannah Sørensen\nPolicy number: POL-6620-1187\nPhone: +44 20 7946 0391\nOn 21 October 2026 a delivery van hit the parked car near the supermarket car park on Station Road. Repair estimate: £1,450.",
+   "spans": [
+    {
+     "start": 29,
+     "end": 44,
+     "type": "PERSON"
+    },
+    {
+     "start": 60,
+     "end": 73,
+     "type": "CUSTOMER_ID"
+    },
+    {
+     "start": 81,
+     "end": 97,
+     "type": "PHONE"
+    }
+   ],
+   "masked": "Claim summary\n\n[PERSON_1]: [PERSON_2]\n[PERSON_3] number: [CUSTOMER_ID_1]\n[LOCATION_1]: [PHONE_1]\nOn 21 October 2026 a delivery van hit the parked car near the supermarket car park on [LOCATION_2]. Repair estimate: £1,450.",
+   "mapping": {
+    "[PERSON_1]": "Policyholder",
+    "[PERSON_2]": "Hannah Sørensen",
+    "[PERSON_3]": "Policy",
+    "[CUSTOMER_ID_1]": "POL-6620-1187",
+    "[LOCATION_1]": "Phone",
+    "[PHONE_1]": "+44 20 7946 0391",
+    "[LOCATION_2]": "Station Road"
+   },
+   "replacements": [
+    {
+     "start": 15,
+     "end": 27,
+     "masked_start": 15,
+     "masked_end": 25,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 29,
+     "end": 44,
+     "masked_start": 27,
+     "masked_end": 37,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 45,
+     "end": 51,
+     "masked_start": 38,
+     "masked_end": 48,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 60,
+     "end": 73,
+     "masked_start": 57,
+     "masked_end": 72,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    },
+    {
+     "start": 74,
+     "end": 79,
+     "masked_start": 73,
+     "masked_end": 85,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 81,
+     "end": 97,
+     "masked_start": 87,
+     "masked_end": 96,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    },
+    {
+     "start": 184,
+     "end": 196,
+     "masked_start": 183,
+     "masked_end": 195,
+     "placeholder": "[LOCATION_2]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "A delivery van hit a parked car near the supermarket car park on October 21, 2026, resulting in a repair estimate of £1,450. The incident occurred on [LOCATION_2] with the customer's [PHONE_1].",
+     "restored_strict": "A delivery van hit a parked car near the supermarket car park on October 21, 2026, resulting in a repair estimate of £1,450. The incident occurred on Station Road with the customer's +44 20 7946 0391.",
+     "restored_robust": "A delivery van hit a parked car near the supermarket car park on October 21, 2026, resulting in a repair estimate of £1,450. The incident occurred on Station Road with the customer's +44 20 7946 0391.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "A delivery van accident occurred on October 21, 2026, near the supermarket car park in [LOCATION_2]. The damaged car was parked by [PERSON_1], and the estimated repair cost is £1,450.",
+     "restored_strict": "A delivery van accident occurred on October 21, 2026, near the supermarket car park in Station Road. The damaged car was parked by Policyholder, and the estimated repair cost is £1,450.",
+     "restored_robust": "A delivery van accident occurred on October 21, 2026, near the supermarket car park in Station Road. The damaged car was parked by Policyholder, and the estimated repair cost is £1,450.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-09",
+   "lang": "en",
+   "kind": "meeting-notes",
+   "text": "Ops review, room 3B\n\nAttendees: Chloe Adeyemi, Ben Fraser\n- Uptime 99.94 % in October, 2 incidents (INC-4471, INC-4480).\n- Migrate the 14 servers to Ubuntu 26.04 by 15 January.\n- Ben owns the budget line 4410-220, £12,000 approved.",
+   "spans": [
+    {
+     "start": 32,
+     "end": 45,
+     "type": "PERSON"
+    },
+    {
+     "start": 47,
+     "end": 57,
+     "type": "PERSON"
+    },
+    {
+     "start": 179,
+     "end": 182,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Ops review, room 3B\n\nAttendees: [PERSON_1], [PERSON_2]\n- [PERSON_3] 99.94 % in October, 2 incidents (INC-4471, INC-4480).\n- Migrate the 14 servers to Ubuntu 26.04 by 15 January.\n- [PERSON_2] owns the budget line 4410-220, £12,000 approved.",
+   "mapping": {
+    "[PERSON_1]": "Chloe Adeyemi",
+    "[PERSON_2]": "Ben Fraser",
+    "[PERSON_3]": "Uptime"
+   },
+   "replacements": [
+    {
+     "start": 32,
+     "end": 45,
+     "masked_start": 32,
+     "masked_end": 42,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 47,
+     "end": 57,
+     "masked_start": 44,
+     "masked_end": 54,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 60,
+     "end": 66,
+     "masked_start": 57,
+     "masked_end": 67,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 179,
+     "end": 182,
+     "masked_start": 180,
+     "masked_end": 190,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The Ops review for room 3B includes a 99.94% uptime in October with 2 incidents (INC-4471, INC-4480). The task to migrate 14 servers to Ubuntu 26.04 by January 15th is scheduled. Budget line 4410-220, worth £12,000, is under [PERSON_2]'s management.",
+     "restored_strict": "The Ops review for room 3B includes a 99.94% uptime in October with 2 incidents (INC-4471, INC-4480). The task to migrate 14 servers to Ubuntu 26.04 by January 15th is scheduled. Budget line 4410-220, worth £12,000, is under Ben Fraser's management.",
+     "restored_robust": "The Ops review for room 3B includes a 99.94% uptime in October with 2 incidents (INC-4471, INC-4480). The task to migrate 14 servers to Ubuntu 26.04 by January 15th is scheduled. Budget line 4410-220, worth £12,000, is under Ben Fraser's management.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The Ops review for room 3B includes attendees [PERSON_1] and [PERSON_2]. [PERSON_3] has a 99.94% uptime in October with 2 incidents (INC-4471, INC-4480). The task is to migrate 14 servers to Ubuntu 26.04 by January 15th. [PERSON_2] is responsible for budget line 4410-220, which is £12,000 approved.",
+     "restored_strict": "The Ops review for room 3B includes attendees Chloe Adeyemi and Ben Fraser. Uptime has a 99.94% uptime in October with 2 incidents (INC-4471, INC-4480). The task is to migrate 14 servers to Ubuntu 26.04 by January 15th. Ben Fraser is responsible for budget line 4410-220, which is £12,000 approved.",
+     "restored_robust": "The Ops review for room 3B includes attendees Chloe Adeyemi and Ben Fraser. Uptime has a 99.94% uptime in October with 2 incidents (INC-4471, INC-4480). The task is to migrate 14 servers to Ubuntu 26.04 by January 15th. Ben Fraser is responsible for budget line 4410-220, which is £12,000 approved.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-10",
+   "lang": "en",
+   "kind": "contract",
+   "text": "Consulting agreement (extract)\n\nThis agreement is made on 1 December 2026 between Northwind Analytics Ltd and Oliver Pemberton-Hayes, born 9 February 1979, of 3 Willow Mews, Cambridge CB1 2AB. The fee is £650 per day, payable to GB02 ZZTB 4027 1555 1209 34 within 14 days of each invoice.",
+   "spans": [
+    {
+     "start": 110,
+     "end": 132,
+     "type": "PERSON"
+    },
+    {
+     "start": 139,
+     "end": 154,
+     "type": "DATE_OF_BIRTH"
+    },
+    {
+     "start": 159,
+     "end": 191,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 229,
+     "end": 256,
+     "type": "IBAN"
+    }
+   ],
+   "masked": "Consulting agreement (extract)\n\nThis agreement is made on 1 December 2026 between Northwind Analytics Ltd and [PERSON_1], born [DATE_OF_BIRTH_1], of [ADDRESS_1]. The fee is £650 per day, payable to [IBAN_1] within 14 days of each invoice.",
+   "mapping": {
+    "[PERSON_1]": "Oliver Pemberton-Hayes",
+    "[DATE_OF_BIRTH_1]": "9 February 1979",
+    "[ADDRESS_1]": "3 Willow Mews, Cambridge CB1 2AB",
+    "[IBAN_1]": "GB02 ZZTB 4027 1555 1209 34"
+   },
+   "replacements": [
+    {
+     "start": 110,
+     "end": 132,
+     "masked_start": 110,
+     "masked_end": 120,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 139,
+     "end": 154,
+     "masked_start": 127,
+     "masked_end": 144,
+     "placeholder": "[DATE_OF_BIRTH_1]",
+     "source": "rules"
+    },
+    {
+     "start": 159,
+     "end": 191,
+     "masked_start": 149,
+     "masked_end": 160,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 229,
+     "end": 256,
+     "masked_start": 198,
+     "masked_end": 206,
+     "placeholder": "[IBAN_1]",
+     "source": "rules+ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The consulting agreement between Northwind Analytics Ltd and [PERSON_1] stipulates a fee of £650 per day, payable within 14 days of each invoice. The agreement was signed on 1 December 2026.",
+     "restored_strict": "The consulting agreement between Northwind Analytics Ltd and Oliver Pemberton-Hayes stipulates a fee of £650 per day, payable within 14 days of each invoice. The agreement was signed on 1 December 2026.",
+     "restored_robust": "The consulting agreement between Northwind Analytics Ltd and Oliver Pemberton-Hayes stipulates a fee of £650 per day, payable within 14 days of each invoice. The agreement was signed on 1 December 2026.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "A consulting agreement was signed on December 1, 2026, between Northwind Analytics Ltd and [PERSON_1], born on [DATE_OF_BIRTH_1], residing at [ADDRESS_1]. The fee is £650 per day, to be paid within 14 days of each invoice to [IBAN_1].",
+     "restored_strict": "A consulting agreement was signed on December 1, 2026, between Northwind Analytics Ltd and Oliver Pemberton-Hayes, born on 9 February 1979, residing at 3 Willow Mews, Cambridge CB1 2AB. The fee is £650 per day, to be paid within 14 days of each invoice to GB02 ZZTB 4027 1555 1209 34.",
+     "restored_robust": "A consulting agreement was signed on December 1, 2026, between Northwind Analytics Ltd and Oliver Pemberton-Hayes, born on 9 February 1979, residing at 3 Willow Mews, Cambridge CB1 2AB. The fee is £650 per day, to be paid within 14 days of each invoice to GB02 ZZTB 4027 1555 1209 34.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-11",
+   "lang": "en",
+   "kind": "chat",
+   "text": "Quick heads-up: Tom is off sick until Wednesday. Ms Okonkwo will cover his client calls. The Hill & Partners pitch moves to next week.",
+   "spans": [
+    {
+     "start": 16,
+     "end": 19,
+     "type": "PERSON"
+    },
+    {
+     "start": 52,
+     "end": 59,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "[PERSON_1] heads-up: [LOCATION_1] is off sick until Wednesday. [PERSON_2] will cover his client calls. The Hill & Partners pitch moves to next week.",
+   "mapping": {
+    "[PERSON_1]": "Quick",
+    "[LOCATION_1]": "Tom",
+    "[PERSON_2]": "Ms Okonkwo"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 5,
+     "masked_start": 0,
+     "masked_end": 10,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 16,
+     "end": 19,
+     "masked_start": 21,
+     "masked_end": 33,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 49,
+     "end": 59,
+     "masked_start": 63,
+     "masked_end": 73,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "[PERSON_1] is out sick until Wednesday, so [PERSON_2] will take over for their client calls. The Hill & Partners pitch is rescheduled for next week.",
+     "restored_strict": "Quick is out sick until Wednesday, so Ms Okonkwo will take over for their client calls. The Hill & Partners pitch is rescheduled for next week.",
+     "restored_robust": "Quick is out sick until Wednesday, so Ms Okonkwo will take over for their client calls. The Hill & Partners pitch is rescheduled for next week.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "[PERSON_1] is out sick until Wednesday, and [PERSON_2] will take over for [PERSON_1]'s client calls. The Hill & Partners pitch is rescheduled for next week.",
+     "restored_strict": "Quick is out sick until Wednesday, and Ms Okonkwo will take over for Quick's client calls. The Hill & Partners pitch is rescheduled for next week.",
+     "restored_robust": "Quick is out sick until Wednesday, and Ms Okonkwo will take over for Quick's client calls. The Hill & Partners pitch is rescheduled for next week.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-12",
+   "lang": "en",
+   "kind": "delivery-notice",
+   "text": "Your parcel 7781 0042 9913 will arrive tomorrow between 8 am and 12 pm.\nRecipient: Agnieszka Wróbel, 58 Kingfisher Way, Norwich NR4 7TJ\nQuestions? Call our depot hotline on 01632 960772, Monday to Friday.",
+   "spans": [
+    {
+     "start": 83,
+     "end": 99,
+     "type": "PERSON"
+    },
+    {
+     "start": 101,
+     "end": 135,
+     "type": "ADDRESS"
+    }
+   ],
+   "masked": "Your parcel 7781 [PHONE_1] will arrive tomorrow between 8 am and 12 pm.\nRecipient: [PERSON_1], [ADDRESS_1]\nQuestions? Call our depot hotline on [PHONE_2], Monday to Friday.",
+   "mapping": {
+    "[PHONE_1]": "0042 9913",
+    "[PERSON_1]": "Agnieszka Wróbel",
+    "[ADDRESS_1]": "58 Kingfisher Way, Norwich NR4 7TJ",
+    "[PHONE_2]": "01632 960772"
+   },
+   "replacements": [
+    {
+     "start": 17,
+     "end": 26,
+     "masked_start": 17,
+     "masked_end": 26,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    },
+    {
+     "start": 83,
+     "end": 99,
+     "masked_start": 83,
+     "masked_end": 93,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 101,
+     "end": 135,
+     "masked_start": 95,
+     "masked_end": 106,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 173,
+     "end": 185,
+     "masked_start": 144,
+     "masked_end": 153,
+     "placeholder": "[PHONE_2]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "Your parcel numbered 7781 will be delivered tomorrow between 8 am and 12 pm. The recipient is [PERSON_1] at [ADDRESS_1]. If you have any questions, please contact our depot hotline on [PHONE_2] from Monday to Friday.",
+     "restored_strict": "Your parcel numbered 7781 will be delivered tomorrow between 8 am and 12 pm. The recipient is Agnieszka Wróbel at 58 Kingfisher Way, Norwich NR4 7TJ. If you have any questions, please contact our depot hotline on 01632 960772 from Monday to Friday.",
+     "restored_robust": "Your parcel numbered 7781 will be delivered tomorrow between 8 am and 12 pm. The recipient is Agnieszka Wróbel at 58 Kingfisher Way, Norwich NR4 7TJ. If you have any questions, please contact our depot hotline on 01632 960772 from Monday to Friday.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "Your parcel numbered 7781 will be delivered tomorrow between 8 am and 12 pm. Please contact our depot hotline on [PHONE_2] for any questions.",
+     "restored_strict": "Your parcel numbered 7781 will be delivered tomorrow between 8 am and 12 pm. Please contact our depot hotline on 01632 960772 for any questions.",
+     "restored_robust": "Your parcel numbered 7781 will be delivered tomorrow between 8 am and 12 pm. Please contact our depot hotline on 01632 960772 for any questions.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-13",
+   "lang": "en",
+   "kind": "support-email",
+   "text": "Dear Mr Hunter,\n\nthank you for your patience. The hunter green sofa (model HG-2) is back in stock, and Ms Rivers from our showroom will call you to arrange the delivery.\n\nKind regards,\nCustomer Care",
+   "spans": [
+    {
+     "start": 8,
+     "end": 14,
+     "type": "PERSON"
+    },
+    {
+     "start": 106,
+     "end": 112,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Dear Mr [PERSON_1],\n\nthank you for your patience. The hunter green sofa (model HG-2) is back in stock, and [PERSON_2] from our showroom will call you to arrange the delivery.\n\nKind regards,\nCustomer Care",
+   "mapping": {
+    "[PERSON_1]": "Hunter",
+    "[PERSON_2]": "Ms Rivers"
+   },
+   "replacements": [
+    {
+     "start": 8,
+     "end": 14,
+     "masked_start": 8,
+     "masked_end": 18,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 103,
+     "end": 112,
+     "masked_start": 107,
+     "masked_end": 117,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The hunter green sofa (model HG-2) is now available in stock, and [PERSON_2] from the showroom will contact you to arrange the delivery.",
+     "restored_strict": "The hunter green sofa (model HG-2) is now available in stock, and Ms Rivers from the showroom will contact you to arrange the delivery.",
+     "restored_robust": "The hunter green sofa (model HG-2) is now available in stock, and Ms Rivers from the showroom will contact you to arrange the delivery.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "Dear [PERSON_1],\n\nthank you for your patience. The hunter green sofa (model HG-2) is back in stock, and [PERSON_2] from our showroom will call you to arrange the delivery.\n\nKind regards,\nCustomer Care",
+     "restored_strict": "Dear Hunter,\n\nthank you for your patience. The hunter green sofa (model HG-2) is back in stock, and Ms Rivers from our showroom will call you to arrange the delivery.\n\nKind regards,\nCustomer Care",
+     "restored_robust": "Dear Hunter,\n\nthank you for your patience. The hunter green sofa (model HG-2) is back in stock, and Ms Rivers from our showroom will call you to arrange the delivery.\n\nKind regards,\nCustomer Care",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-14",
+   "lang": "en",
+   "kind": "hr-request",
+   "text": "Hi payroll, from January please pay my salary into my new account GB51ZZTB30009120477310. Account holder: Kwame Mensah, staff number 30418.\nThanks, Kwame",
+   "spans": [
+    {
+     "start": 66,
+     "end": 88,
+     "type": "IBAN"
+    },
+    {
+     "start": 106,
+     "end": 118,
+     "type": "PERSON"
+    },
+    {
+     "start": 133,
+     "end": 138,
+     "type": "CUSTOMER_ID"
+    },
+    {
+     "start": 148,
+     "end": 153,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Hi payroll, from January please pay my salary into my new account [IBAN_1]. Account holder: [PERSON_1], staff number [CUSTOMER_ID_1].\nThanks, [PERSON_1]",
+   "mapping": {
+    "[IBAN_1]": "GB51ZZTB30009120477310",
+    "[PERSON_1]": "Kwame Mensah",
+    "[CUSTOMER_ID_1]": "30418"
+   },
+   "replacements": [
+    {
+     "start": 66,
+     "end": 88,
+     "masked_start": 66,
+     "masked_end": 74,
+     "placeholder": "[IBAN_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 106,
+     "end": 118,
+     "masked_start": 92,
+     "masked_end": 102,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 133,
+     "end": 138,
+     "masked_start": 117,
+     "masked_end": 132,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    },
+    {
+     "start": 148,
+     "end": 153,
+     "masked_start": 142,
+     "masked_end": 152,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message instructs the payroll department to transfer the salary from January into the new account of [PERSON_1], who is the staff number [CUSTOMER_ID_1], and the account holder is [PERSON_1].",
+     "restored_strict": "The message instructs the payroll department to transfer the salary from January into the new account of Kwame Mensah, who is the staff number 30418, and the account holder is Kwame Mensah.",
+     "restored_robust": "The message instructs the payroll department to transfer the salary from January into the new account of Kwame Mensah, who is the staff number 30418, and the account holder is Kwame Mensah.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The message instructs the payroll department to transfer the salary from January into the new account of [PERSON_1], who is the staff member with the customer ID [CUSTOMER_ID_1], using the IBAN [IBAN_1].",
+     "restored_strict": "The message instructs the payroll department to transfer the salary from January into the new account of Kwame Mensah, who is the staff member with the customer ID 30418, using the IBAN GB51ZZTB30009120477310.",
+     "restored_robust": "The message instructs the payroll department to transfer the salary from January into the new account of Kwame Mensah, who is the staff member with the customer ID 30418, using the IBAN GB51ZZTB30009120477310.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-15",
+   "lang": "en",
+   "kind": "meeting-notes",
+   "text": "Client meeting notes\n\nClient: Patel Logistics Ltd, contact Mr Ravi Patel (ravi@patel-logistics.example, +44 7700 900651)\nDiscussed: 40 pallets per week, 2-year contract, 3 % discount above 500 pallets.\nNext: Ellie sends the revised quote by Friday.",
+   "spans": [
+    {
+     "start": 62,
+     "end": 72,
+     "type": "PERSON"
+    },
+    {
+     "start": 74,
+     "end": 102,
+     "type": "EMAIL"
+    },
+    {
+     "start": 104,
+     "end": 119,
+     "type": "PHONE"
+    },
+    {
+     "start": 208,
+     "end": 213,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Client meeting notes\n\nClient: Patel Logistics Ltd, contact Mr [PERSON_1] ([EMAIL_1], [PHONE_1])\nDiscussed: 40 pallets per week, 2-year contract, 3 % discount above 500 pallets.\nNext: [PERSON_2] sends the revised quote by Friday.",
+   "mapping": {
+    "[PERSON_1]": "Ravi Patel",
+    "[EMAIL_1]": "ravi@patel-logistics.example",
+    "[PHONE_1]": "+44 7700 900651",
+    "[PERSON_2]": "Ellie"
+   },
+   "replacements": [
+    {
+     "start": 62,
+     "end": 72,
+     "masked_start": 62,
+     "masked_end": 72,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 74,
+     "end": 102,
+     "masked_start": 74,
+     "masked_end": 83,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 104,
+     "end": 119,
+     "masked_start": 85,
+     "masked_end": 94,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    },
+    {
+     "start": 208,
+     "end": 213,
+     "masked_start": 183,
+     "masked_end": 193,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The client, Patel Logistics Ltd, discussed a 40 pallets per week contract with a 2-year term, including a 3% discount for orders over 500 pallets. The client requested that Mr. [PERSON_2] send a revised quote by Friday.",
+     "restored_strict": "The client, Patel Logistics Ltd, discussed a 40 pallets per week contract with a 2-year term, including a 3% discount for orders over 500 pallets. The client requested that Mr. Ellie send a revised quote by Friday.",
+     "restored_robust": "The client, Patel Logistics Ltd, discussed a 40 pallets per week contract with a 2-year term, including a 3% discount for orders over 500 pallets. The client requested that Mr. Ellie send a revised quote by Friday.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "The client meeting notes indicate that Patel Logistics Ltd discussed a 40-pallet per week order, a 2-year contract with a 3% discount for orders over 500 pallets, and that the revised quote should be sent by Friday to [PERSON_2].",
+     "restored_strict": "The client meeting notes indicate that Patel Logistics Ltd discussed a 40-pallet per week order, a 2-year contract with a 3% discount for orders over 500 pallets, and that the revised quote should be sent by Friday to Ellie.",
+     "restored_robust": "The client meeting notes indicate that Patel Logistics Ltd discussed a 40-pallet per week order, a 2-year contract with a 3% discount for orders over 500 pallets, and that the revised quote should be sent by Friday to Ellie.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-16",
+   "lang": "en",
+   "kind": "cancellation",
+   "text": "I want to cancel my membership, number GYM-551209. My name is Rhys Llewellyn, I live at 22 Bryn Road, Swansea SA2 0AB and my date of birth is 30 June 1985. Please confirm to rhys.l@example.net.",
+   "spans": [
+    {
+     "start": 39,
+     "end": 49,
+     "type": "CUSTOMER_ID"
+    },
+    {
+     "start": 62,
+     "end": 76,
+     "type": "PERSON"
+    },
+    {
+     "start": 88,
+     "end": 117,
+     "type": "ADDRESS"
+    },
+    {
+     "start": 142,
+     "end": 154,
+     "type": "DATE_OF_BIRTH"
+    },
+    {
+     "start": 174,
+     "end": 192,
+     "type": "EMAIL"
+    }
+   ],
+   "masked": "I want to cancel my membership, number [CUSTOMER_ID_1]. My name is [PERSON_1], I live at [ADDRESS_1] and my date of birth is [DATE_OF_BIRTH_1]. Please confirm to [EMAIL_1].",
+   "mapping": {
+    "[CUSTOMER_ID_1]": "GYM-551209",
+    "[PERSON_1]": "Rhys Llewellyn",
+    "[ADDRESS_1]": "22 Bryn Road, Swansea SA2 0AB",
+    "[DATE_OF_BIRTH_1]": "30 June 1985",
+    "[EMAIL_1]": "rhys.l@example.net"
+   },
+   "replacements": [
+    {
+     "start": 39,
+     "end": 49,
+     "masked_start": 39,
+     "masked_end": 54,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    },
+    {
+     "start": 62,
+     "end": 76,
+     "masked_start": 67,
+     "masked_end": 77,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 88,
+     "end": 117,
+     "masked_start": 89,
+     "masked_end": 100,
+     "placeholder": "[ADDRESS_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 142,
+     "end": 154,
+     "masked_start": 125,
+     "masked_end": 142,
+     "placeholder": "[DATE_OF_BIRTH_1]",
+     "source": "rules"
+    },
+    {
+     "start": 174,
+     "end": 192,
+     "masked_start": 162,
+     "masked_end": 171,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message is requesting confirmation to cancel a membership, provided by [CUSTOMER_ID_1], who is [PERSON_1], lives at [ADDRESS_1], and was born on [DATE_OF_BIRTH_1]. The cancellation is to be confirmed with [EMAIL_1].",
+     "restored_strict": "The message is requesting confirmation to cancel a membership, provided by GYM-551209, who is Rhys Llewellyn, lives at 22 Bryn Road, Swansea SA2 0AB, and was born on 30 June 1985. The cancellation is to be confirmed with rhys.l@example.net.",
+     "restored_robust": "The message is requesting confirmation to cancel a membership, provided by GYM-551209, who is Rhys Llewellyn, lives at 22 Bryn Road, Swansea SA2 0AB, and was born on 30 June 1985. The cancellation is to be confirmed with rhys.l@example.net.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "You want to cancel your membership, which is number [CUSTOMER_ID_1]. Your name is [PERSON_1], you live at [ADDRESS_1], and your date of birth is [DATE_OF_BIRTH_1]. Please confirm this with [EMAIL_1].",
+     "restored_strict": "You want to cancel your membership, which is number GYM-551209. Your name is Rhys Llewellyn, you live at 22 Bryn Road, Swansea SA2 0AB, and your date of birth is 30 June 1985. Please confirm this with rhys.l@example.net.",
+     "restored_robust": "You want to cancel your membership, which is number GYM-551209. Your name is Rhys Llewellyn, you live at 22 Bryn Road, Swansea SA2 0AB, and your date of birth is 30 June 1985. Please confirm this with rhys.l@example.net.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-17",
+   "lang": "en",
+   "kind": "hr-note",
+   "text": "New starters in December:\n- Isla McKenzie (DOB 1999-04-12), marketing intern\n- Arjun Mehta (DOB 1994-10-03), backend developer, starts 1 Dec 2026\nLaptops (asset tags 7781 and 7782) are ordered.",
+   "spans": [
+    {
+     "start": 28,
+     "end": 41,
+     "type": "PERSON"
+    },
+    {
+     "start": 47,
+     "end": 57,
+     "type": "DATE_OF_BIRTH"
+    },
+    {
+     "start": 79,
+     "end": 90,
+     "type": "PERSON"
+    },
+    {
+     "start": 96,
+     "end": 106,
+     "type": "DATE_OF_BIRTH"
+    }
+   ],
+   "masked": "New starters in December:\n- Isla McKenzie ([LOCATION_1] [DATE_OF_BIRTH_1]), marketing intern\n- [PERSON_1] (DOB [DATE_OF_BIRTH_2]), backend developer, starts 1 Dec 2026\n[PERSON_2] (asset tags 7781 and 7782) are ordered.",
+   "mapping": {
+    "[LOCATION_1]": "DOB",
+    "[DATE_OF_BIRTH_1]": "1999-04-12",
+    "[PERSON_1]": "Arjun Mehta",
+    "[DATE_OF_BIRTH_2]": "1994-10-03",
+    "[PERSON_2]": "Laptops"
+   },
+   "replacements": [
+    {
+     "start": 43,
+     "end": 46,
+     "masked_start": 43,
+     "masked_end": 55,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 47,
+     "end": 57,
+     "masked_start": 56,
+     "masked_end": 73,
+     "placeholder": "[DATE_OF_BIRTH_1]",
+     "source": "rules"
+    },
+    {
+     "start": 79,
+     "end": 90,
+     "masked_start": 95,
+     "masked_end": 105,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 96,
+     "end": 106,
+     "masked_start": 111,
+     "masked_end": 128,
+     "placeholder": "[DATE_OF_BIRTH_2]",
+     "source": "rules"
+    },
+    {
+     "start": 146,
+     "end": 153,
+     "masked_start": 168,
+     "masked_end": 178,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [
+    "Isla McKenzie"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "New interns and a backend developer have joined the team in December. Isla McKenzie, a marketing intern, starts on the 1st of December, 2026. Two backend developers, [PERSON_1] and [PERSON_2], with asset tags 7781 and 7782, have also been ordered.",
+     "restored_strict": "New interns and a backend developer have joined the team in December. Isla McKenzie, a marketing intern, starts on the 1st of December, 2026. Two backend developers, Arjun Mehta and Laptops, with asset tags 7781 and 7782, have also been ordered.",
+     "restored_robust": "New interns and a backend developer have joined the team in December. Isla McKenzie, a marketing intern, starts on the 1st of December, 2026. Two backend developers, Arjun Mehta and Laptops, with asset tags 7781 and 7782, have also been ordered.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "New employees joining in December:\n- Isla McKenzie, marketing intern, from [LOCATION_1] on [DATE_OF_BIRTH_1]\n- [PERSON_1], backend developer, starting on 1 Dec 2026\n- [PERSON_2]'s assets, tags 7781 and 7782, have been ordered.",
+     "restored_strict": "New employees joining in December:\n- Isla McKenzie, marketing intern, from DOB on 1999-04-12\n- Arjun Mehta, backend developer, starting on 1 Dec 2026\n- Laptops's assets, tags 7781 and 7782, have been ordered.",
+     "restored_robust": "New employees joining in December:\n- Isla McKenzie, marketing intern, from DOB on 1999-04-12\n- Arjun Mehta, backend developer, starting on 1 Dec 2026\n- Laptops's assets, tags 7781 and 7782, have been ordered.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-18",
+   "lang": "en",
+   "kind": "complaint",
+   "text": "hey, this is jess from flat 2. the heating still doesnt work since monday. can someone from maintenance call me on 07700 900233? my neighbour olu has the same problem.",
+   "spans": [
+    {
+     "start": 13,
+     "end": 17,
+     "type": "PERSON"
+    },
+    {
+     "start": 115,
+     "end": 127,
+     "type": "PHONE"
+    },
+    {
+     "start": 142,
+     "end": 145,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "[PERSON_1], this is jess from flat 2. the heating still doesnt work since monday. can someone from maintenance call me on [PHONE_1]? my neighbour olu has the same problem.",
+   "mapping": {
+    "[PERSON_1]": "hey",
+    "[PHONE_1]": "07700 900233"
+   },
+   "replacements": [
+    {
+     "start": 0,
+     "end": 3,
+     "masked_start": 0,
+     "masked_end": 10,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 115,
+     "end": 127,
+     "masked_start": 122,
+     "masked_end": 131,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [
+    "jess",
+    "olu"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "The heating in flat 2 is still not working, and the person from maintenance needs to contact [PERSON_1] on [PHONE_1] to fix the issue. Additionally, the heating in flat 2 is also not working, and the person from maintenance needs to contact [PERSON_2] on [PHONE_2] to fix the problem.",
+     "restored_strict": "The heating in flat 2 is still not working, and the person from maintenance needs to contact hey on 07700 900233 to fix the issue. Additionally, the heating in flat 2 is also not working, and the person from maintenance needs to contact [PERSON_2] on [PHONE_2] to fix the problem.",
+     "restored_robust": "The heating in flat 2 is still not working, and the person from maintenance needs to contact hey on 07700 900233 to fix the issue. Additionally, the heating in flat 2 is also not working, and the person from maintenance needs to contact [PERSON_2] on [PHONE_2] to fix the problem.",
+     "altered_forms": [],
+     "invented_forms": [
+      "[PERSON_2]",
+      "[PHONE_2]"
+     ]
+    },
+    "instructed": {
+     "answer": "[PERSON_1] is contacting [PHONE_1] to report that the heating in flat 2 still doesn't work since Monday, and that their neighbor [PERSON_2] is experiencing the same issue.",
+     "restored_strict": "hey is contacting 07700 900233 to report that the heating in flat 2 still doesn't work since Monday, and that their neighbor [PERSON_2] is experiencing the same issue.",
+     "restored_robust": "hey is contacting 07700 900233 to report that the heating in flat 2 still doesn't work since Monday, and that their neighbor [PERSON_2] is experiencing the same issue.",
+     "altered_forms": [],
+     "invented_forms": [
+      "[PERSON_2]"
+     ]
+    }
+   }
+  },
+  {
+   "id": "en-19",
+   "lang": "en",
+   "kind": "calendar-invite",
+   "text": "Invitation: 1:1 Megan Clarke / Stefan Novak\nWhen: Thursday 10 December 2026, 2:00 to 2:30 pm\nWhere: meeting room Thames, 4th floor\nAgenda: goals for 2027, training budget (£1,500).",
+   "spans": [
+    {
+     "start": 16,
+     "end": 28,
+     "type": "PERSON"
+    },
+    {
+     "start": 31,
+     "end": 43,
+     "type": "PERSON"
+    }
+   ],
+   "masked": "Invitation: 1:1 [PERSON_1] / [PERSON_2]\nWhen: Thursday 10 December 2026, 2:00 to 2:30 pm\nWhere: meeting room [LOCATION_1], 4th floor\n[PERSON_3]: goals for 2027, training budget (£1,500).",
+   "mapping": {
+    "[PERSON_1]": "Megan Clarke",
+    "[PERSON_2]": "Stefan Novak",
+    "[LOCATION_1]": "Thames",
+    "[PERSON_3]": "Agenda"
+   },
+   "replacements": [
+    {
+     "start": 16,
+     "end": 28,
+     "masked_start": 16,
+     "masked_end": 26,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 31,
+     "end": 43,
+     "masked_start": 29,
+     "masked_end": 39,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 113,
+     "end": 119,
+     "masked_start": 109,
+     "masked_end": 121,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 131,
+     "end": 137,
+     "masked_start": 133,
+     "masked_end": 143,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message invites two individuals, [PERSON_1] and [PERSON_2], to a 1:1 meeting on Thursday, December 10, 2026, at 2:00 to 2:30 pm in the meeting room on the 4th floor. [PERSON_3] has provided goals for 2027 and a training budget of £1,500.",
+     "restored_strict": "The message invites two individuals, Megan Clarke and Stefan Novak, to a 1:1 meeting on Thursday, December 10, 2026, at 2:00 to 2:30 pm in the meeting room on the 4th floor. Agenda has provided goals for 2027 and a training budget of £1,500.",
+     "restored_robust": "The message invites two individuals, Megan Clarke and Stefan Novak, to a 1:1 meeting on Thursday, December 10, 2026, at 2:00 to 2:30 pm in the meeting room on the 4th floor. Agenda has provided goals for 2027 and a training budget of £1,500.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "An invitation has been extended to [PERSON_1] and [PERSON_2] for a 1:1 meeting on Thursday, December 10, 2026, from 2:00 to 2:30 pm in the meeting room on the 4th floor. [PERSON_3] has provided goals for 2027 and a training budget of £1,500.",
+     "restored_strict": "An invitation has been extended to Megan Clarke and Stefan Novak for a 1:1 meeting on Thursday, December 10, 2026, from 2:00 to 2:30 pm in the meeting room on the 4th floor. Agenda has provided goals for 2027 and a training budget of £1,500.",
+     "restored_robust": "An invitation has been extended to Megan Clarke and Stefan Novak for a 1:1 meeting on Thursday, December 10, 2026, from 2:00 to 2:30 pm in the meeting room on the 4th floor. Agenda has provided goals for 2027 and a training budget of £1,500.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-20",
+   "lang": "en",
+   "kind": "legal-letter",
+   "text": "Dear Ms Achterberg,\n\nRe: Doyle v. Harbour Freight Ltd (claim no. HQ26X01234)\n\nplease find attached our client's witness statement. Our client, Mrs Fiona Doyle, can be reached at fiona.doyle@example.org or 020 7946 0815.",
+   "spans": [
+    {
+     "start": 8,
+     "end": 18,
+     "type": "PERSON"
+    },
+    {
+     "start": 25,
+     "end": 30,
+     "type": "PERSON"
+    },
+    {
+     "start": 147,
+     "end": 158,
+     "type": "PERSON"
+    },
+    {
+     "start": 178,
+     "end": 201,
+     "type": "EMAIL"
+    },
+    {
+     "start": 205,
+     "end": 218,
+     "type": "PHONE"
+    }
+   ],
+   "masked": "Dear Ms Achterberg,\n\n[PERSON_1]: [PERSON_2] (claim no. HQ26X01234)\n\nplease find attached our client's witness statement. Our client, [PERSON_3], can be reached at [EMAIL_1] or [PHONE_1].",
+   "mapping": {
+    "[PERSON_1]": "Re",
+    "[PERSON_2]": "Doyle v. Harbour Freight Ltd",
+    "[PERSON_3]": "Mrs Fiona Doyle",
+    "[EMAIL_1]": "fiona.doyle@example.org",
+    "[PHONE_1]": "020 7946 0815"
+   },
+   "replacements": [
+    {
+     "start": 21,
+     "end": 23,
+     "masked_start": 21,
+     "masked_end": 31,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 25,
+     "end": 53,
+     "masked_start": 33,
+     "masked_end": 43,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 143,
+     "end": 158,
+     "masked_start": 133,
+     "masked_end": 143,
+     "placeholder": "[PERSON_3]",
+     "source": "ner"
+    },
+    {
+     "start": 178,
+     "end": 201,
+     "masked_start": 163,
+     "masked_end": 172,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules+ner"
+    },
+    {
+     "start": 205,
+     "end": 218,
+     "masked_start": 176,
+     "masked_end": 185,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [
+    "Achterberg"
+   ],
+   "answers": {
+    "plain": {
+     "answer": "The message is a request for a witness statement from a client named [PERSON_3], who can be reached at [EMAIL_1] or [PHONE_1].",
+     "restored_strict": "The message is a request for a witness statement from a client named Mrs Fiona Doyle, who can be reached at fiona.doyle@example.org or 020 7946 0815.",
+     "restored_robust": "The message is a request for a witness statement from a client named Mrs Fiona Doyle, who can be reached at fiona.doyle@example.org or 020 7946 0815.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "Dear Ms. Achterberg,\n\n[PERSON_1]: [PERSON_2] (claim no. HQ26X01234)\n\nPlease find attached our client's witness statement. Our client, [PERSON_3], can be reached at [EMAIL_1] or [PHONE_1].",
+     "restored_strict": "Dear Ms. Achterberg,\n\nRe: Doyle v. Harbour Freight Ltd (claim no. HQ26X01234)\n\nPlease find attached our client's witness statement. Our client, Mrs Fiona Doyle, can be reached at fiona.doyle@example.org or 020 7946 0815.",
+     "restored_robust": "Dear Ms. Achterberg,\n\nRe: Doyle v. Harbour Freight Ltd (claim no. HQ26X01234)\n\nPlease find attached our client's witness statement. Our client, Mrs Fiona Doyle, can be reached at fiona.doyle@example.org or 020 7946 0815.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-21",
+   "lang": "en",
+   "kind": "crm-note",
+   "text": "CRM note\nContact: Mateo Álvarez | m.alvarez@example.com | mobile +44 7700 900127\nCustomer no. 58820: interested in 12 seats of the Team plan (£9 per seat and month). Call back on Tuesday at 3 pm.",
+   "spans": [
+    {
+     "start": 18,
+     "end": 31,
+     "type": "PERSON"
+    },
+    {
+     "start": 34,
+     "end": 55,
+     "type": "EMAIL"
+    },
+    {
+     "start": 65,
+     "end": 80,
+     "type": "PHONE"
+    },
+    {
+     "start": 94,
+     "end": 99,
+     "type": "CUSTOMER_ID"
+    }
+   ],
+   "masked": "CRM note\nContact: [PERSON_1] | [EMAIL_1] | mobile [PHONE_1]\nCustomer no. [CUSTOMER_ID_1]: interested in 12 seats of the Team plan (£9 per seat and month). Call back on Tuesday at 3 pm.",
+   "mapping": {
+    "[PERSON_1]": "Mateo Álvarez",
+    "[EMAIL_1]": "m.alvarez@example.com",
+    "[PHONE_1]": "+44 7700 900127",
+    "[CUSTOMER_ID_1]": "58820"
+   },
+   "replacements": [
+    {
+     "start": 18,
+     "end": 31,
+     "masked_start": 18,
+     "masked_end": 28,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 34,
+     "end": 55,
+     "masked_start": 31,
+     "masked_end": 40,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules"
+    },
+    {
+     "start": 65,
+     "end": 80,
+     "masked_start": 50,
+     "masked_end": 59,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    },
+    {
+     "start": 94,
+     "end": 99,
+     "masked_start": 73,
+     "masked_end": 88,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The customer, identified by [CUSTOMER_ID_1], is interested in purchasing 12 seats of the Team plan for £9 per seat and month. They have been contacted by [PERSON_1] and should expect a call back on Tuesday at 3 pm.",
+     "restored_strict": "The customer, identified by 58820, is interested in purchasing 12 seats of the Team plan for £9 per seat and month. They have been contacted by Mateo Álvarez and should expect a call back on Tuesday at 3 pm.",
+     "restored_robust": "The customer, identified by 58820, is interested in purchasing 12 seats of the Team plan for £9 per seat and month. They have been contacted by Mateo Álvarez and should expect a call back on Tuesday at 3 pm.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "A CRM note for a customer interested in 12 seats of the Team plan (£9 per seat and month) with a contact from [PERSON_1] on [PHONE_1] and a customer ID of [CUSTOMER_ID_1]. The call is scheduled for Tuesday at 3 pm.",
+     "restored_strict": "A CRM note for a customer interested in 12 seats of the Team plan (£9 per seat and month) with a contact from Mateo Álvarez on +44 7700 900127 and a customer ID of 58820. The call is scheduled for Tuesday at 3 pm.",
+     "restored_robust": "A CRM note for a customer interested in 12 seats of the Team plan (£9 per seat and month) with a contact from Mateo Álvarez on +44 7700 900127 and a customer ID of 58820. The call is scheduled for Tuesday at 3 pm.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-22",
+   "lang": "en",
+   "kind": "internal-email",
+   "text": "Hi, I spoke with Herr Brandl from our Kassel office today. He asked that the travel refund of €212.40 goes to his German account DE15 9999 0044 0731 8220 45. His employee number is PN 40917.",
+   "spans": [
+    {
+     "start": 22,
+     "end": 28,
+     "type": "PERSON"
+    },
+    {
+     "start": 129,
+     "end": 156,
+     "type": "IBAN"
+    },
+    {
+     "start": 181,
+     "end": 189,
+     "type": "CUSTOMER_ID"
+    }
+   ],
+   "masked": "Hi, I spoke with [PERSON_1] from our [LOCATION_1] office today. He asked that the travel refund of €212.40 goes to his German account [IBAN_1]. His employee number is [CUSTOMER_ID_1].",
+   "mapping": {
+    "[PERSON_1]": "Herr Brandl",
+    "[LOCATION_1]": "Kassel",
+    "[IBAN_1]": "DE15 9999 0044 0731 8220 45",
+    "[CUSTOMER_ID_1]": "PN 40917"
+   },
+   "replacements": [
+    {
+     "start": 17,
+     "end": 28,
+     "masked_start": 17,
+     "masked_end": 27,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 38,
+     "end": 44,
+     "masked_start": 37,
+     "masked_end": 49,
+     "placeholder": "[LOCATION_1]",
+     "source": "ner"
+    },
+    {
+     "start": 129,
+     "end": 156,
+     "masked_start": 134,
+     "masked_end": 142,
+     "placeholder": "[IBAN_1]",
+     "source": "rules"
+    },
+    {
+     "start": 181,
+     "end": 189,
+     "masked_start": 167,
+     "masked_end": 182,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "The message is about a travel refund of €212.40 being transferred to [PERSON_1]'s German account via IBAN [IBAN_1], with [CUSTOMER_ID_1] being the employee number.",
+     "restored_strict": "The message is about a travel refund of €212.40 being transferred to Herr Brandl's German account via IBAN DE15 9999 0044 0731 8220 45, with PN 40917 being the employee number.",
+     "restored_robust": "The message is about a travel refund of €212.40 being transferred to Herr Brandl's German account via IBAN DE15 9999 0044 0731 8220 45, with PN 40917 being the employee number.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "A colleague from [LOCATION_1] office, [PERSON_1], mentioned that the travel refund of €212.40 should be transferred to his German account, [IBAN_1], and his employee number is [CUSTOMER_ID_1].",
+     "restored_strict": "A colleague from Kassel office, Herr Brandl, mentioned that the travel refund of €212.40 should be transferred to his German account, DE15 9999 0044 0731 8220 45, and his employee number is PN 40917.",
+     "restored_robust": "A colleague from Kassel office, Herr Brandl, mentioned that the travel refund of €212.40 should be transferred to his German account, DE15 9999 0044 0731 8220 45, and his employee number is PN 40917.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-23",
+   "lang": "en",
+   "kind": "reception-note",
+   "text": "Note from reception: Joy Fisher called about the fishing licence renewal for her father, Mr Fisher (customer FL-30092). She will come by on Friday.",
+   "spans": [
+    {
+     "start": 21,
+     "end": 31,
+     "type": "PERSON"
+    },
+    {
+     "start": 92,
+     "end": 98,
+     "type": "PERSON"
+    },
+    {
+     "start": 109,
+     "end": 117,
+     "type": "CUSTOMER_ID"
+    }
+   ],
+   "masked": "Note from reception: [PERSON_1] called about the fishing licence renewal for her father, [PERSON_1] (customer [CUSTOMER_ID_1]). She will come by on Friday.",
+   "mapping": {
+    "[PERSON_1]": "Joy Fisher",
+    "[CUSTOMER_ID_1]": "FL-30092"
+   },
+   "replacements": [
+    {
+     "start": 21,
+     "end": 31,
+     "masked_start": 21,
+     "masked_end": 31,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 89,
+     "end": 98,
+     "masked_start": 89,
+     "masked_end": 99,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 109,
+     "end": 117,
+     "masked_start": 110,
+     "masked_end": 125,
+     "placeholder": "[CUSTOMER_ID_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "A customer named [PERSON_1] from CUSTOMER_ID_1 called to inform the reception that [PERSON_1]'s father needs to renew his fishing licence. [PERSON_1] will visit on Friday.",
+     "restored_strict": "A customer named Joy Fisher from CUSTOMER_ID_1 called to inform the reception that Joy Fisher's father needs to renew his fishing licence. Joy Fisher will visit on Friday.",
+     "restored_robust": "A customer named Joy Fisher from FL-30092 called to inform the reception that Joy Fisher's father needs to renew his fishing licence. Joy Fisher will visit on Friday.",
+     "altered_forms": [
+      "CUSTOMER_ID_1"
+     ],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "A note from reception indicates that [PERSON_1], the customer with [CUSTOMER_ID_1], called to renew her father's fishing license and will visit on Friday.",
+     "restored_strict": "A note from reception indicates that Joy Fisher, the customer with FL-30092, called to renew her father's fishing license and will visit on Friday.",
+     "restored_robust": "A note from reception indicates that Joy Fisher, the customer with FL-30092, called to renew her father's fishing license and will visit on Friday.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  },
+  {
+   "id": "en-24",
+   "lang": "en",
+   "kind": "enrolment",
+   "text": "Enrolment form received for Lily Chen, date of birth May 3, 2015. Parent: David Chen, dchen@example.com, (212) 555-0187. Start date: January 8, 2027, class 4B.",
+   "spans": [
+    {
+     "start": 28,
+     "end": 37,
+     "type": "PERSON"
+    },
+    {
+     "start": 53,
+     "end": 64,
+     "type": "DATE_OF_BIRTH"
+    },
+    {
+     "start": 74,
+     "end": 84,
+     "type": "PERSON"
+    },
+    {
+     "start": 86,
+     "end": 103,
+     "type": "EMAIL"
+    },
+    {
+     "start": 105,
+     "end": 119,
+     "type": "PHONE"
+    }
+   ],
+   "masked": "Enrolment form received for [PERSON_1], date of birth [DATE_OF_BIRTH_1]. Parent: [PERSON_2], [EMAIL_1], [PHONE_1]. Start date: January 8, 2027, class 4B.",
+   "mapping": {
+    "[PERSON_1]": "Lily Chen",
+    "[DATE_OF_BIRTH_1]": "May 3, 2015",
+    "[PERSON_2]": "David Chen",
+    "[EMAIL_1]": "dchen@example.com",
+    "[PHONE_1]": "(212) 555-0187"
+   },
+   "replacements": [
+    {
+     "start": 28,
+     "end": 37,
+     "masked_start": 28,
+     "masked_end": 38,
+     "placeholder": "[PERSON_1]",
+     "source": "ner"
+    },
+    {
+     "start": 53,
+     "end": 64,
+     "masked_start": 54,
+     "masked_end": 71,
+     "placeholder": "[DATE_OF_BIRTH_1]",
+     "source": "rules"
+    },
+    {
+     "start": 74,
+     "end": 84,
+     "masked_start": 81,
+     "masked_end": 91,
+     "placeholder": "[PERSON_2]",
+     "source": "ner"
+    },
+    {
+     "start": 86,
+     "end": 103,
+     "masked_start": 93,
+     "masked_end": 102,
+     "placeholder": "[EMAIL_1]",
+     "source": "rules"
+    },
+    {
+     "start": 105,
+     "end": 119,
+     "masked_start": 104,
+     "masked_end": 113,
+     "placeholder": "[PHONE_1]",
+     "source": "rules"
+    }
+   ],
+   "leaked": [],
+   "answers": {
+    "plain": {
+     "answer": "A new student named [PERSON_1] has been enrolled with [PERSON_2] as a parent, and their birth date is [DATE_OF_BIRTH_1]. The student will start class 4B on January 8, 2027, and the contact information for [PERSON_2] is [EMAIL_1] and [PHONE_1].",
+     "restored_strict": "A new student named Lily Chen has been enrolled with David Chen as a parent, and their birth date is May 3, 2015. The student will start class 4B on January 8, 2027, and the contact information for David Chen is dchen@example.com and (212) 555-0187.",
+     "restored_robust": "A new student named Lily Chen has been enrolled with David Chen as a parent, and their birth date is May 3, 2015. The student will start class 4B on January 8, 2027, and the contact information for David Chen is dchen@example.com and (212) 555-0187.",
+     "altered_forms": [],
+     "invented_forms": []
+    },
+    "instructed": {
+     "answer": "A new enrolment form has been received for [PERSON_1], whose date of birth is [DATE_OF_BIRTH_1]. The parent is [PERSON_2], who can be reached at [EMAIL_1] and [PHONE_1]. The student will start class 4B on January 8, 2027.",
+     "restored_strict": "A new enrolment form has been received for Lily Chen, whose date of birth is May 3, 2015. The parent is David Chen, who can be reached at dchen@example.com and (212) 555-0187. The student will start class 4B on January 8, 2027.",
+     "restored_robust": "A new enrolment form has been received for Lily Chen, whose date of birth is May 3, 2015. The parent is David Chen, who can be reached at dchen@example.com and (212) 555-0187. The student will start class 4B on January 8, 2027.",
+     "altered_forms": [],
+     "invented_forms": []
+    }
+   }
+  }
+ ]
+}
