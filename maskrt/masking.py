@@ -145,6 +145,10 @@ ROBUST = re.compile(
 )
 
 
+# Anything else that looks like a placeholder the model made up itself, e.g. [HERR_Nguyen].
+OTHER = re.compile(r"\[[A-Z]{2,}(?:_[A-Za-z0-9ÄÖÜäöüß]+)+\]")
+
+
 @dataclass(frozen=True)
 class Found:
     start: int
@@ -175,7 +179,10 @@ def find_placeholders(text: str) -> list[Found]:
         token = m.group()
         exact = STRICT.fullmatch(token) is not None and token == placeholder(type_, int(m.group("num")))
         found.append(Found(start, end, type_, int(m.group("num")), exact))
-    return found
+    for m in OTHER.finditer(text):
+        if not any(f.start < m.end() and m.start() < f.end for f in found):
+            found.append(Found(m.start(), m.end(), "UNKNOWN", 0, False))
+    return sorted(found, key=lambda f: f.start)
 
 
 def unmask_strict(answer: str, mapping: dict[str, str]) -> str:
