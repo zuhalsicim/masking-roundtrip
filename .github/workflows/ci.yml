@@ -1,0 +1,37 @@
+name: ci
+
+# Pushes to main only, to keep the number of runs small.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - name: Lint
+        run: ruff check .
+      - name: Unit tests
+        run: pytest -q
+      - name: Test set matches its manifest
+        run: python -m maskrt check-data
+      - name: Smoke run without any model (rules only)
+        run: python -m maskrt smoke
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Type-check and build the page
+        working-directory: web
+        run: |
+          npm ci
+          npm run build
