@@ -1,0 +1,2 @@
+# Runtime. The NER models and the language model are files, not packages: see README, "How to rerun".
+spacy==3.8.18

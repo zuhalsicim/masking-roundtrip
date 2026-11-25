@@ -1,0 +1,16 @@
+[project]
+name = "masking-roundtrip"
+version = "0.1.0"
+description = "Mask personal data before a language model sees it, put it back afterwards, and measure both."
+requires-python = ">=3.12"
+license = "MIT"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
